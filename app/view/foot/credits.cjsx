@@ -23,7 +23,7 @@ module.exports = React.createClass
           {seperator}<a href={link} title={name} target="_blank">{name}</a>
         </span>
     else
-      Links = <span>a tallented group of folks</span>
+      Links = <span>a talented group of folks</span>
 
     <p className={className}>
       Built and designed by {Links}.
