@@ -27,7 +27,9 @@ module.exports = React.createClass
         <Head data={data} />
         <Map />
         <RouteHandler data={data} />
+        <p className="container">about section...</p>
         <About data={data} />
+        <p className="container">contact section...</p>
         <Foot data={data} />
         <script src={jsFilePath} type="text/javascript" />
       </body>
