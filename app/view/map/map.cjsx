@@ -44,7 +44,7 @@ module.exports = React.createClass
       # Build the element we want for each building.
       return <button key={id} className={className} onClick={onClickFunc}>{title}</button>
 
-    <article id="map" className="container">
+    <article id="map">
       {buildingElements}
       <img src="foodhubtemporarymap.png" alt="map" />
       {buildingInfoEl}
