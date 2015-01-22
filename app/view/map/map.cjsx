@@ -9,7 +9,7 @@ module.exports = React.createClass
     activeBuildingId: null
 
   handleClick: (id) ->
-    console.log 'clicked', id
+    #console.log 'clicked', id
     @setState {activeBuildingId: id}
 
   render: ->
