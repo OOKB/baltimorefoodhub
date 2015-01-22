@@ -23,7 +23,7 @@ processPg = (path) ->
   vars = {path: path}
   App vars, render
 
-pages = ['/', '/domains/']
+pages = ['/']
 
 _.each pages, (pg) ->
   processPg pg

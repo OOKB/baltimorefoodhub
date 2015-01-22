@@ -2,7 +2,6 @@ r = require 'request'
 _ = require 'queries'
 async = require 'async'
 fs = require 'fs-extra'
-imgix = require './imgix'
 
 makeReq = (url, handleData) ->
   (cb) ->

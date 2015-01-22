@@ -31,7 +31,7 @@ yaml = require 'gulp-yaml'
 sourcemaps = require 'gulp-sourcemaps'
 
 serverData = require './serverData'
-content = require './content'
+#content = require './content'
 
 # Default gulp tasks watches files for changes
 gulp.task "default", ['browser-sync'], ->
@@ -47,8 +47,8 @@ gulp.task "browser-sync", ['compile-watch', 'styles', 'static'], ->
   browserSync
     server:
       baseDir: 'public'
-    open: 'external'
-    host: 'l.cape.io'
+    #open: 'external'
+    #host: 'l.cape.io'
     logConnections: true
     injectChanges: false
     #logLevel: 'debug'
