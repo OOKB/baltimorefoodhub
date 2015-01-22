@@ -2,21 +2,11 @@ React = require 'react'
 _ = require 'lodash'
 
 buildings = require '../../data/buildings'
-buildingIndex = {}
-
-# Create a building index
-# _.each buildings, (building, i) ->
-#   {id} = building
-#   buildingIndex[id] = i
 
 module.exports = React.createClass
   # The default state object when this component is created/loaded.
   getInitialState: ->
     activeBuildingId: null
-
-  # getActiveBuilding: (id) ->
-  #   i = buildingIndex[id]
-  #   buildings[i]
 
   handleClick: (id) ->
     console.log 'clicked', id
