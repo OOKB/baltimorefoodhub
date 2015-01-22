@@ -38,8 +38,8 @@ gulp.task "default", ['browser-sync'], ->
   #gulp.watch './app/**/*.*', ['templates', browserSync.reload]
   gulp.watch "styles/*.less", ["styles", browserSync.reload]
   gulp.watch 'static/**', ['static', browserSync.reload]
-  gulp.watch './content/**/*.md', ['content', browserSync.reload]
-  gulp.watch './content/**/*.yaml', ['data', browserSync.reload]
+  gulp.watch './content/**/*.md', ['serverData', browserSync.reload]
+  gulp.watch './content/**/*.yaml', ['serverData', browserSync.reload]
   return
 
 # For development.
