@@ -11,7 +11,7 @@ module.exports = React.createClass
 
   render: ->
     {data} = @props
-    {title, tagline, since, builtDesigned, street, zipcode} = data
+    {title, tagline, since, builtDesigned, street, zipcode, email} = data
 
     yr = new Date().getFullYear()
     msg = "\u00a9 Copyright #{since}-#{yr}, #{title}"
@@ -23,7 +23,8 @@ module.exports = React.createClass
         </div>
         <p className="message">{msg}</p>
         <ul>
-          <li><p>{address}</p></li>
+          <li>{address}</li>
+          <li>{email}</li>
         </ul>
       </div>
     </footer>
