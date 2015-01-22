@@ -16,9 +16,11 @@ module.exports = React.createClass
     # Variables we want from the state object of this component.
     {activeBuildingId} = @state
 
-
+    # Define a default building info element. false is nothing.
     buildingInfoEl = false
+
     # For every building create a div element with the information of that building.
+    # If building is active then create buildingInfoEl.
     buildingElements = buildings.map (item, i) =>
       # The variables we want from each building object.
       {title, id} = item
@@ -36,6 +38,7 @@ module.exports = React.createClass
           <ul className="building-info">
             <li>{title}</li>
             <li>{id}</li>
+            <li>More info about the building here probably.</li>
           </ul>
 
       # Build the element we want for each building.
