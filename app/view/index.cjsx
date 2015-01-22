@@ -4,11 +4,13 @@ React = require 'react'
 
 Head = require './head/head'
 Foot = require './foot/foot'
+Map = require './map/map'
 
 module.exports = React.createClass
   render: ->
     {data} = @props
     {title, sha} = data
+
     appFileName = sha or 'app'
     cssFilePath = "/assets/#{appFileName}.css"
     jsFilePath = "/assets/#{appFileName}.js"
@@ -22,6 +24,7 @@ module.exports = React.createClass
       </head>
       <body>
         <Head data={data} />
+        <Map />
         <RouteHandler data={data} />
         <Foot data={data} />
         <script src={jsFilePath} type="text/javascript" />
