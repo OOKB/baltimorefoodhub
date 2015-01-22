@@ -1,7 +1,14 @@
 title: Baltimore Food Hub
 since: 2014
 tagline: Creating Baltimore’s First Food Hub
-about: 'The Baltimore Food Hub is a project aimed at creating jobs and economic opportunity focused on the food industry. The project will transform a 3.5-acre site located at 1801 E. Oliver Street in East Baltimore into a campus housing a synergistic group of food-related businesses, services, and programs. The Project will include a kitchen incubator and social enterprise workforce training facility, urban farming operation, a retail farm stand, and office and training space for food entrepreneurs and start-up businesses.'
+about: |
+  The Baltimore Food Hub is a project aimed at creating jobs and economic opportunity
+  focused on the food industry. The project will transform a 3.5-acre site located at
+  1801 E. Oliver Street in East Baltimore into a campus housing a synergistic group of
+  food-related businesses, services, and programs. The Project will include a kitchen
+  incubator and social enterprise workforce training facility, urban farming operation,
+  a retail farm stand, and office and training space for food entrepreneurs and start-up
+  businesses.
 groundbreaking: 'Look for a groundbreaking in early 2015.'
 email: info@baltimorefoodhub.com
 street: 1801 E. Oliver Street
