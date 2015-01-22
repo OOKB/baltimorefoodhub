@@ -1,7 +1,5 @@
 React = require 'react'
 
-{ButtonToolbar, Button, Row, Col} = require 'react-bootstrap'
-
 Credits   = require './credits'
 
 module.exports = React.createClass
@@ -13,20 +11,19 @@ module.exports = React.createClass
 
   render: ->
     {data} = @props
-    {title, tagline, since, builtDesigned} = data
+    {title, tagline, since, builtDesigned, street, zipcode} = data
 
     yr = new Date().getFullYear()
     msg = "\u00a9 Copyright #{since}-#{yr}, #{title}"
-
+    address = "#{street}, #{zipcode}"
     <footer>
       <div className="container">
-        <Row>
-          <Col sm={4} className="footer-credits">
-            <Credits builtDesigned={builtDesigned} />
-          </Col>
-          <Col sm={4}>
-            <p>{msg}</p>
-          </Col>
-        </Row>
+        <div className="footer-credits">
+          <Credits builtDesigned={builtDesigned} />
+        </div>
+        <p className="message">{msg}</p>
+        <ul>
+          <li><p>{address}</p></li>
+        </ul>
       </div>
     </footer>
