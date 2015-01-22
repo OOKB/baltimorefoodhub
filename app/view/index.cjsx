@@ -5,6 +5,7 @@ React = require 'react'
 Head = require './head/head'
 Foot = require './foot/foot'
 Map = require './map/map'
+About = require './about/about'
 
 module.exports = React.createClass
   render: ->
@@ -26,6 +27,7 @@ module.exports = React.createClass
         <Head data={data} />
         <Map />
         <RouteHandler data={data} />
+        <About data={data} />
         <Foot data={data} />
         <script src={jsFilePath} type="text/javascript" />
       </body>
