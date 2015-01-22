@@ -8,5 +8,5 @@ module.exports = React.createClass
     {title} = @props.data
 
     <header>
-
+      <h1>{title}</h1>
     </header>
