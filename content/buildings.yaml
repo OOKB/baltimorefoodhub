@@ -1,18 +1,28 @@
 -
-  title: TL House
-  id: tl-house
+  title: Incubator Kitchen + Social Culinary Enterprise + Cooking Classroom Rental
+  id: incubator
+  sample: Tenant name is City Seeds - Operated by Humanim. 15,000 sq ft. - website cityseeds.com. - Opening summer 2016
 -
-  title: KC House
-  id: kc-house
+  title: Dry Storage
+  id: dry-storage
+  sample:
 -
-  title: KB House
-  id: kb-house
+  title: Commissary
+  id: commissary
+  sample: goods and services for sale
 -
-  title: Coffee House
-  id: coffee-house
+  title: Cannery
+  id: cannery
+  sample:
 -
   title: Food Prep
   id: foot-prep
+  sample:
 -
-  title: Butcher
-  id: butcher
+  title: Auqaponics
+  id: aquaponics
+  sample: Aquariums and fish and such.
+-
+  title: Urban Hoophouses
+  id: hoophouse
+  sample: Experiments in urban green house growing.
