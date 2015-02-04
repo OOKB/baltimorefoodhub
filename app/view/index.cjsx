@@ -52,8 +52,8 @@ module.exports = React.createClass
         </section>
         <p className="container">contact section...</p>
         <p className="container">Is there a way that we can have all contact information be categorized: Leasing / General Info. / Press and Media</p>
-        <Foot data={data} />
         <p className="container">leasing section... link to leasing docs</p>
+        <Foot data={data} />
         <script src={jsFilePath} type="text/javascript" />
       </body>
     </html>

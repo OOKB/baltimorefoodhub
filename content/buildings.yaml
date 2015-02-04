@@ -1,28 +1,72 @@
 -
-  title: Incubator Kitchen + Social Culinary Enterprise + Cooking Classroom Rental
+  building: 1
+  title: Coworking
+  id: coworking
+  sample: Destination for food entrepreneurs …
+  leasing: the “Pumping Station”
+  sf: 9961
+  floors: 1 level
+  ceilings: 30ft
+  loadingdock: true
+  tenants:
+    - Maryland Farmers Market Association
+  expressed-interest: Farm Alliance
+  blurb: |
+    Destination for food entrepreneurs and businesses who want an office that doesn’t double as a kitchen table.
+
+    Rent a desk, an office or use our conference rooms.
+-
+  building: 2
+  title: Storage
+  id: storage
+  sample: storage spaces are available for any food related business …
+  leasing: the “Machine Shop”
+  sf: 13965
+  floors: 2 Levels + Mezzanine
+  loadingdock: true
+  blurb: |
+    Think of this as your own secured container to make all food business dreams a reality.
+
+    750 - 5000 sq ft storage spaces are available for any food related business.
+-
+  building: 3
+  title: TK
+  id: TK
+  sample: TK
+  leasing: the “Storage Building”
+  sf: 9888
+  floors: 2 Levels
+-
+  building: 4
+  title: |
+    Social Enterprise
+
+    Kitchen Incubator
+
+    Education Classroom
+
+    Cooking Demonstration
   id: incubator
-  sample: Tenant name is City Seeds - Operated by Humanim. 15,000 sq ft. - website cityseeds.com. - Opening summer 2016
+  sample: City Seeds, Operated by Humanim. www.cityseeds.com. - Opening summer 2016
+  sf: 15000
+  floors: 1 level
+  tenants:
+    - City Seeds
+  blurb: |
+    Rent space to scale your food business, join our commercial production kitchen enterprise or
+    teach your best culinary skills. This facility has what you need, even if you don’t realize it yet.
 -
-  title: Dry Storage
-  id: dry-storage
-  sample:
+  title: Food Truck Parking
+  id: food-truck-parking
+  blurb: |
+    We like food and we like trucks that make it easy for us to access it. Park your truck, store and prep your
+    food and even have space to write some emails. The Baltimore Food Hub was made for you.
+
+    With 6 spots for Food Trucks, get in touch today, to secure yours.
 -
-  title: Commissary
-  id: commissary
-  sample: goods and services for sale
--
-  title: Cannery
-  id: cannery
-  sample:
--
-  title: Food Prep
-  id: foot-prep
-  sample:
--
-  title: Auqaponics
-  id: aquaponics
-  sample: Aquariums and fish and such.
--
-  title: Urban Hoophouses
+  title: Urban Farming
   id: hoophouse
-  sample: Experiments in urban green house growing.
+  blurb: |
+    Local sourcing at its finest year round. Get your hands dirty and learn what it means to grow real food from the ground up.
+
+    Farmer or grower, this is your land, make it grow! We have ¼ of an acre ready for you to dig in.

@@ -26,5 +26,6 @@ module.exports = React.createClass
           <li>{address}</li>
           <li>{email}</li>
         </ul>
+        <a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a>
       </div>
     </footer>
