@@ -46,6 +46,6 @@ module.exports = React.createClass
 
     <article id="map">
       {buildingElements}
-      <img src="foodhubtemporarymap.png" alt="map" />
+      <img src="temporarymap-web.png" alt="map" />
       {buildingInfoEl}
     </article>
