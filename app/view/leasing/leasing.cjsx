@@ -1,11 +1,6 @@
 React = require 'react'
 
 module.exports = React.createClass
-  getInitialState: ->
-    name: null
-
-  componentDidMount: ->
-    #@fbClick()
 
   render: ->
     {data} = @props
