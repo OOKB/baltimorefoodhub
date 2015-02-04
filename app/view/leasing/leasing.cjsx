@@ -1,15 +1,9 @@
 React = require 'react'
 
 module.exports = React.createClass
-  getInitialState: ->
-    name: null
-
-  componentDidMount: ->
-    #@fbClick()
 
   render: ->
-    {data} = @props
-    {leasingblurb} = data
+    {leasingblurb} = @props.data
 
     <section id="leasing">
       <div className="container">
