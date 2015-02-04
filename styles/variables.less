@@ -2,24 +2,27 @@
 /* --------------->>> variables.less <<<----------------*/
 /* -----------------------------------------------------*/
 
-.deming-stack {
-  font-family: 'DemingEPRegular', Helvetica, Arial, Sans-serif;
+/* @font-face declarations */
+@font-face {
+    font-family: 'DemingEP';
+    src: url('ff/deming_ep-webfont.eot');
+    src: url('ff/deming_ep-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ff/deming_ep-webfont.woff2') format('woff2'),
+         url('ff/deming_ep-webfont.woff') format('woff'),
+         url('ff/deming_ep-webfont.ttf') format('truetype'),
+         url('ff/deming_ep-webfont.svg#deming_epregular') format('svg');
   font-style: normal;
   font-weight: normal;
 }
 
-.vevey-stack {
-  font-family: 'VeveyRegular', Helvetica, Arial, Sans-serif;
+.deming-stack {
+  font-family: 'DemingEP', Helvetica, Arial, Sans-serif;
   font-style: normal;
   font-weight: normal;
-  letter-spacing: 1px;
 }
 
 @maintext:   rgba(125,116,87,.9); /* brown */
 @activetext: rgba(158,81,78,1);   /* red */
-
-  /*color:rgba(204,188,143,1);*/
-  /*color:rgba(178,164,125,1);*/
 
 /* -----------------------------------------------------*/
 /* ------------->>> /end variables.less <<<-------------*/
