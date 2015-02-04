@@ -3,8 +3,7 @@ React = require 'react'
 module.exports = React.createClass
 
   render: ->
-    {data} = @props
-    {leasingblurb} = data
+    {leasingblurb} = @props.data
 
     <section id="leasing">
       <div className="container">
