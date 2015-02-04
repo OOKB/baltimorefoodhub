@@ -23,7 +23,7 @@ module.exports = React.createClass
     # If building is active then create buildingInfoEl.
     buildingElements = buildings.map (item, i) =>
       # The variables we want from each building object.
-      {title, id, sample, leasing, sf, blurb} = item
+      {building, title, id, sample, leasing, sf, blurb} = item
       # Define the class name for each building div.
       className = "building bld#{i} #{id}"
       # Define a function that gets called on the click of this div.
@@ -36,11 +36,13 @@ module.exports = React.createClass
         # If a building was clicked on show the information for that building.
         buildingInfoEl =
           <ul className="building-info">
+            <li>Building #{building}</li>
             <li><h3>{title}</h3></li>
             <li>{leasing}</li>
-            <li>{sf}</li>
+            <li>{sf} sq. ft</li>
+            <li><p>{sample}</p></li>
             <li><p>{blurb}</p></li>
-            <li>More info about the building, other tenants, etc.</li>
+            <li>Potentially more info about the building, other tenants, etc.</li>
           </ul>
 
       # Build the element we want for each building.

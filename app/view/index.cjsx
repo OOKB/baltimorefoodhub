@@ -6,6 +6,8 @@ Head = require './head/head'
 Foot = require './foot/foot'
 Map = require './map/map'
 About = require './about/about'
+Contact = require './contact/contact'
+Leasing = require './leasing/leasing'
 
 module.exports = React.createClass
   render: ->
@@ -28,9 +30,8 @@ module.exports = React.createClass
         <Map />
         <RouteHandler data={data} />
         <About data={data} />
-        <p className="container">contact section...</p>
-        <p className="container">Is there a way that we can have all contact information be categorized: Leasing / General Info. / Press and Media</p>
-        <p className="container">leasing section... link to leasing docs</p>
+        <Contact data={data} />
+        <Leasing data={data} />
         <Foot data={data} />
         <script src={jsFilePath} type="text/javascript" />
       </body>
