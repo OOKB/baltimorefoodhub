@@ -1,7 +1,7 @@
 React = require 'react'
 _ = require 'lodash'
 
-buildings = require '../../data/buildings'
+#buildings = require '../../data/buildings'
 
 module.exports = React.createClass
   # The default state object when this component is created/loaded.
@@ -15,6 +15,7 @@ module.exports = React.createClass
   render: ->
     # Variables we want from the state object of this component.
     {activeBuildingId} = @state
+    {buildings} = @props.data.content
 
     # Define a default building info element. false is nothing.
     buildingInfoEl = false
@@ -36,10 +37,10 @@ module.exports = React.createClass
         # If a building was clicked on show the information for that building.
         buildingInfoEl =
           <ul className="building-info">
-            <li>Building #{building}</li>
+            <li>Building #{i+1}</li>
             <li><h3>{title}</h3></li>
             <li>{leasing}</li>
-            <li>{sf} sq. ft</li>
+            {if sf then <li>{sf} sq. ft</li>}
             <li><p>{sample}</p></li>
             <li><p>{blurb}</p></li>
             <li>Potentially more info about the building, other tenants, etc.</li>
