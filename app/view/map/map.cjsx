@@ -13,7 +13,8 @@ module.exports = React.createClass
   render: ->
     # Variables we want from the state object of this component.
     {activeBuildingId} = @state
-    # Variables from props.
+    # Variables from data props.
+    # Directories are in the content object. Each dir name is there.
     {buildings} = @props.data.content
 
     # Define a default building info element. false is nothing.
@@ -23,7 +24,7 @@ module.exports = React.createClass
     # If building is active then create buildingInfoEl.
     buildingElements = buildings.map (item, i) =>
       # The variables we want from each building object.
-      {building, title, id, sample, leasing, sf, blurb} = item
+      {building, title, id, sample, leasing, sf, content} = item
       # Define the class name for each building div.
       className = "building bld#{i} #{id}"
       # Define a function that gets called on the click of this div.
@@ -41,7 +42,7 @@ module.exports = React.createClass
             <li>{leasing}</li>
             {if sf then <li>{sf} sq. ft</li>}
             <li><p>{sample}</p></li>
-            <li><p>{blurb}</p></li>
+            <li dangerouslySetInnerHTML={__html: content} />
             <li>Potentially more info about the building, other tenants, etc.</li>
           </ul>
 
