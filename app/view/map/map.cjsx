@@ -25,6 +25,8 @@ module.exports = React.createClass
     buildingElements = buildings.map (item, i) =>
       # The variables we want from each building object.
       {building, title, id, sample, leasing, sf, content} = item
+      if _.isArray title
+        title = title.join(' ')
       # Define the class name for each building div.
       className = "building bld#{i} #{id}"
       # Define a function that gets called on the click of this div.
