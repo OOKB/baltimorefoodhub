@@ -1,8 +1,6 @@
 React = require 'react'
 _ = require 'lodash'
 
-#buildings = require '../../data/buildings'
-
 module.exports = React.createClass
   # The default state object when this component is created/loaded.
   getInitialState: ->
@@ -15,6 +13,7 @@ module.exports = React.createClass
   render: ->
     # Variables we want from the state object of this component.
     {activeBuildingId} = @state
+    # Variables from props.
     {buildings} = @props.data.content
 
     # Define a default building info element. false is nothing.
