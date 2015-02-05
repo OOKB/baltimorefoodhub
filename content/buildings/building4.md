@@ -1,13 +1,10 @@
 ---
 building: 4
-title: |
-  Social Enterprise
-
-  Kitchen Incubator
-
-  Education Classroom
-
-  Cooking Demonstration
+title:
+  - Social Enterprise
+  - Kitchen Incubator
+  - Education Classroom
+  - Cooking Demonstration
 id: incubator
 sf: 15000
 floors: 1 level

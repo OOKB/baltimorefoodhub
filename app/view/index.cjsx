@@ -27,7 +27,7 @@ module.exports = React.createClass
       </head>
       <body>
         <Head data={data} />
-        <Map />
+        <Map data={data} />
         <RouteHandler data={data} />
         <About data={data} />
         <Contact data={data} />

@@ -2,6 +2,22 @@ r = require 'request'
 _ = require 'queries'
 async = require 'async'
 fs = require 'fs-extra'
+path = require 'path'
+
+mm = require 'marky-mark'
+
+getDirs = (filePath) ->
+  dirs = fs.readdirSync(filePath).filter (file) ->
+    fs.statSync(filePath+file).isDirectory()
+  data = {}
+  dirs.forEach (dir) ->
+    dirPath = path.join process.cwd(), filePath, dir
+    content = mm.parseMatchesSync dirPath, ['**/*.md']
+    data[dir] = _.map content, (model) ->
+      yaml = model.meta
+      model = _.without model, ['yaml', 'markdown', 'meta', 'filenameExtension']
+      _.merge model, yaml
+  data
 
 makeReq = (url, handleData) ->
   (cb) ->
@@ -51,17 +67,19 @@ module.exports = (callback) ->
     url = "http://social.cape.io/instagram/#{data.instagram}"
     getData.insta = makeReq url
 
+  getData.content = (callback) ->
+    content = getDirs('content/')
+    callback null, content
+
 
   save = (err, serverData) ->
     throw err if err
-
-
+    _.merge data, serverData
     fs.outputJsonSync 'app/data/index.json', data
     if _.isFunction callback
       callback()
 
   async.parallel getData, save
-
 
 # req = gSheetReq('18Rh1RV0znH9Ey_eRzN76JKNaXspfrvHV6hZMrGZYczI', '1') (err, data) ->
 #   console.log data

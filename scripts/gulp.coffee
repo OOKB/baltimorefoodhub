@@ -101,12 +101,12 @@ gulp.task 'data', ->
 # Convert markdown files from content dir to json files.
 # gulp.task 'content', ->
 #   content()
-gulp.task 'content', ->
-  gulp.src './content/**/*.md'
-    .pipe markdown()
-    .pipe gulp.dest('./app/data/')
+# gulp.task 'content', ->
+#   gulp.src './content/**/*.md'
+#     .pipe markdown()
+#     .pipe gulp.dest('./app/data/')
 
-gulp.task 'serverData', ['data', 'content'], (cb) ->
+gulp.task 'serverData', ['data'], (cb) ->
   serverData cb
 
 # Compile the static html files.
