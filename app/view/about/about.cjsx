@@ -1,5 +1,8 @@
 React = require 'react'
 
+content = require('../../data/about')
+{body} = content
+
 module.exports = React.createClass
 
   render: ->
@@ -7,5 +10,5 @@ module.exports = React.createClass
 
     <article id="about" className="container">
       <h2>{tagline}</h2>
-      <p>{about}</p>
+      <p dangerouslySetInnerHTML={__html: body} />
     </article>

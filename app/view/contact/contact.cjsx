@@ -1,14 +1,14 @@
 React = require 'react'
 
+content = require('../../data/contact')
+{body} = content
+
 module.exports = React.createClass
 
   render: ->
-    {data} = @props
-    {contactblurb} = data
-
     <section id="contact">
       <div className="container">
-        <p className="message">{contactblurb}</p>
+        <p className="message" dangerouslySetInnerHTML={__html: body} />
         <p>insert in a contact form...</p>
       </div>
     </section>
