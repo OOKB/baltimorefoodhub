@@ -64,7 +64,8 @@ html, body {
 @media (min-width: 50rem) {
   .left        {float:left;}
   .right       {float:right;}
-  .clear       {display:block;clear:both;}
+  .clear,
+  .clearBoth   {display:block;clear:both;}
   .clearLeft   {display:block;clear:left;}
   .clearRight  {display:block;clear:right;}
 
@@ -126,8 +127,8 @@ html {
   font-size: 100%;
 }
 body {
-  font-size: 1em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
+  font-size: 1.1111111em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.5;
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; /* do I want a better, wider ranging font-stack? */
   color: #231f20;
@@ -152,6 +153,7 @@ h5 { font-size: 1.5rem;  line-height: 1.5;  letter-spacing: 0; }
 h6 { font-size: 1.33rem; line-height: 1.5;  letter-spacing: 0; }
 
 /* Larger than phablet */
+/* these aren't currently being changed... though perhaps they need to be */
 @media (min-width: 30rem) {
   h1 { font-size: 3.0rem; }
   h2 { font-size: 2.5rem; }
@@ -163,9 +165,10 @@ h6 { font-size: 1.33rem; line-height: 1.5;  letter-spacing: 0; }
 
 p {
   margin-top: 0;
+  margin-bottom: 1em;
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.33rem;
   font-weight: 300;
 }

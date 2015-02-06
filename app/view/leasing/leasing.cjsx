@@ -8,9 +8,12 @@ content = require('../../data/leasing')
 module.exports = React.createClass
 
   render: ->
-    <section id="leasing">
-      <div className="container">
-        <p className="message" dangerouslySetInnerHTML={__html: body} />
-        <p>insert big leasing info download button</p>
-      </div>
-    </section>
+    <article id="leasing" className="container">
+      <section className="group">
+        <h2 className="four columns">Leasing</h2>
+        <div className="eight columns">
+          <p className="message" dangerouslySetInnerHTML={__html: body} />
+          <p>insert big leasing info download button</p>
+        </div>
+      </section>
+    </article>

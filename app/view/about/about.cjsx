@@ -9,6 +9,11 @@ module.exports = React.createClass
     {tagline, about} = @props.data
 
     <article id="about" className="container">
-      <h2>{tagline}</h2>
-      <p dangerouslySetInnerHTML={__html: body} />
+      <section className="group">
+        <h2 className="four columns">About</h2>
+        <div className="eight columns">
+          <h3>{tagline}</h3>
+          <p dangerouslySetInnerHTML={__html: body} />
+        </div>
+      </section>
     </article>
