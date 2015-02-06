@@ -17,7 +17,9 @@ App = (vars, render) ->
 
   Render = (Handler) ->
     if inBrowser
-      data = window.app.db
+      window.app =
+        db: data
+      data.windowInnerWidth = window.innerWidth
     render Handler, {data: data, vars: vars}
 
   if inBrowser

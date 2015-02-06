@@ -1,3 +1,4 @@
+windowInnerWidth: 900
 title: Baltimore Food Hub
 since: 2014
 tagline: Creating Baltimore’s First Food Hub
@@ -16,3 +17,19 @@ zipcode: 21213
 wufoo:
   subdomain: sundaysenergy
   hash: r1sm2yc80uyfw5j
+
+navOffsetDefault: -61
+nav:
+  -
+    title: Campus Directory
+    link: map
+  -
+    title: About BFH
+    link: about
+  -
+    title: Contact
+    link: contact
+  -
+    title: Leasing
+    link: leasing
+    offset: -600
