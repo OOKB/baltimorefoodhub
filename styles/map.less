@@ -12,7 +12,8 @@
   width: 30px;
   z-index: 99;
   border:none;
-  .hide-text;
+  font-size: 1.11111rem;
+  color: rgba(255,255,255,0);
 }
 
 #map .building,
@@ -22,9 +23,8 @@
 
 #map .building:hover,
 #map .building:hover::after {
-  background: rgba(110,203,152,.4);
-  text-indent: 0;
-  .show-text;
+  background: rgba(110,203,152,.66);
+  color: rgba(255,255,255,1);
 }
 
 #map img {
@@ -82,10 +82,19 @@
 
 /*foodtrucks*/
 #map .bld4 {
-  top:    55%;
+  top:    58.5%;
   left:   35%;
-  height: 14%;
-  width:  13.5%;
+  height: 10.5%;
+  width:  23%;
+}
+
+#map .bld4::after {
+  position:   absolute;
+  content:    '';
+  width:  40.5%;
+  height: 75%;
+  bottom: -75%;
+  right:  0;
 }
 
 /*urban farming */
