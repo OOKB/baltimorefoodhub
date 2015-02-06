@@ -45,7 +45,7 @@ module.exports = React.createClass
             {if sf then <li>{sf} sq. ft</li>}
             <li><p>{sample}</p></li>
             <li dangerouslySetInnerHTML={__html: content} />
-            <li>Potentially more info about the building, other tenants, etc.</li>
+            <li><em>Any other info about the building? other tenants, etc.?</em></li>
           </ul>
 
       # Build the element we want for each building.

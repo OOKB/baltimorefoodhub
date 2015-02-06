@@ -8,7 +8,7 @@ tenants:
   - City Seeds
 ---
 
-[City Seeds](www.cityseeds.com), Operated by Humanim.
+[City Seeds](http://www.cityseeds.com), Operated by Humanim.
 
 Opening summer 2016
 
