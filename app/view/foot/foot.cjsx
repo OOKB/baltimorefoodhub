@@ -18,14 +18,21 @@ module.exports = React.createClass
     address = "#{street}, #{zipcode}"
     <footer>
       <div className="container">
-        <div className="footer-credits">
-          <Credits builtDesigned={builtDesigned} />
+        <div className="group">
+          <figure className="three columns">
+            <img src="bfh-smalllogo.png" alt="Baltimore Food Hub Logo, small version" />
+          </figure>
+          <div className="three columns">
+            <p className="message">{msg}</p>
+            <ul>
+              <li>{address}</li>
+              <li>{email}</li>
+            </ul>
+          </div>
+          <div className="footer-credits three columns">
+            <Credits builtDesigned={builtDesigned} />
+          </div>
+          <p className="three columns"><a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
         </div>
-        <p className="message">{msg}</p>
-        <ul>
-          <li>{address}</li>
-          <li>{email}</li>
-        </ul>
-        <a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a>
       </div>
     </footer>
