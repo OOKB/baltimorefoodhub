@@ -1,17 +1,14 @@
 React = require 'react'
 
-Credits   = require './credits'
+MainContact = require './mainContact'
+Credits = require './credits'
+Email = require '../emailField'
 
 module.exports = React.createClass
-  getInitialState: ->
-    name: null
-
-  componentDidMount: ->
-    #@fbClick()
 
   render: ->
     {data} = @props
-    {title, tagline, since, builtDesigned, street, zipcode, email} = data
+    {title, tagline, since, builtDesigned, street, zipcode, email, mainContact} = data
 
     yr = new Date().getFullYear()
     msg = "\u00a9 Copyright #{since}-#{yr}, #{title}"
@@ -26,10 +23,11 @@ module.exports = React.createClass
             <p className="message">{msg}</p>
             <ul>
               <li>{address}</li>
-              <li>{email}</li>
+              <li><Email email={email} /></li>
             </ul>
           </div>
           <div className="footer-credits three columns">
+            <MainContact mainContact={mainContact} />
             <Credits builtDesigned={builtDesigned} />
           </div>
           <p className="three columns"><a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
