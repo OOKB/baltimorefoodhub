@@ -12,5 +12,5 @@ module.exports = React.createClass
       <figure className="logo">
         <img src="bfhlogo.png" alt="Baltimore Food Hub Logo" />
       </figure>
-      <Nav />
+      <Nav data={@props.data} />
     </header>
