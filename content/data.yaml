@@ -13,3 +13,6 @@ street: 1801 E. Oliver Street
 city: Baltimore
 state: MD
 zipcode: 21213
+wufoo:
+  subdomain: sundaysenergy
+  hash: r1sm2yc80uyfw5j
