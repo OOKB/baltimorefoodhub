@@ -10,13 +10,21 @@
   position: absolute;
   height: 30px;
   width: 30px;
-  background: rgba(0,0,0,.33);
   z-index: 99;
   border:none;
+  .hide-text;
 }
 
-#map .building:hover {
-  background: rgba(0,0,0,.33);
+#map .building,
+#map .building::after {
+  background: rgba(110,203,152,.1);
+}
+
+#map .building:hover,
+#map .building:hover::after {
+  background: rgba(110,203,152,.4);
+  text-indent: 0;
+  .show-text;
 }
 
 #map img {
@@ -33,18 +41,36 @@
   width:  11%;
 }
 
+#map .bld0::after {
+  position:   absolute;
+  content:    '';
+  width:  35%;
+  height: 40%;
+  bottom: 0;
+  right: -35%;
+}
+
 #map .bld1 {
   top:    10%;
-  left:   53.5%;
+  left:   53.75%;
   height: 22%;
-  width:  10%;
+  width:  9%;
+}
+
+#map .bld1::after {
+  position:   absolute;
+  content:    '';
+  width:  26%;
+  height: 35%;
+  top:    32%;
+  right: -26%;
 }
 
 #map .bld2 {
   top:    10%;
-  left:   65%;
+  left:   65.8%;
   height: 23%;
-  width:  09%;
+  width:  7.5%;
 }
 
 #map .bld3 {
@@ -73,8 +99,7 @@
 .building-info {
   position: absolute;
   z-index: 199;
-  background: rgba(255,205,155,.8);
-  box-shadow: 0 0 4px rgba(0,0,0,.25);
+  background: rgba(110,203,152,.8);
   padding: 1em;
   top:    0;
   bottom: 0;

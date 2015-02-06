@@ -1,6 +1,6 @@
 React = require 'react'
 
-#Nav = require './nav'
+Nav = require './nav'
 
 module.exports = React.createClass
   render: ->
@@ -9,5 +9,5 @@ module.exports = React.createClass
 
     <header>
       <h1>{title}</h1>
-      <p className="right">Directory / About / Contact / Leasing / </p>
+      <Nav />
     </header>
