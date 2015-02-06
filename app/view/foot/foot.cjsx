@@ -30,7 +30,9 @@ module.exports = React.createClass
             <MainContact mainContact={mainContact} />
             <Credits builtDesigned={builtDesigned} />
           </div>
-          <p className="three columns"><a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
+          <p className="three columns">
+            <a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a>
+          </p>
         </div>
       </div>
     </footer>
