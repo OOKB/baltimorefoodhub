@@ -17,11 +17,13 @@
 }
 
 #map .building,
+#map .building::before,
 #map .building::after {
   background: rgba(110,203,152,.1);
 }
 
 #map .building:hover,
+#map .building:hover::before,
 #map .building:hover::after {
   background: rgba(110,203,152,.66);
   color: rgba(255,255,255,1);
@@ -55,6 +57,15 @@
   left:   53.75%;
   height: 22%;
   width:  9%;
+}
+
+#map .bld1::before {
+  position: absolute;
+  content: '';
+  height:  35%;
+  width:   25%;
+  bottom: -35%;
+  right:   14%;
 }
 
 #map .bld1::after {

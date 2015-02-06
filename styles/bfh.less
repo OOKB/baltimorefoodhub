@@ -6,7 +6,7 @@
 ========================================================================================= */
 body {
   background: white;
-  padding: 2rem 0;
+  padding: 3rem 0 0 0;
 }
 
 footer {
@@ -21,19 +21,19 @@ h1, h2, h3, h4, h5, h6, p, table {
   text-rendering: optimizeLegibility;
 }
 
-a { color: rgba(105,59,62,1); }
+a { color: @bfh-green; }
 
 /* topbar with sitename and links */
 header {
   background: white;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid @bfh-black;
   height: 3rem;
   width:100%;
   position: fixed;
   top:  0;
   right:0;
   left: 0;
-  z-index: 199;
+  z-index: 999;
   vertical-align: middle
 }
 
@@ -60,26 +60,30 @@ header nav ul li {
 
 header nav ul li a {
   display: block;
-  color:rgba(238,230,217,1);
+  color: @bfh-black;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 1px;
-  line-height: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  text-decoration: none;
-  text-transform: uppercase;
+  line-height: ~"calc(3rem - 2px)";
+  padding-left: .75rem;
+  padding-right: .75rem;
   text-decoration: none;
 }
 
 header nav ul li a:hover {
+  background: @bfh-green;
   color: white;
 }
 
-header nav ul li.active a,
-header nav ul li a.active,
 header nav ul li a:active {
-  color: @activetext;
+  background: @bfh-green;
+  color: @bfh-black;
+  box-shadow: inset 1px 2px 3px rgba(35,31,32,.25);
+}
+
+header nav ul li.active a,
+header nav ul li a.active {
+  color: @bfh-green;
 }
 
 header figure {
@@ -114,20 +118,6 @@ section > h3 {
   .deming-stack;
 }
 
-#hero, #mission {
-  text-align: center;
-}
-
-#mission p {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 2rem;
-  margin-top: 1rem;
-  /**/
-	text-shadow: 0 1px 1px #FFF;
-  color:@maintext;
-}
-
 /* contact */
 #contact .contact-form {
   margin-left: -1%;
@@ -147,10 +137,10 @@ article h2 {
   -----------------------------------------------------*/
 
 footer {
-  background: transparent url('/footerflair.png') center center no-repeat;
+  background: @bfh-green url('/footerflair.png') center center no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  border-top: 1px solid black;
+  border-top: 1px solid @bfh-black;
   padding-top: 2em;
 }
 
