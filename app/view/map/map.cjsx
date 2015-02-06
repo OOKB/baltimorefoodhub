@@ -8,7 +8,10 @@ module.exports = React.createClass
 
   handleClick: (id) ->
     #console.log 'clicked', id
-    @setState {activeBuildingId: id}
+    if id == @state.activeBuildingId
+      @setState {activeBuildingId: null}
+    else
+      @setState {activeBuildingId: id}
 
   render: ->
     # Variables we want from the state object of this component.
