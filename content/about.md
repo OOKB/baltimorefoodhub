@@ -1,6 +1,10 @@
 ---
 id: about
-
+blurb: |
+  Baltimore Food Hub is a facility that manages the aggregation, storage, processing,
+  distribution or marketing of locally and regionally produced food. It may include one
+  or all of these functions, depending on what our tenants need. After all, this is an
+  opportunity for Baltimore and we do what our people need us to do.  
 ---
 
 _Baking more than just brownies._
