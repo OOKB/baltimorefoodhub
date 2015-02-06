@@ -6,9 +6,12 @@ content = require('../../data/contact')
 module.exports = React.createClass
 
   render: ->
-    <section id="contact">
-      <div className="container">
-        <p className="message" dangerouslySetInnerHTML={__html: body} />
-        <p>insert in a contact form...</p>
-      </div>
-    </section>
+    <article id="contact" className="container">
+      <section className="group">
+        <h2 className="four columns">Contact</h2>
+        <div className="eight columns">
+          <p className="message" dangerouslySetInnerHTML={__html: body} />
+          <p>insert in a contact form...</p>
+        </div>
+      </section>
+    </article>

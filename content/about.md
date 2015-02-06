@@ -3,7 +3,7 @@ id: about
 
 ---
 
-##Baking more than just brownies.
+_Baking more than just brownies._
 
 If you haven’t heard, we are growing the food innovation economy and lucky for us, we aren’t doing this alone.
 

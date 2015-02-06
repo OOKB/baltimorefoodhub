@@ -10,13 +10,25 @@
   position: absolute;
   height: 30px;
   width: 30px;
-  background: rgba(0,0,0,.33);
   z-index: 99;
   border:none;
+  font-size: 1.11111rem;
+  color: rgba(255,255,255,0);
+  /**/
+  outline: none;
 }
 
-#map .building:hover {
-  background: rgba(0,0,0,.33);
+#map .building,
+#map .building::before,
+#map .building::after {
+  background: rgba(110,203,152,.1);
+}
+
+#map .building:hover,
+#map .building:hover::before,
+#map .building:hover::after {
+  background: rgba(110,203,152,.66);
+  color: rgba(255,255,255,1);
 }
 
 #map img {
@@ -33,18 +45,45 @@
   width:  11%;
 }
 
+#map .bld0::after {
+  position:   absolute;
+  content:    '';
+  width:  35%;
+  height: 40%;
+  bottom: 0;
+  right: -35%;
+}
+
 #map .bld1 {
   top:    10%;
-  left:   53.5%;
+  left:   53.75%;
   height: 22%;
-  width:  10%;
+  width:  9%;
+}
+
+#map .bld1::before {
+  position: absolute;
+  content: '';
+  height:  35%;
+  width:   25%;
+  bottom: -35%;
+  right:   14%;
+}
+
+#map .bld1::after {
+  position:   absolute;
+  content:    '';
+  width:  26%;
+  height: 35%;
+  top:    32%;
+  right: -26%;
 }
 
 #map .bld2 {
   top:    10%;
-  left:   65%;
+  left:   65.8%;
   height: 23%;
-  width:  09%;
+  width:  7.5%;
 }
 
 #map .bld3 {
@@ -56,10 +95,19 @@
 
 /*foodtrucks*/
 #map .bld4 {
-  top:    55%;
+  top:    58.5%;
   left:   35%;
-  height: 14%;
-  width:  13.5%;
+  height: 10.5%;
+  width:  23%;
+}
+
+#map .bld4::after {
+  position: absolute;
+  content: '';
+  width:  40.5%;
+  height: 75%;
+  bottom: -75%;
+  right:  0;
 }
 
 /*urban farming */
@@ -70,22 +118,28 @@
   width:  14.3333%;
 }
 
+/* popup */
 .building-info {
-  position: absolute;
-  z-index: 199;
-  background: rgba(255,205,155,.8);
-  box-shadow: 0 0 4px rgba(0,0,0,.25);
+  background: rgba(110,203,152,.8);
+  border-left: 1px solid @bfh-black;
+  box-shadow: 0 0 3px rgba(35,31,32,.44);
   padding: 1em;
+  width: 24%;
+  position: absolute;
   top:    0;
   bottom: 0;
   right:  0;
-  width: 24%;
+  z-index: 199;
 }
 
 .building-info h3 {
   font-size: 1.1rem;
   letter-spacing: 0;
   font-weight: bold;
+}
+
+.building-info a {
+  color: @bfh-slate;
 }
 
 /** /end styles for the map **/
