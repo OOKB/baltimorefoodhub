@@ -586,10 +586,11 @@ article h2 {
   margin-top: 0.5rem !important;
 }
 #about {
-  background-color: white;
+  background-color: ;
 }
 #contact {
-  background-color: white;
+  background-color: ;
+  border-top: 2px solid #231f20;
 }
 #leasing {
   background-color: #617875;
