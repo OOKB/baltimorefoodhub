@@ -20,7 +20,7 @@ module.exports = React.createClass
       <div className="container">
         <div className="group">
           <figure className="three columns">
-            <img src="bfh-smalllogo.png" alt="Baltimore Food Hub Logo, small version" />
+            <img src="bfh-smalllogo-whitebg.png" alt="Baltimore Food Hub Logo, small version" />
           </figure>
           <div className="three columns">
             <p className="message">{msg}</p>

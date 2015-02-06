@@ -27,6 +27,9 @@
 @bfh-silver:  rgba(153,164,174,1);
 @bfh-slate:   rgba(97,120,117,1);
 
+/** base-64 embedded images? **/
+/** is this smart? why did we do this for RG? **/
+
 /** other general reusable classes/hacks **/
 .hide-text {
   text-indent: 200%;
@@ -38,6 +41,22 @@
   text-indent: 0%;
   white-space: normal;
   overflow: visible;
+}
+
+li.close,
+li.close button,
+button.close {
+  height: 22px;
+  width: 22px;
+}
+
+li.close button,
+button.close {
+  .hide-text;
+  background: transparent url('../bfh-close.png') center center no-repeat;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
 }
 
 /* -----------------------------------------------------*/

@@ -127,10 +127,11 @@ html {
   font-size: 100%;
 }
 body {
-  font-size: 1.1111111em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.5;
   font-weight: 400;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; /* do I want a better, wider ranging font-stack? */
+  /* do I want a better, wider ranging font-stack? */
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #231f20;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -142,15 +143,16 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
+  line-height: normal;
 }
-h1 { font-size: 3.0rem;  line-height: 1.2;  letter-spacing: 0; }
-h2 { font-size: 2.5rem;  line-height: 1.25; letter-spacing: 0; }
-h3 { font-size: 2.0rem;  line-height: 1.3;  letter-spacing: 0; }
-h4 { font-size: 1.75rem; line-height: 1.35; letter-spacing: 0; }
-h5 { font-size: 1.5rem;  line-height: 1.5;  letter-spacing: 0; }
-h6 { font-size: 1.33rem; line-height: 1.5;  letter-spacing: 0; }
+h1 { font-size: 3.0rem;  }
+h2 { font-size: 2.5rem;  }
+h3 { font-size: 2.0rem;  }
+h4 { font-size: 1.75rem; }
+h5 { font-size: 1.5rem;  }
+h6 { font-size: 1.33rem; }
 
 /* Larger than phablet */
 /* these aren't currently being changed... though perhaps they need to be */
@@ -166,9 +168,11 @@ h6 { font-size: 1.33rem; line-height: 1.5;  letter-spacing: 0; }
 p {
   margin-top: 0;
   margin-bottom: 1em;
+  line-height: normal;
 }
 
 .lead {
-  font-size: 1.33rem;
+  font-size: 1.25rem;
   font-weight: 300;
+  line-height: normal;
 }

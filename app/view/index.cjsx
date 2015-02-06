@@ -29,9 +29,11 @@ module.exports = React.createClass
         <Head data={data} />
         <Map data={data} />
         <RouteHandler data={data} />
-        <About data={data} />
-        <Contact data={data} />
-        <Leasing data={data} />
+        <main>
+          <About data={data} />
+          <Contact data={data} />
+          <Leasing data={data} />
+        </main>
         <Foot data={data} />
         <script src={jsFilePath} type="text/javascript" />
       </body>

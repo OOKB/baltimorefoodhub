@@ -2,15 +2,14 @@
 /* ------------------->>> bfh.less <<<-------------------*/
 /* -----------------------------------------------------*/
 
-/* Custom Bar Guild Styles
+/* Custom Baltimore Food Hub
 ========================================================================================= */
 body {
   background: white;
-  padding: 3rem 0 0 0;
-}
-
-footer {
-  margin-top: 4rem;
+  margin: 0;
+  padding: 0;
+  /* temp for testing */
+//   background: white url('../bfh-8p-baseline.png') top left repeat;
 }
 
 /* Typograhy, etc.
@@ -103,8 +102,17 @@ img {
   height: auto;
 }
 
-section {
-  padding-top: 3rem;
+/* Main sections
+  -----------------------------------------------------*/
+
+.container,
+.group {
+  margin-bottom: 0;
+}
+
+main > article {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 section > h3 {
@@ -118,19 +126,28 @@ section > h3 {
   .deming-stack;
 }
 
-/* contact */
-#contact .contact-form {
-  margin-left: -1%;
-  margin-right: -1%;
-}
-
-/* Main sections
-  -----------------------------------------------------*/
-
 article h2 {
   .deming-stack;
   font-size: 1.5rem;
   letter-spacing: 2px;
+  margin-top: 0.5rem !important;
+}
+
+#about   { background-color: white; }
+#contact { background-color: white; }
+#leasing { background-color: @bfh-slate; border-top: 2px solid @bfh-black; color:white;}
+
+#about {
+  background-image: url('../pumphouse.png');
+  background-position: -15% bottom;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+/* contact */
+#contact .contact-form {
+  margin-left: -1%;
+  margin-right: -1%;
 }
 
 /* Footer
@@ -140,8 +157,9 @@ footer {
   background: @bfh-green url('/footerflair.png') center center no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  border-top: 1px solid @bfh-black;
-  padding-top: 2em;
+  border-top: 2px solid @bfh-black;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
 }
 
 /* -----------------------------------------------------*/
