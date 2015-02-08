@@ -649,7 +649,7 @@ article h2 {
   background-size: 100%;
 }
 @media (min-width: 30rem) {
-  #about {
+  #contact {
     background-size: 75%;
   }
 }
