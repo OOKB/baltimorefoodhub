@@ -86,14 +86,24 @@ header nav ul li a.active {
 }
 
 header figure {
-  display: inline-block;
+  display: none;
   height: 200px;
   width: 200px;
   overflow: hidden;
   position: absolute;
-  top: 1rem;
+  top: .5rem;
   left: 1rem;
 }
+
+@media (min-width: 40rem) {
+  header figure {
+    display: block;
+  }
+  header h1 {
+    display: none;
+  }
+}
+
 
 /**/
 
@@ -141,9 +151,16 @@ article h2 {
   ==============================================*/
 #about {
   background-image: url('../pumphouse.png');
-  background-position: -15% bottom;
+  background-position: left bottom;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 100%;
+}
+
+@media (min-width: 30rem) {
+  #about {
+    background-position: -15% bottom;
+    background-size: 50%;
+  }
 }
 
 #about p.lead {
@@ -160,9 +177,14 @@ article h2 {
   background-image: url('../contact-flair-white.png');
   background-position: left bottom;
   background-repeat: no-repeat;
-  background-size: 75%;
+  background-size: 100%;
 }
 
+@media (min-width: 30rem) {
+  #about {
+    background-size: 75%;
+  }
+}
 #contact .contact-form {
   margin-left: -1%;
   margin-right: -1%;
