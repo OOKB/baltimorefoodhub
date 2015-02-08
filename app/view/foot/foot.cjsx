@@ -16,23 +16,33 @@ module.exports = React.createClass
     <footer>
       <div className="container">
         <div className="group">
-          <figure className="three columns">
+          <figure className="two columns center-text">
             <img src="bfh-smalllogo-whitebg.png" alt="Baltimore Food Hub Logo, small version" />
           </figure>
-          <div className="three columns">
-            <p className="message">{msg}</p>
-            <ul>
-              <li>{address}</li>
-              <li><Email email={email} /></li>
-            </ul>
+          <div className="ten columns">
+            <div className="group">
+              <div className="four columns">
+                <div className="overlay">
+                  <p className="message">{msg}</p>
+                  <p><a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
+                </div>
+              </div>
+              <div className="footer-credits four columns">
+                <div className="overlay">
+                  <MainContact mainContact={mainContact} />
+                  <ul>
+                    <li>{address}</li>
+                    <li><Email email={email} /></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="four columns">
+                <div className="overlay">
+                  <Credits builtDesigned={builtDesigned} />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="footer-credits three columns">
-            <MainContact mainContact={mainContact} />
-            <Credits builtDesigned={builtDesigned} />
-          </div>
-          <p className="three columns">
-            <a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a>
-          </p>
         </div>
       </div>
     </footer>

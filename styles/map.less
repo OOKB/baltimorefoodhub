@@ -36,6 +36,9 @@
   position: relative;
   z-index: 0;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 /** position and "design" the building overlays with CSS **/
@@ -121,7 +124,8 @@
 
 /* popup */
 .building-info {
-  background: rgba(110,203,152,.8);
+  background: rgba(110,203,152,.8) url('/spiralpattern1-tall.png') center center no-repeat;
+  background-size: cover;
   border-left: 1px solid @bfh-black;
   box-shadow: 0 -3px 6px rgba(35,31,32,.44);
   padding: 1em;

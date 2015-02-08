@@ -45,7 +45,6 @@ module.exports = React.createClass
             <li className="close"><button onClick={onClickFunc}>Close</button></li>
             <li>Building #{i+1}</li>
             <li><h3>{title}</h3></li>
-            <li>{leasing}</li>
             {if sf then <li>{sf} sq. ft</li>}
             <li><p>{sample}</p></li>
             <li dangerouslySetInnerHTML={__html: content} />

@@ -6,11 +6,10 @@ module.exports = React.createClass
 
   render: ->
     {name, title, email, phone} = @props.mainContact
-    nameTitle = "#{name}, #{title}"
 
-
-    <div className="main-contact">
-      <div className="name-title">{nameTitle}</div>
-      <div className="email"><Email email={email} /></div>
-      <div className="phone">{phone}</div>
-    </div>
+    <ul className="main-contact">
+      <li className="name">{name}</li>
+      <li className="title">{title}</li>
+      <li className="email"><Email email={email} /></li>
+      <li className="phone">{phone}</li>
+    </ul>
