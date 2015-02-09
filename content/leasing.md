@@ -3,4 +3,4 @@ id: leasing
 
 ---
 
-Leasing info will be coming... also, will need to link to downloadable PDF with more leasing info.
+We are open for business. The Baltimore Food Hub will be the first of its kind in the Region. As a food campus, every tenant will get the support and access they need to be focused on growing the food economy. Please get in touch if you are looking for space to build your food business.
