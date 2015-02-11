@@ -14,7 +14,6 @@ module.exports = React.createClass
           <h2 className="four columns">Leasing</h2>
           <div className="eight columns">
             <p className="message" dangerouslySetInnerHTML={__html: body} />
-            <p>insert big leasing info download button</p>
           </div>
         </div>
       </section>

@@ -13,9 +13,10 @@ module.exports = React.createClass
         <div className="group">
           <h2 className="four columns">About</h2>
           <div className="eight columns">
-            <p className="lead">{blurb}</p>
-            <h3>{tagline}</h3>
-            <p dangerouslySetInnerHTML={__html: body} />
+            <div className="bordered">
+              <p className="lead">{blurb}</p>
+              <p dangerouslySetInnerHTML={__html: body} />
+            </div>
           </div>
         </div>
       </section>

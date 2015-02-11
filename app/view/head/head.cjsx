@@ -10,7 +10,7 @@ module.exports = React.createClass
     <header>
       <h1>{title}</h1>
       <figure className="logo">
-        <img src="bfhlogo.png" alt="Baltimore Food Hub Logo" />
+        <img src="bfh-logo-gradient.png" alt="Baltimore Food Hub Logo" />
       </figure>
       <Nav data={@props.data} />
     </header>

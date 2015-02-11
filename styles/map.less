@@ -29,7 +29,7 @@
 #map .building:hover::before,
 #map .building:hover::after {
   background: rgba(110,203,152,.66);
-  color: rgba(255,255,255,1);
+  color: @bfh-white;
 }
 
 #map img {
@@ -58,6 +58,18 @@
   right: -35%;
 }
 
+#map .bld0,
+#map .bld0::before,
+#map .bld0::after {
+  background: rgba(154,56,32,.1);
+}
+
+#map .bld0:hover,
+#map .bld0:hover::before,
+#map .bld0:hover::after {
+  background: rgba(154,56,32,.66);
+}
+
 #map .bld1 {
   top:    10%;
   left:   53.75%;
@@ -83,6 +95,18 @@
   right: -26%;
 }
 
+#map .bld1,
+#map .bld1::before,
+#map .bld1::after {
+  background: rgba(237,170,0,.1);
+}
+
+#map .bld1:hover,
+#map .bld1:hover::before,
+#map .bld1:hover::after {
+  background: rgba(237,170,0,.66);
+}
+
 #map .bld2 {
   top:    10%;
   left:   65.8%;
@@ -95,6 +119,18 @@
   left:   11%;
   height: 20%;
   width:  23%;
+}
+
+#map .bld3,
+#map .bld3::before,
+#map .bld3::after {
+  background: rgba(97,126,149,.1);
+}
+
+#map .bld3:hover,
+#map .bld3:hover::before,
+#map .bld3:hover::after {
+  background: rgba(97,126,149,.66);
 }
 
 /*foodtrucks*/
@@ -114,6 +150,18 @@
   right:  0;
 }
 
+#map .bld4,
+#map .bld4::before,
+#map .bld4::after {
+  background: rgba(153,164,174,.1);
+}
+
+#map .bld4:hover,
+#map .bld4:hover::before,
+#map .bld4:hover::after {
+  background: rgba(153,164,174,.66);
+}
+
 /*urban farming */
 #map .bld5 {
   top:    69.333%;
@@ -122,9 +170,21 @@
   width:  14.3333%;
 }
 
+#map .bld5,
+#map .bld5::before,
+#map .bld5::after {
+  background: rgba(92,73,37,.1);
+}
+
+#map .bld5:hover,
+#map .bld5:hover::before,
+#map .bld5:hover::after {
+  background: rgba(92,73,37,.66);
+}
+
 /* popup */
 .building-info {
-  background: rgba(110,203,152,.8) url('/spiralpattern1-tall.png') center center no-repeat;
+  background: rgba(237,170,0,.8) url('/spiralpattern1-tall.png') center center no-repeat;
   background-size: cover;
   border-left: 1px solid @bfh-black;
   box-shadow: 0 -3px 6px rgba(35,31,32,.44);
@@ -149,6 +209,15 @@
   font-size: 1.1rem;
   letter-spacing: 0;
   font-weight: bold;
+}
+
+@media (min-width: 50em ) {
+  .building-info {
+    font-size: 1.25rem;
+  }
+  .building-info h3 {
+    font-size: 1.5rem;
+  }
 }
 
 .building-info a {

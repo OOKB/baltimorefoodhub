@@ -8,6 +8,7 @@ body {
   background: white;
   margin: 0;
   padding: 0;
+  font-family: @gentium-stack;
   /* temp for testing */
 //   background: white url('../bfh-8p-baseline.png') top left repeat;
 }
@@ -20,7 +21,7 @@ h1, h2, h3, h4, h5, h6, p, table {
   text-rendering: optimizeLegibility;
 }
 
-a { color: @bfh-green; }
+a { color: @bfh-yellow; }
 
 /* topbar with sitename and links */
 header {
@@ -60,6 +61,7 @@ header nav ul li {
 header nav ul li a {
   display: block;
   color: @bfh-black;
+  font-family: helvetica, arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 1px;
@@ -70,25 +72,29 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  background: @bfh-green;
+  background: @bfh-gray417;
   color: white;
 }
 
 header nav ul li a:active {
-  background: @bfh-green;
+  background: @bfh-gray417;
   color: @bfh-black;
   box-shadow: inset 1px 2px 3px rgba(35,31,32,.25);
 }
 
 header nav ul li.active a,
 header nav ul li a.active {
-  color: @bfh-green;
+  color: @bfh-gray417;
+}
+
+header nav ul li.active a:hover {
+  color: white;
 }
 
 header figure {
   display: none;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   overflow: hidden;
   position: absolute;
   top: .5rem;
@@ -143,14 +149,14 @@ article h2 {
   margin-top: 0.5rem !important;
 }
 
-#about   { background-color: ; }
-#contact { background-color: @bfh-green; border-top: 2px solid @bfh-black; }
-#leasing { background-color: @bfh-slate; border-top: 2px solid @bfh-black; color:white;}
+#about   { background-color: @bfh-red174; color: @bfh-white; }
+#contact { background-color: @bfh-yellow; border-top: 2px solid @bfh-white; }
+#leasing { background-color: @bfh-green; border-top: 2px solid white; }
 
 /* About stripe
   ==============================================*/
 #about {
-  background-image: url('../pumphouse.png');
+  background-image: url('../about-flair-white.png');
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -158,16 +164,15 @@ article h2 {
 
 @media (min-width: 30rem) {
   #about {
-    background-position: -15% bottom;
-    background-size: 50%;
+    background-size: 60%;
   }
 }
 
-#about p.lead {
-  border: 15px solid @bfh-slate;
+#about div.bordered {
+  background: @bfh-red174;
+  border: 15px solid @bfh-white;
   border-bottom-width: 30px;
-  color: @bfh-slate;
-  font-family: @gentium-stack;
+  color: @bfh-white;
   font-weight: bold;
   padding: 1.25em;
 }
@@ -194,18 +199,22 @@ article h2 {
   -----------------------------------------------------*/
 
 footer {
-  background: @bfh-green url('../footerflair.png') center bottom no-repeat;
+  background: @bfh-white url('../footer-slate-flair.png') center bottom no-repeat;
   background-size: cover;
-  border-top: 2px solid @bfh-black;
+  border-top: 2px solid @bfh-slate;
   padding-top: 2rem;
   padding-bottom: 6rem;
 }
 
+footer a {
+  color: @bfh-slate;
+}
+
 footer .overlay {
   background: white;
-  border: 1px solid @bfh-black;
+  border: 1px solid @bfh-slate;
+  color: @bfh-slate;
   padding: 1em;
-  font-size: .9rem;
   /** trying to get some things to break nicely when columns get skinny **/
   -ms-word-break: break-all;
    word-break: break-all;
@@ -218,6 +227,27 @@ footer .overlay {
   hyphens: auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
+}
+
+footer .overlay li {
+  margin: 0 0 .25em 0;
+}
+
+footer .footer-credits {
+  background: rgba(255,255,255,.75);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+footer .footer-credits p {
+  color: @bfh-silver;
+  margin: 0;
+  font-size: .75rem;
+  letter-spacing: 1px;
+  padding: .5em;
+  text-transform: uppercase;
+  font-family: helvetica, arial, sans-serif;
 }
 
 /* -----------------------------------------------------*/
