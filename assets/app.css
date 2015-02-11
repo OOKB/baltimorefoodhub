@@ -480,6 +480,7 @@ body {
   background: white;
   margin: 0;
   padding: 0;
+  font-family: 'Gentium Basic', Cambria, Georgia, Times, serif;
   /* temp for testing */
 }
 /* Typograhy, etc.
@@ -496,7 +497,7 @@ table {
   text-rendering: optimizeLegibility;
 }
 a {
-  color: #6ecb98;
+  color: #edaa00;
 }
 /* topbar with sitename and links */
 header {
@@ -534,6 +535,7 @@ header nav ul li {
 header nav ul li a {
   display: block;
   color: #231f20;
+  font-family: helvetica, arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 1px;
@@ -543,22 +545,25 @@ header nav ul li a {
   text-decoration: none;
 }
 header nav ul li a:hover {
-  background: #6ecb98;
+  background: #66665d;
   color: white;
 }
 header nav ul li a:active {
-  background: #6ecb98;
+  background: #66665d;
   color: #231f20;
   box-shadow: inset 1px 2px 3px rgba(35, 31, 32, 0.25);
 }
 header nav ul li.active a,
 header nav ul li a.active {
-  color: #6ecb98;
+  color: #66665d;
+}
+header nav ul li.active a:hover {
+  color: white;
 }
 header figure {
   display: none;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   overflow: hidden;
   position: absolute;
   top: .5rem;
@@ -608,36 +613,35 @@ article h2 {
   margin-top: 0.5rem !important;
 }
 #about {
-  background-color: ;
+  background-color: #9a3820;
+  color: #ffffff;
 }
 #contact {
-  background-color: #6ecb98;
-  border-top: 2px solid #231f20;
+  background-color: #edaa00;
+  border-top: 2px solid #ffffff;
 }
 #leasing {
-  background-color: #617875;
-  border-top: 2px solid #231f20;
-  color: white;
+  background-color: #6ecb98;
+  border-top: 2px solid white;
 }
 /* About stripe
   ==============================================*/
 #about {
-  background-image: url('../pumphouse.png');
+  background-image: url('../about-flair-white.png');
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 @media (min-width: 30rem) {
   #about {
-    background-position: -15% bottom;
-    background-size: 50%;
+    background-size: 60%;
   }
 }
-#about p.lead {
-  border: 15px solid #617875;
+#about div.bordered {
+  background: #9a3820;
+  border: 15px solid #ffffff;
   border-bottom-width: 30px;
-  color: #617875;
-  font-family: 'Gentium Basic', Cambria, Georgia, Times, serif;
+  color: #ffffff;
   font-weight: bold;
   padding: 1.25em;
 }
@@ -660,17 +664,20 @@ article h2 {
 /* Footer
   -----------------------------------------------------*/
 footer {
-  background: #6ecb98 url('../footerflair.png') center bottom no-repeat;
+  background: #ffffff url('../footer-slate-flair.png') center bottom no-repeat;
   background-size: cover;
-  border-top: 2px solid #231f20;
+  border-top: 2px solid #617875;
   padding-top: 2rem;
   padding-bottom: 6rem;
 }
+footer a {
+  color: #617875;
+}
 footer .overlay {
   background: white;
-  border: 1px solid #231f20;
+  border: 1px solid #617875;
+  color: #617875;
   padding: 1em;
-  font-size: .9rem;
   /** trying to get some things to break nicely when columns get skinny **/
   -ms-word-break: break-all;
   word-break: break-all;
@@ -682,6 +689,24 @@ footer .overlay {
   hyphens: auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
+}
+footer .overlay li {
+  margin: 0 0 .25em 0;
+}
+footer .footer-credits {
+  background: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+footer .footer-credits p {
+  color: #99a4ae;
+  margin: 0;
+  font-size: .75rem;
+  letter-spacing: 1px;
+  padding: .5em;
+  text-transform: uppercase;
+  font-family: helvetica, arial, sans-serif;
 }
 /** Styles for the map **/
 #map {
@@ -734,6 +759,16 @@ footer .overlay {
   bottom: 0;
   right: -35%;
 }
+#map .bld0,
+#map .bld0::before,
+#map .bld0::after {
+  background: rgba(154, 56, 32, 0.1);
+}
+#map .bld0:hover,
+#map .bld0:hover::before,
+#map .bld0:hover::after {
+  background: rgba(154, 56, 32, 0.66);
+}
 #map .bld1 {
   top: 10%;
   left: 53.75%;
@@ -756,6 +791,16 @@ footer .overlay {
   top: 32%;
   right: -26%;
 }
+#map .bld1,
+#map .bld1::before,
+#map .bld1::after {
+  background: rgba(237, 170, 0, 0.1);
+}
+#map .bld1:hover,
+#map .bld1:hover::before,
+#map .bld1:hover::after {
+  background: rgba(237, 170, 0, 0.66);
+}
 #map .bld2 {
   top: 10%;
   left: 65.8%;
@@ -767,6 +812,16 @@ footer .overlay {
   left: 11%;
   height: 20%;
   width: 23%;
+}
+#map .bld3,
+#map .bld3::before,
+#map .bld3::after {
+  background: rgba(97, 126, 149, 0.1);
+}
+#map .bld3:hover,
+#map .bld3:hover::before,
+#map .bld3:hover::after {
+  background: rgba(97, 126, 149, 0.66);
 }
 /*foodtrucks*/
 #map .bld4 {
@@ -783,6 +838,16 @@ footer .overlay {
   bottom: -75%;
   right: 0;
 }
+#map .bld4,
+#map .bld4::before,
+#map .bld4::after {
+  background: rgba(153, 164, 174, 0.1);
+}
+#map .bld4:hover,
+#map .bld4:hover::before,
+#map .bld4:hover::after {
+  background: rgba(153, 164, 174, 0.66);
+}
 /*urban farming */
 #map .bld5 {
   top: 69.333%;
@@ -790,9 +855,19 @@ footer .overlay {
   height: 16%;
   width: 14.3333%;
 }
+#map .bld5,
+#map .bld5::before,
+#map .bld5::after {
+  background: rgba(92, 73, 37, 0.1);
+}
+#map .bld5:hover,
+#map .bld5:hover::before,
+#map .bld5:hover::after {
+  background: rgba(92, 73, 37, 0.66);
+}
 /* popup */
 .building-info {
-  background: rgba(110, 203, 152, 0.8) url('/spiralpattern1-tall.png') center center no-repeat;
+  background: rgba(237, 170, 0, 0.8) url('/spiralpattern1-tall.png') center center no-repeat;
   background-size: cover;
   border-left: 1px solid #231f20;
   box-shadow: 0 -3px 6px rgba(35, 31, 32, 0.44);
@@ -815,6 +890,14 @@ footer .overlay {
   font-size: 1.1rem;
   letter-spacing: 0;
   font-weight: bold;
+}
+@media (min-width: 50em) {
+  .building-info {
+    font-size: 1.25rem;
+  }
+  .building-info h3 {
+    font-size: 1.5rem;
+  }
 }
 .building-info a {
   color: #617875;
