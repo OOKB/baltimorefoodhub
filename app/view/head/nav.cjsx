@@ -3,11 +3,13 @@ cx = require '../cx'
 _ = require 'lodash'
 
 Toggle = require './toggle'
+LARGE_SCREEN_SIZE = 767
 
 module.exports = React.createClass
   getInitialState: ->
-    snap: false
-    activeSection: null
+    {nav} = @props.data
+    snap: true
+    activeSection: nav[0].link
     menuOpen: true
     innerWidth: 900
     programsActive: false
@@ -15,7 +17,7 @@ module.exports = React.createClass
   handleScroll: ->
     y = window.pageYOffset
     h = window.innerHeight
-    activeSection = null
+    activeSection = @state.activeSection
     # What section are we in?
     @sectionCoords.forEach (section) ->
       if y > section.offset
@@ -30,17 +32,18 @@ module.exports = React.createClass
 
     # When to show the menu.
     # Window height -200 px.
-    if y > (h-120) and not @state.snap
-      newState.snap = true
-      changeState = true
+    # if y > (h-120) and not @state.snap
+    #   newState.snap = true
+    #   changeState = true
 
     # When to hide menu after it's been shown.
-    if y < (h-120) and @state.snap
-      newState.snap = false
-      changeState = true
+    # if y < (h-120) and @state.snap
+    #   newState.snap = false
+    #   changeState = true
 
     if changeState
       @setState newState
+
     return
 
   handleResize: ->
@@ -64,11 +67,11 @@ module.exports = React.createClass
           offset: pos
     @sectionCoords = sectionCoords
 
-    setMenuOpen = window.innerWidth > 767
-    if menuOpen isnt setMenuOpen
+    # When smallScreen is true menuOpen should be false.
+    if menuOpen is (window.innerWidth < LARGE_SCREEN_SIZE)
       @setState
         innerWidth: window.innerWidth
-        menuOpen: setMenuOpen
+        menuOpen: !menuOpen
 
   sectionCoords: []
 
@@ -116,12 +119,31 @@ module.exports = React.createClass
     {snap, menuOpen, activeSection, innerWidth, menuOpen} = @state
     {nav} = @props.data
     last_i = nav.length - 1
-    # Build array of links.
-    Links = nav.map (link, i) =>
-      link.first = i == 0
-      link.last = i == last_i
-      @linkEl link
 
+    # Calculate if window is small.
+    if innerWidth < LARGE_SCREEN_SIZE
+      smallScreen = true
+      # The toggle is added to the DOM when the screen is small.
+      ToggleEl = <Toggle handleToggle={@handleToggle} menuOpen={menuOpen} />
+    else
+      smallScreen = false
+      # Large window always shows menu.
+      menuOpen = true
+      # Large window hides toggle.
+      ToggleEl = false
+
+    # Build NavList element.
+    if menuOpen
+      # Build array of links.
+      Links = nav.map (link, i) =>
+        link.first = i == 0
+        link.last = i == last_i
+        @linkEl link
+      NavList = <ul className="nav">{Links}</ul>
+    else
+      NavList = false
+
+    # Calculate the class names for the nav element.
     navClasses =
       'main-nav': true
       'show-menu': menuOpen
@@ -129,14 +151,9 @@ module.exports = React.createClass
     if activeSection
       navClasses[activeSection] = true
 
-    # Show button when width is < 768
-    ToggleEl = if innerWidth < 767
-      <Toggle handleToggle={@handleToggle} menuOpen={menuOpen} />
-
+    # Navigation template.
     <nav className={cx(navClasses)}>
       <div className="nav-logo"></div>
       {ToggleEl}
-      <ul className="nav">
-        {Links}
-      </ul>
+      {NavList}
     </nav>
