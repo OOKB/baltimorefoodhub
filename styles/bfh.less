@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: @gentium-stack;
+  color: @bfh-slate;
   /* temp for testing */
 //   background: white url('../bfh-8p-baseline.png') top left repeat;
 }
@@ -21,12 +22,12 @@ h1, h2, h3, h4, h5, h6, p, table {
   text-rendering: optimizeLegibility;
 }
 
-a { color: @bfh-yellow; }
+a { color: @bfh-yellow; transition: all 400ms; }
 
 /* topbar with sitename and links */
 header {
   background: @bfh-white;
-  border-bottom: 2px solid @bfh-black;
+  border-bottom: 2px solid @bfh-slate;
   height: 3rem;
   width:100%;
   position: fixed;
@@ -48,6 +49,16 @@ header h1 {
   .deming-stack;
 }
 
+header h1 a {
+  color: @bfh-slate;
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  color: @bfh-black;
+}
+
+header nav {float: right;}
 header nav ul {
   margin: 0;
   padding: 0;
@@ -60,7 +71,7 @@ header nav ul li {
 
 header nav ul li a {
   display: block;
-  color: @bfh-black;
+  color: @bfh-slate;
   font-family: helvetica, arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -78,7 +89,7 @@ header nav ul li a:hover {
 
 header nav ul li a:active {
   background: @bfh-gray417;
-  color: @bfh-black;
+  color: @bfh-slate;
   box-shadow: inset 1px 2px 3px rgba(35,31,32,.25);
 }
 
@@ -107,7 +118,7 @@ nav button.toggle {
   .center-text;
   /**/
   background: @bfh-white;
-  border: 2px solid @bfh-black;
+  border: 2px solid @bfh-slate;
   font-size: 1rem;
   line-height: 2.2rem;
   text-transform: uppercase;
@@ -116,10 +127,10 @@ nav button.toggle {
 @media (max-width: 767px) {
   header { background: transparent; border: none; height: 0; }
   header h1 { display: none; }
-
+  header nav {float: none;}
   nav.show-menu ul {
     background: @bfh-white;
-    border-top: 1px solid @bfh-black;
+    border-top: 1px solid @bfh-slate;
     padding-bottom: 5rem;
     position: fixed;
     bottom: 0;
@@ -130,7 +141,7 @@ nav button.toggle {
   nav.show-menu ul li {
     display: list-item;
     text-align: left;
-    border-bottom: 1px solid @bfh-black;
+    border-bottom: 1px solid @bfh-slate;
   }
 }
 
@@ -179,14 +190,12 @@ article h2 {
   margin-top: 0.5rem !important;
 }
 
-#hero    {  }
-#about   { background-color: @bfh-red174; color: @bfh-white; }
-#contact { background-color: @bfh-yellow; border-top: 2px solid @bfh-white; }
-#leasing { background-color: @bfh-green; border-top: 2px solid @bfh-white; }
-
 /* Hero
   ==============================================*/
 #hero {
+  background: @bfh-slate url('../footer-rainbow-to-gray.png') center top no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   padding-bottom: 2rem;
 }
 
@@ -201,6 +210,10 @@ article h2 {
 
 #hero h1 { display: none; }
 #hero h2 {
+  background: @bfh-slate;
+  color: @bfh-white;
+  padding: 1.5rem 1rem 2rem 1rem;
+//   border: 1px solid;
   .league-gothic-stack;
   font-size: 1.8rem;
   letter-spacing: 0;
@@ -210,6 +223,9 @@ article h2 {
 }
 
 @media (min-width: 40em) {
+  #hero {
+    height: 100vh;
+  }
   #hero figure img {
     height: 300px;
     width: auto;
@@ -245,7 +261,10 @@ article h2 {
   padding: 1.25em;
 }
 
+#leasing { border-top: 2px solid @bfh-slate; }
+
 /* contact */
+/*
 #contact {
   background-image: url('../contact-flair-white.png');
   background-position: left bottom;
@@ -262,15 +281,17 @@ article h2 {
   margin-left: -1%;
   margin-right: -1%;
 }
+*/
 
 /* Footer
   -----------------------------------------------------*/
 
 footer {
-  background: @bfh-white url('../footer-slate-flair.png') center bottom no-repeat;
+  background: @bfh-slate url('../footer-rainbow-to-gray.png') center bottom no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   border-top: 2px solid @bfh-slate;
-  padding-top: 2rem;
+  padding-top: 5rem;
   padding-bottom: 6rem;
 }
 

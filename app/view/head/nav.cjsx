@@ -158,7 +158,6 @@ module.exports = React.createClass
 
     # Navigation template.
     <nav className={cx(navClasses)}>
-      <div className="nav-logo"></div>
       {ToggleEl}
       {NavList}
     </nav>

@@ -63,12 +63,12 @@
 }
 
 @bfh-black:       rgba(35,31,32,1);
-@bfh-white:       rgba(255,255,255,1);
+// @bfh-white:       rgba(255,255,255,1);
 @bfh-yellow:      rgba(237,170,0,1);
 @bfh-silver:      rgba(153,164,174,1);
 @bfh-green:       rgba(110,203,152,1);
 @bfh-blue:        rgba(97,126,149,1);
-@bfh-slate:       rgba(97,120,117,1);
+@bfh-slate-orig:  rgba(97,120,117,1);
 @bfh-red174:      rgba(154,56,32,1);
 @bfh-darkred:     rgba(123,64,57,1);
 @bfh-darkbrown:   rgba(92,73,37,1);
@@ -79,9 +79,8 @@
 @bfh-gray402:     rgba(159,149,139,1);
 @bfh-graywg8:     rgba(142,130,121,1);
 
-
-/** base-64 embedded images? **/
-/** is this smart? why did we do this for RG? **/
+@bfh-slate:       lighten(@bfh-black, 15%);
+@bfh-white:       lighten(@bfh-silver,33%);
 
 /** other general reusable classes/hacks **/
 .hide-text {

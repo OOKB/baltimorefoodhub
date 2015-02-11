@@ -12,7 +12,7 @@ module.exports = React.createClass
       <section className="container">
         <div className="group">
           <h2 className="four columns">Leasing</h2>
-          <div className="eight columns">
+          <div className="eight columns lead">
             <p className="message" dangerouslySetInnerHTML={__html: body} />
           </div>
         </div>
