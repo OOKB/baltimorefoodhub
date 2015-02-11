@@ -8,5 +8,5 @@ module.exports = React.createClass
     {handleToggle} = @props
 
     <button onClick={handleToggle} className="toggle" type="button">
-      Reveal Menu
+      Menu
     </button>

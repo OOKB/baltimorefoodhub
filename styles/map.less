@@ -4,13 +4,37 @@
   position: relative;
   border-top: 2px solid @bfh-black;
   border-bottom: 2px solid @bfh-black;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 #map h2 {
-  position: absolute;
-  top: 5rem;
-  left: 10%;
-  z-index: 99;
+  margin: 1rem 1rem 0;
+}
+
+@media (min-width: 30em) {
+  #map h2 {
+    position: absolute;
+    top: 1rem;
+    left: 10%;
+    z-index: 99;
+  }
+}
+@media (min-width: 50em) {
+  #map h2 {
+    top: 5rem;
+  }
+}
+
+#map .map-group {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  #map .map-group {
+    width: 140%;
+    margin-left: -10%;
+  }
 }
 
 #map .building {
@@ -33,10 +57,23 @@
 }
 
 #map .building:hover,
+#map .building:active,
 #map .building:hover::before,
-#map .building:hover::after {
+#map .building:hover::after,
+#map .building:active::before,
+#map .building:active::after {
   background: rgba(110,203,152,.66);
-  color: @bfh-white;
+}
+
+@media (min-width: 768px) {
+  #map .building:hover,
+  #map .building:active,
+  #map .building:hover::before,
+  #map .building:hover::after,
+  #map .building:active::before,
+  #map .building:active::after {
+    color: @bfh-white;
+  }
 }
 
 #map img {
@@ -191,30 +228,51 @@
 
 /* popup */
 .building-info {
-  background-image: url('/spiralpattern1-tall.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-left: 1px solid @bfh-black;
-  box-shadow: 0 -3px 6px rgba(35,31,32,.44);
-  margin-bottom: 0;
+  border: 1px solid @bfh-black;
+  color: @bfh-white;
+  margin: -5% 0 0;
   padding: 1em;
-  padding-top: 4rem;
-  width: 24%;
-  position: absolute;
-  top:      0;
-  bottom:   0;
-  right:    0;
+  position: relative;
   z-index:  199;
-  overflow: auto;
+  /**/
+  transition: all 400ms;
 }
 
-.building-info.bld0 { background-color: rgba(154,56,32,.8);   }
-.building-info.bld1 { background-color: rgba(237,170,0,.8);   }
-.building-info.bld2 { background-color: rgba(110,203,152,.8); }
-.building-info.bld3 { background-color: rgba(97,126,149,.8);  }
-.building-info.bld4 { background-color: rgba(153,164,174,.8); }
-.building-info.bld5 { background-color: rgba(92,73,37,.8);    }
+.building-info.bld0 { background-color: @bfh-red174;    }
+.building-info.bld1 { background-color: @bfh-yellow;    }
+.building-info.bld2 { background-color: @bfh-green;     }
+.building-info.bld3 { background-color: @bfh-blue;      }
+.building-info.bld4 { background-color: @bfh-silver;    }
+.building-info.bld5 { background-color: @bfh-darkbrown; }
+
+@media (min-width: 768px) {
+  .building-info {
+    background-image: url('/spiralpattern1-tall.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-left: 1px solid @bfh-black;
+    box-shadow: 0 -3px 6px rgba(35,31,32,.44);
+    color: @bfh-black;
+    margin: 0;
+    padding-top: 4rem;
+    position: absolute;
+    overflow: auto;
+    width: 24%;
+    top:      0;
+    right:    0;
+    bottom:   0;
+  }
+
+  .building-info.bld0 { background-color: rgba(154,56,32,.8);   }
+  .building-info.bld1 { background-color: rgba(237,170,0,.8);   }
+  .building-info.bld2 { background-color: rgba(110,203,152,.8); }
+  .building-info.bld3 { background-color: rgba(97,126,149,.8);  }
+  .building-info.bld4 { background-color: rgba(153,164,174,.8); }
+  .building-info.bld5 { background-color: rgba(92,73,37,.8);    }
+
+}
 
 .building-info li.close {
   position: absolute;
