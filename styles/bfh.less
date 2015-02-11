@@ -91,6 +91,47 @@ header nav ul li.active a:hover {
   color: @bfh-white;
 }
 
+/* Toggly-small screen menu things
+  =================================*/
+
+nav button.toggle {
+  display: block;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -35px;
+  height: 70px;
+  width: 70px;
+  z-index: 399;
+  /**/
+  background: transparent url('/bfh-logo-footer-slate.png') center center no-repeat;
+  background-size: 70px 70px;
+  border: none;
+  outline: none;
+  .hide-text;
+}
+
+@media (max-width: 767px) {
+  header { background: transparent; border: none; height: 0; }
+  header h1 { display: none; }
+
+  nav.show-menu ul {
+    background: @bfh-white;
+    border-top: 1px solid @bfh-black;
+    padding-bottom: 90px;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+  }
+
+  nav.show-menu ul li {
+    display: list-item;
+    text-align: left;
+    border-bottom: 1px solid @bfh-black;
+  }
+}
+
 /**/
 
 img {
@@ -107,8 +148,15 @@ img {
 
 #hero,
 main > article {
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  #hero,
+  main > article {
+    padding-top: 5rem;
+  }
 }
 
 section > h3 {
@@ -146,7 +194,7 @@ article h2 {
 
 #hero figure img {
   height: 300px;
-  width: 300px;
+  width: auto;
 }
 
 #hero h1 { display: none; }
