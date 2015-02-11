@@ -16,7 +16,7 @@ module.exports = React.createClass
             <h2 >Contact</h2>
             <aside>
               <p>{mailchimp}</p>
-              {MailchimpForm}
+              <MailchimpForm />
             </aside>
           </div>
           <div className="eight columns lead">
