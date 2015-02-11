@@ -4,6 +4,7 @@ React = require 'react'
 
 Head = require './head/head'
 Foot = require './foot/foot'
+Hero = require './hero/hero'
 Map = require './map/map'
 About = require './about/about'
 Contact = require './contact/contact'
@@ -27,6 +28,7 @@ module.exports = React.createClass
       </head>
       <body>
         <Head data={data} />
+        <Hero data={data} />
         <Map data={data} />
         <RouteHandler data={data} />
         <main>

@@ -91,26 +91,6 @@ header nav ul li.active a:hover {
   color: white;
 }
 
-header figure {
-  display: none;
-  height: 250px;
-  width: 250px;
-  overflow: hidden;
-  position: absolute;
-  top: .5rem;
-  left: 1rem;
-}
-
-@media (min-width: 40rem) {
-  header figure {
-    display: block;
-  }
-  header h1 {
-    display: none;
-  }
-}
-
-
 /**/
 
 img {
@@ -120,12 +100,12 @@ img {
 
 /* Main sections
   -----------------------------------------------------*/
-
 .container,
 .group {
   margin-bottom: 0;
 }
 
+#hero,
 main > article {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -149,9 +129,33 @@ article h2 {
   margin-top: 0.5rem !important;
 }
 
+#hero    {  }
 #about   { background-color: @bfh-red174; color: @bfh-white; }
 #contact { background-color: @bfh-yellow; border-top: 2px solid @bfh-white; }
 #leasing { background-color: @bfh-green; border-top: 2px solid white; }
+
+/* Hero
+  ==============================================*/
+#hero {
+  padding-bottom: 2rem;
+}
+
+#hero .container {
+  max-width: 45rem;
+}
+
+#hero figure img {
+  height: 300px;
+  width: 300px;
+}
+
+#hero h1 { display: none; }
+#hero h2 {
+  .league-gothic-stack;
+  font-size: 2.66rem;
+  letter-spacing: 0;
+  line-height: 1;
+}
 
 /* About stripe
   ==============================================*/

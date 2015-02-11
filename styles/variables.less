@@ -6,16 +6,48 @@
 
 /* @font-face declarations */
 @font-face {
-    font-family: 'DemingEP';
-    src: url('ff/deming_ep-webfont.eot');
-    src: url('ff/deming_ep-webfont.eot?#iefix') format('embedded-opentype'),
-         url('ff/deming_ep-webfont.woff2') format('woff2'),
-         url('ff/deming_ep-webfont.woff') format('woff'),
-         url('ff/deming_ep-webfont.ttf') format('truetype'),
-         url('ff/deming_ep-webfont.svg#deming_epregular') format('svg');
+  font-family: 'DemingEP';
+  src:  url('ff/deming_ep-webfont.eot');
+  src:  local('Deming EP'),
+        local('DemingEP'),
+        url('ff/deming_ep-webfont.eot?#iefix') format('embedded-opentype'),
+        url('ff/deming_ep-webfont.woff2') format('woff2'),
+        url('ff/deming_ep-webfont.woff') format('woff'),
+        url('ff/deming_ep-webfont.ttf') format('truetype'),
+        url('ff/deming_ep-webfont.svg#deming_epregular') format('svg');
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'LeagueGothic';
+  src: url('ff/leaguegothic-regular-webfont.eot');
+  src:  local('League Gothic'),
+        local('LeagueGothic-Regular'),
+        url('ff/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('ff/leaguegothic-regular-webfont.woff') format('woff'),
+        url('ff/leaguegothic-regular-webfont.ttf') format('truetype'),
+        url('ff/leaguegothic-regular-webfont.svg#league_gothic_italicregular') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'LeagueGothic';
+  src: url('ff/leaguegothic-italic-webfont.eot');
+  src:  local('League Gothic Italic'),
+        local('LeagueGothic-Italic'),
+        url('ff/leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('ff/leaguegothic-italic-webfont.woff') format('woff'),
+        url('ff/leaguegothic-italic-webfont.ttf') format('truetype'),
+        url('ff/leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+  font-style: italic;
+  font-weight: normal;
+}
+
+/**/
+/**/
+/**/
 
 .deming-stack {
   font-family: 'DemingEP', Calibri, Helvetica, Arial, Sans-serif;
@@ -24,6 +56,11 @@
 }
 
 @gentium-stack: 'Gentium Basic', Cambria, Georgia, Times, serif;
+
+.league-gothic-stack {
+  font-family: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
+  font-weight: normal;
+}
 
 @bfh-black:       rgba(35,31,32,1);
 @bfh-white:       rgba(255,255,255,1);
