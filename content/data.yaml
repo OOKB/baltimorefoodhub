@@ -19,7 +19,7 @@ wufoo:
 navOffsetDefault: -61
 nav:
   -
-    title: Map
+    title: Directory
     link: map
   -
     title: About
