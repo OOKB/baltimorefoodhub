@@ -2,8 +2,15 @@
 
 #map {
   position: relative;
-  border-top: 3px solid @bfh-black;
-  border-bottom: 3px solid @bfh-black;
+  border-top: 2px solid @bfh-black;
+  border-bottom: 2px solid @bfh-black;
+}
+
+#map h2 {
+  position: absolute;
+  top: 5rem;
+  left: 10%;
+  z-index: 99;
 }
 
 #map .building {
@@ -42,14 +49,14 @@
 }
 
 /** position and "design" the building overlays with CSS **/
-#map .bld0 {
+#map .building.bld0 {
   top:    10%;
   left:   35%;
   height: 25%;
   width:  11%;
 }
 
-#map .bld0::after {
+#map .building.bld0::after {
   position:   absolute;
   content:    '';
   width:  35%;
@@ -58,26 +65,26 @@
   right: -35%;
 }
 
-#map .bld0,
-#map .bld0::before,
-#map .bld0::after {
+#map .building.bld0,
+#map .building.bld0::before,
+#map .building.bld0::after {
   background: rgba(154,56,32,.1);
 }
 
-#map .bld0:hover,
-#map .bld0:hover::before,
-#map .bld0:hover::after {
+#map .building.bld0:hover,
+#map .building.bld0:hover::before,
+#map .building.bld0:hover::after {
   background: rgba(154,56,32,.66);
 }
 
-#map .bld1 {
+#map .building.bld1 {
   top:    10%;
   left:   53.75%;
   height: 22%;
   width:  9%;
 }
 
-#map .bld1::before {
+#map .building.bld1::before {
   position: absolute;
   content: '';
   height:  35%;
@@ -86,7 +93,7 @@
   right:   14%;
 }
 
-#map .bld1::after {
+#map .building.bld1::after {
   position:   absolute;
   content:    '';
   width:  26%;
@@ -95,53 +102,53 @@
   right: -26%;
 }
 
-#map .bld1,
-#map .bld1::before,
-#map .bld1::after {
+#map .building.bld1,
+#map .building.bld1::before,
+#map .building.bld1::after {
   background: rgba(237,170,0,.1);
 }
 
-#map .bld1:hover,
-#map .bld1:hover::before,
-#map .bld1:hover::after {
+#map .building.bld1:hover,
+#map .building.bld1:hover::before,
+#map .building.bld1:hover::after {
   background: rgba(237,170,0,.66);
 }
 
-#map .bld2 {
+#map .building.bld2 {
   top:    10%;
   left:   65.8%;
   height: 23%;
   width:  7.5%;
 }
 
-#map .bld3 {
+#map .building.bld3 {
   top:    50%;
   left:   11%;
   height: 20%;
   width:  23%;
 }
 
-#map .bld3,
-#map .bld3::before,
-#map .bld3::after {
+#map .building.bld3,
+#map .building.bld3::before,
+#map .building.bld3::after {
   background: rgba(97,126,149,.1);
 }
 
-#map .bld3:hover,
-#map .bld3:hover::before,
-#map .bld3:hover::after {
+#map .building.bld3:hover,
+#map .building.bld3:hover::before,
+#map .building.bld3:hover::after {
   background: rgba(97,126,149,.66);
 }
 
 /*foodtrucks*/
-#map .bld4 {
+#map .building.bld4 {
   top:    58.5%;
   left:   35%;
   height: 10.5%;
   width:  23%;
 }
 
-#map .bld4::after {
+#map .building.bld4::after {
   position: absolute;
   content: '';
   width:  40.5%;
@@ -150,53 +157,64 @@
   right:  0;
 }
 
-#map .bld4,
-#map .bld4::before,
-#map .bld4::after {
+#map .building.bld4,
+#map .building.bld4::before,
+#map .building.bld4::after {
   background: rgba(153,164,174,.1);
 }
 
-#map .bld4:hover,
-#map .bld4:hover::before,
-#map .bld4:hover::after {
+#map .building.bld4:hover,
+#map .building.bld4:hover::before,
+#map .building.bld4:hover::after {
   background: rgba(153,164,174,.66);
 }
 
 /*urban farming */
-#map .bld5 {
+#map .building.bld5 {
   top:    69.333%;
   left:   34.5%;
   height: 16%;
   width:  14.3333%;
 }
 
-#map .bld5,
-#map .bld5::before,
-#map .bld5::after {
+#map .building.bld5,
+#map .building.bld5::before,
+#map .building.bld5::after {
   background: rgba(92,73,37,.1);
 }
 
-#map .bld5:hover,
-#map .bld5:hover::before,
-#map .bld5:hover::after {
+#map .building.bld5:hover,
+#map .building.bld5:hover::before,
+#map .building.bld5:hover::after {
   background: rgba(92,73,37,.66);
 }
 
 /* popup */
 .building-info {
-  background: rgba(237,170,0,.8) url('/spiralpattern1-tall.png') center center no-repeat;
+  background-image: url('/spiralpattern1-tall.png');
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   border-left: 1px solid @bfh-black;
   box-shadow: 0 -3px 6px rgba(35,31,32,.44);
   margin-bottom: 0;
   padding: 1em;
+  padding-top: 4rem;
   width: 24%;
   position: absolute;
-  top:      3rem;
+  top:      0;
   bottom:   0;
   right:    0;
   z-index:  199;
+  overflow: auto;
 }
+
+.building-info.bld0 { background-color: rgba(154,56,32,.7);   }
+.building-info.bld1 { background-color: rgba(237,170,0,.8);   }
+.building-info.bld2 { background-color: rgba(110,203,152,.8); }
+.building-info.bld3 { background-color: rgba(97,126,149,.7);  }
+.building-info.bld4 { background-color: rgba(153,164,174,.8); }
+.building-info.bld5 { background-color: rgba(92,73,37,.7);    }
 
 .building-info li.close {
   position: absolute;

@@ -41,7 +41,7 @@ module.exports = React.createClass
       if activeBuildingId and activeBuildingId is id
         # If a building was clicked on show the information for that building.
         buildingInfoEl =
-          <ul className="building-info">
+          <ul className="building-info bld#{i}">
             <li className="close"><button onClick={onClickFunc}>Close</button></li>
             <li>Building #{i+1}</li>
             <li><h3>{title}</h3></li>
@@ -54,6 +54,7 @@ module.exports = React.createClass
       return <button key={id} className={className} onClick={onClickFunc}>{title}</button>
 
     <article id="map">
+      <h2>Directory</h2>
       {buildingElements}
       <img src="temporarymap-web-lighter.png" alt="map" />
       {buildingInfoEl}
