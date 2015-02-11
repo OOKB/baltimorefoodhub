@@ -245,12 +245,27 @@
 .building-info.bld4 { background-color: @bfh-silver;    }
 .building-info.bld5 { background-color: @bfh-darkbrown; }
 
+.building-info li.close {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  z-index: 209
+}
+
+.building-info h3 {
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .building-info {
+/*
     background-image: url('/spiralpattern1-tall.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+*/
     border: none;
     border-left: 1px solid @bfh-black;
     box-shadow: 0 -3px 6px rgba(35,31,32,.44);
@@ -265,26 +280,20 @@
     bottom:   0;
   }
 
-  .building-info.bld0 { background-color: rgba(154,56,32,.8);   }
+  .building-info.bld0 { background-color: rgba(154,56,32,.66);   }
   .building-info.bld1 { background-color: rgba(237,170,0,.8);   }
   .building-info.bld2 { background-color: rgba(110,203,152,.8); }
-  .building-info.bld3 { background-color: rgba(97,126,149,.8);  }
+  .building-info.bld3 { background-color: rgba(97,126,149,.66);  }
   .building-info.bld4 { background-color: rgba(153,164,174,.8); }
-  .building-info.bld5 { background-color: rgba(92,73,37,.8);    }
+  .building-info.bld5 { background-color: rgba(92,73,37,.5);    }
 
-}
+  .building-info li.close {
+    position: absolute;
+    top: 4rem;
+    right: 11px;
+    z-index: 209
+  }
 
-.building-info li.close {
-  position: absolute;
-  top: 11px;
-  right: 11px;
-  z-index: 209
-}
-
-.building-info h3 {
-  font-size: 1.1rem;
-  letter-spacing: 0;
-  font-weight: bold;
 }
 
 @media (min-width: 50em ) {
