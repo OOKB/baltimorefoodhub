@@ -6,7 +6,6 @@ module.exports = React.createClass
     <div id="mc_embed_signup">
       <form action="//baltimorefoodhub.us10.list-manage.com/subscribe/post?u=4370b0753e3481ebab6e8a40e&id=9a6a03e5ee" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" novalidate>
         <div id="mc_embed_signup_scroll">
-          <h3>Subscribe to our mailing list</h3>
           <div className="indicates-required">
             <span className="asterisk">*</span> indicates required
           </div>
@@ -14,14 +13,6 @@ module.exports = React.createClass
             <label htmlFor="mce-EMAIL">Email Address  <span className="asterisk">*</span>
             </label>
             <input type="email" defaultValue="" name="EMAIL" className="required email" id="mce-EMAIL" />
-          </div>
-          <div className="mc-field-group">
-            <label htmlFor="mce-FNAME">First Name </label>
-            <input type="text" defaultValue="" name="FNAME" id="mce-FNAME" />
-          </div>
-          <div className="mc-field-group">
-            <label htmlFor="mce-LNAME">Last Name </label>
-            <input type="text" defaultValue="" name="LNAME" id="mce-LNAME" />
           </div>
           <div id="mce-responses" className="clear">
             <div className="response" id="mce-error-response" style={{display: 'none'}} />

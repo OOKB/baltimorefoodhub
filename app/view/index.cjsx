@@ -32,9 +32,9 @@ module.exports = React.createClass
         <Map data={data} />
         <RouteHandler data={data} />
         <main>
-          <About data={data} />
-          <Contact data={data} />
+          ## <About data={data} /> // how do I comment something out?
           <Leasing data={data} />
+          ## <Contact data={data} /> // how do I comment something out?
         </main>
         <Foot data={data} />
         <script src={jsFilePath} type="text/javascript" />
