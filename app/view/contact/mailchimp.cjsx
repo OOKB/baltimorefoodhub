@@ -17,11 +17,11 @@ module.exports = React.createClass
           </div>
           <div className="mc-field-group">
             <label htmlFor="mce-FNAME">First Name </label>
-            <input type="text" defaultValue="" name="FNAME" className id="mce-FNAME" />
+            <input type="text" defaultValue="" name="FNAME" id="mce-FNAME" />
           </div>
           <div className="mc-field-group">
             <label htmlFor="mce-LNAME">Last Name </label>
-            <input type="text" defaultValue="" name="LNAME" className id="mce-LNAME" />
+            <input type="text" defaultValue="" name="LNAME" id="mce-LNAME" />
           </div>
           <div id="mce-responses" className="clear">
             <div className="response" id="mce-error-response" style={{display: 'none'}} />
