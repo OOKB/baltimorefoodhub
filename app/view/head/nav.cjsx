@@ -110,9 +110,14 @@ module.exports = React.createClass
       active: activeSection and activeSection == link
     if link
       classNames[link] = true
+    onClickFunc = (e) =>
+      if onClick
+        onClick(e)
+      if window.innerWidth < LARGE_SCREEN_SIZE
+        @setState menuOpen: false
 
     <li key={key} className={cx(classNames)}>
-      <a href={href} onClick={onClick} title={title}>{title}</a>
+      <a href={href} onClick={onClickFunc} title={title}>{title}</a>
     </li>
 
   render: ->
