@@ -756,11 +756,9 @@ article h2 {
 /* Footer
   -----------------------------------------------------*/
 footer {
-  /*
-  background: @bfh-slate url('../footer-rainbow-to-gray.png') center bottom no-repeat;
+  background: #4e4e4e url('/footer-rainbow-to-gray.png') center bottom no-repeat;
   background-size: cover;
   background-attachment: fixed;
-*/
   border-top: 2px solid #4e4e4e;
   padding-top: 5rem;
   padding-bottom: 6rem;
@@ -805,6 +803,19 @@ footer .footer-credits p {
   padding: .5em;
   text-transform: uppercase;
   font-family: helvetica, arial, sans-serif;
+}
+/** mailchimp styling **/
+.indicates-required {
+  font-size: .9em;
+  font-style: italic;
+}
+.asterisk,
+.indicates-required {
+  color: #7b4039;
+}
+.mc-field-group input {
+  display: block;
+  width: 100%;
 }
 /** Styles for the map **/
 #map {
@@ -1133,13 +1144,6 @@ footer .footer-credits p {
     opacity: 1;
   }
 }
-body footer {
-  background-image: url('../hero-bg-f7f8f8.png');
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-animation: flowingGradient 20s linear infinite;
-}
 @keyframes flowingGradient {
   0%,
   100% {
@@ -1167,6 +1171,9 @@ body footer {
   padding: 0;
 }
 #hero figure {
+  background: white;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
   position: absolute;
   text-align: center;
   z-index: 10;
@@ -1177,8 +1184,6 @@ body footer {
   left: 50%;
   margin-left: -150px;
   padding: 0;
-  border-radius: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 }
 #hero figure img {
   width: 300px;
@@ -1214,7 +1219,7 @@ body footer {
   width: 1px;
   height: 1px;
   font-size: 30px;
-  box-shadow: 0 0 2em 0.5em #f7f8f8;
+  box-shadow: 0 0 2em 0.5em #617e95;
 }
 #hero ul li {
   left: -50em;
@@ -1244,6 +1249,21 @@ body footer {
 }
 #hero ul li:nth-child(4) {
   transform: rotate(45deg);
+}
+#hero ul li:nth-child(2),
+#hero ul li:nth-child(2)::before,
+#hero ul li:nth-child(2)::after {
+  box-shadow: 0 0 2em 0.5em #edaa00;
+}
+#hero ul li:nth-child(3),
+#hero ul li:nth-child(3)::before,
+#hero ul li:nth-child(3)::after {
+  box-shadow: 0 0 2em 0.5em #9a3820;
+}
+#hero ul li:nth-child(4),
+#hero ul li:nth-child(4)::before,
+#hero ul li:nth-child(4)::after {
+  box-shadow: 0 0 2em 0.5em #6ecb98;
 }
 @keyframes rotate {
   100% {
