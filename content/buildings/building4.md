@@ -2,7 +2,7 @@
 building: 4
 title: Kitchen Incubator
 id: incubator
-sf: 15000
+sf: 15,000
 floors: 1 level
 tenants:
   - City Seeds

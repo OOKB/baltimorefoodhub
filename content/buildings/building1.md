@@ -3,7 +3,7 @@ building: 1
 title: Storage
 id: storage1
 leasing: the “Pumping Station”
-sf: 9961
+sf: 9,961
 floors: 1 level
 ceilings: 30ft
 loadingdock: true

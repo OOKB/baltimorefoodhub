@@ -47,7 +47,7 @@ mailchimpBlurb: 'Stay up to date on what’s happening.'
 builtDesigned:
   -
     name: OOKB
-    link: http://www.ookb.co
+    link: http://www.ookb.co/?utm_source=bfh
   -
     name: CAPE
-    link: http://www.cape.io
+    link: http://www.cape.io/?utm_source=bfh

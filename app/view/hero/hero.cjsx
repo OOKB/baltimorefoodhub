@@ -10,5 +10,8 @@ module.exports = React.createClass
         </figure>
         <h1 className="sitename">{title}</h1>
         <h2 className="sitename">{blurb}</h2>
+        <div className="wavewrap">
+          <div className="wave"></div>
+        </div>
       </section>
     </article>

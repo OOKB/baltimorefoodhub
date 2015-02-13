@@ -3,7 +3,7 @@ building: 2
 title: Storage
 id: storage2
 leasing: the “Machine Shop”
-sf: 13965
+sf: 13,965
 floors: 2 Levels + Mezzanine
 loadingdock: true
 ---

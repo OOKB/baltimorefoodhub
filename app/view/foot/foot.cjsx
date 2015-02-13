@@ -22,7 +22,7 @@ module.exports = React.createClass
           <div className="three columns">
             <div className="overlay">
               <figure className="logo text-center">
-                <img src="bfh-logo-footer-slate.png" alt="Baltimore Food Hub Logo, small version" />
+                <img src="bfh-smalllogo.png" alt="Baltimore Food Hub Logo, small version" />
               </figure>
               <ul>
                 <li>{title}</li>

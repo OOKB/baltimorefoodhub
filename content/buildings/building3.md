@@ -2,7 +2,7 @@
 building: 3
 title: Coworking
 id: coworking
-sf: 9888
+sf: 9,888
 floors: 2 Levels
 tenants:
   - Maryland Farmers Market Association
