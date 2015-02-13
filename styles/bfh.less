@@ -5,13 +5,14 @@
 /* Custom Baltimore Food Hub
 ========================================================================================= */
 body {
-  background: @bfh-white;
   margin: 0;
   padding: 0;
   font-family: @gentium-stack;
   color: @bfh-slate;
-  /* temp for testing */
-//   background: white url('../bfh-8p-baseline.png') top left repeat;
+  /**/
+  background: #4e4e4e url('/footer-rainbow-to-gray.png') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Typograhy, etc.
@@ -193,11 +194,7 @@ article h2 {
 /* Hero
   ==============================================*/
 #hero {
-/*
-  background: @bfh-slate url('../footer-rainbow-to-gray.png') left bottom no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-*/
+  background: transparent;
   padding-bottom: 2rem;
 }
 
@@ -215,7 +212,6 @@ article h2 {
   background: @bfh-slate;
   color: @bfh-white;
   padding: 1.5rem 1rem 2rem 1rem;
-//   border: 1px solid;
   .league-gothic-stack;
   font-size: 1.8rem;
   letter-spacing: 0;
@@ -226,52 +222,52 @@ article h2 {
 
 @media (min-width: 40em) {
   #hero {
+    position: relative;
     height: 100vh;
+    padding: 0;
+  }
+  #hero figure {
+    background: @bfh-slate;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,.35);
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+    width: 300px;
+    height: 300px;
+    top:50vh;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+    padding: 0;
   }
   #hero figure img {
     height: 300px;
     width: auto;
   }
   #hero h2 {
+    border-radius: .5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.35);
     font-size: 2.66rem;
     max-width: 100%;
-    margin: 0;
+    height: 300px;
+    position: absolute;
+    z-index: 10;
+    top: 50vh;
+    margin-top: -150px !important;
   }
 }
 
-/* About stripe
+/* Leasing stripe
   ==============================================*/
-#about {
-  background-image: url('../about-flair-white.png');
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-@media (min-width: 30rem) {
-  #about {
-    background-size: 60%;
-  }
-}
-
-#about div.bordered {
-  background: @bfh-red174;
-  border: 15px solid @bfh-white;
-  border-bottom-width: 30px;
-  color: @bfh-white;
-  font-weight: bold;
-  padding: 1.25em;
-}
-
+#map, #leasing { background: @bfh-white; }
 #leasing { border-top: 2px solid @bfh-slate; }
 
 /* Footer
   -----------------------------------------------------*/
 
 footer {
-  background: @bfh-slate url('/footer-rainbow-to-gray.png') center bottom no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background: transparent;
   border-top: 2px solid @bfh-slate;
   padding-top: 5rem;
   padding-bottom: 6rem;

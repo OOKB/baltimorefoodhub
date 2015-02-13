@@ -13,7 +13,7 @@
   http://davidwalsh.name/css-spin-revisited
 */
 
-/* ridiculous animation idea */
+/* ridiculous gradient idea */
 /*
   background-image:
     linear-gradient(
@@ -35,6 +35,24 @@
   }
 }
 
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100%  {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slateFade {
+  0% {
+    background-color: @bfh-slate;
+  }
+  100%  {
+    background-color: rgba(0,0,0,0);
+  }
+}
+
 @keyframes flowingGradient {
   0%, 100% {
     background-color: @bfh-red174;
@@ -53,6 +71,29 @@
   }
 }
 
+@keyframes rotate {
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes fadingOut {
+  0%, 20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .1;
+  }
+}
+
+/** slowly fadein all the elements on the homepage **/
+#hero        { animation: slateFade 2s 0 ease-in; }
+#hero figure { animation: fadein 2s 2s ease-in, fadeout 2s 5s ease-in; }
+#hero h2     { animation: fadein 2s 7s ease-in; }
+header       { animation: fadein 2s 9s ease-in; }
+
+/** Crazy spirally idea **/
+/*
 #hero {
   margin: 0;
   overflow: hidden;
@@ -167,18 +208,4 @@
 #hero ul li:nth-child(4)::after {
   box-shadow: 0 0 2em .5em @bfh-green;
 }
-
-@keyframes rotate {
-  100% {
-    transform: rotate(90deg);
-  }
-}
-
-@keyframes fadingOut {
-  0%, 20% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .1;
-  }
-}
+*/
