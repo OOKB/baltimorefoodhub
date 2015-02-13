@@ -22,13 +22,15 @@ module.exports = React.createClass
           <div className="three columns">
             <div className="overlay">
               <figure className="logo text-center">
-                <img src="bfh-smalllogo-4e4e4e.png" alt="Baltimore Food Hub Logo, small version" />
+                <img src="bfh-logo-gradient.png" alt="Baltimore Food Hub Logo" />
               </figure>
               <ul>
                 <li><strong>{title}</strong></li>
                 <li>{address}</li>
                 <li><Email email={email} /></li>
               </ul>
+              <p className="message">{msg}</p>
+              <p><a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
             </div>
           </div>
 
@@ -49,16 +51,6 @@ module.exports = React.createClass
               <strong>Newsletter</strong>
               <p>{mailchimpBlurb}</p>
               <MailchimpForm />
-            </div>
-          </div>
-
-        </div>
-        <div className="group">
-
-          <div className="three columns">
-            <div className="overlay">
-              <p className="message">{msg}</p>
-              <p><a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
             </div>
           </div>
 

@@ -269,11 +269,9 @@ article h2 {
   -----------------------------------------------------*/
 
 footer {
-/*
-  background: @bfh-slate url('../footer-rainbow-to-gray.png') center bottom no-repeat;
+  background: @bfh-slate url('/footer-rainbow-to-gray.png') center bottom no-repeat;
   background-size: cover;
   background-attachment: fixed;
-*/
   border-top: 2px solid @bfh-slate;
   padding-top: 5rem;
   padding-bottom: 6rem;
@@ -325,6 +323,17 @@ footer .footer-credits p {
   padding: .5em;
   text-transform: uppercase;
   font-family: helvetica, arial, sans-serif;
+}
+
+/** mailchimp styling **/
+.indicates-required { font-size: .9em; font-style: italic; }
+.asterisk,
+.indicates-required {
+  color: @bfh-darkred;
+}
+.mc-field-group input {
+  display: block;
+  width: 100%;
 }
 
 /* -----------------------------------------------------*/
