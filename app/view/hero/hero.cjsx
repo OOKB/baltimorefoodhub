@@ -9,9 +9,12 @@ module.exports = React.createClass
           <img src="bfh-logo-gradient.png" alt="Baltimore Food Hub Logo" />
         </figure>
         <h1 className="sitename">{title}</h1>
-        <h2 className="sitename">{blurb}</h2>
-        <div className="wavewrap">
-          <div className="wave"></div>
-        </div>
+        <h2 className="siteblurb">{blurb}</h2>
       </section>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </article>
