@@ -225,6 +225,7 @@ button.close {
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
 }
@@ -1091,15 +1092,12 @@ footer .footer-credits p {
 */
 /* help: http://codepen.io/bjornmeansbear/pen/gbveXZ */
 #hero .logowrap img {
-  height: 304px;
-  width: auto;
-  margin-top: -2px;
-  margin-left: -2px;
+  max-width: 100%;
+  width: 300px;
+  height: auto;
 }
 #hero .logowrap,
-#hero .circle,
-#hero .circle::before,
-#hero .circle::after {
+#hero .circle {
   background: transparent;
   border-radius: 100%;
   display: block;
@@ -1112,7 +1110,6 @@ footer .footer-credits p {
   margin-top: -150px;
   left: 50%;
   margin-left: -150px;
-  z-index: 0;
 }
 #hero .logowrap {
   background: #4e4e4e;
@@ -1128,15 +1125,7 @@ footer .footer-credits p {
   overflow: hidden;
   z-index: -1;
 }
-#hero .circle::before,
-#hero .circle::after {
-  content: ' ';
-  height: 294px;
-  width: 294px;
-}
-#hero .circle,
-#hero .circle::before,
-#hero .circle::after {
+#hero .circle {
   border: 3px solid #f7f8f8;
   text-indent: -300%;
   overflow: hidden;
@@ -1144,156 +1133,126 @@ footer .footer-credits p {
   z-index: 0;
 }
 #hero .circle:nth-child(1) {
-  -webkit-animation: scaleup5 12s 0s linear infinite;
-  -moz-animation: scaleup5 12s 0s linear infinite;
-  animation: scaleup5 12s 0s linear infinite;
-}
-#hero .circle:nth-child(1)::before {
-  -webkit-animation: scaleup5 12s .5s linear infinite;
-  -moz-animation: scaleup5 12s .5s linear infinite;
-  animation: scaleup5 12s .5s linear infinite;
-}
-#hero .circle:nth-child(1)::after {
-  -webkit-animation: scaleup5 12s 1s linear infinite;
-  -moz-animation: scaleup5 12s 1s linear infinite;
-  animation: scaleup5 12s 1s linear infinite;
+  -webkit-animation: rainbowRinglet 12s 0s linear infinite;
+  -moz-animation: rainbowRinglet 12s 0s linear infinite;
+  animation: rainbowRinglet 12s 0s linear infinite;
 }
 #hero .circle:nth-child(2) {
-  -webkit-animation: scaleup5 12s 1.5s linear infinite;
-  -moz-animation: scaleup5 12s 1.5s linear infinite;
-  animation: scaleup5 12s 1.5s linear infinite;
-}
-#hero .circle:nth-child(2)::before {
-  -webkit-animation: scaleup5 12s 2s linear infinite;
-  -moz-animation: scaleup5 12s 2s linear infinite;
-  animation: scaleup5 12s 2s linear infinite;
-}
-#hero .circle:nth-child(2)::after {
-  -webkit-animation: scaleup5 12s 2.5s linear infinite;
-  -moz-animation: scaleup5 12s 2.5s linear infinite;
-  animation: scaleup5 12s 2.5s linear infinite;
+  -webkit-animation: rainbowRinglet 12s .5s linear infinite;
+  -moz-animation: rainbowRinglet 12s .5s linear infinite;
+  animation: rainbowRinglet 12s .5s linear infinite;
 }
 #hero .circle:nth-child(3) {
-  -webkit-animation: scaleup5 12s 3s linear infinite;
-  -moz-animation: scaleup5 12s 3s linear infinite;
-  animation: scaleup5 12s 3s linear infinite;
-}
-#hero .circle:nth-child(3)::before {
-  -webkit-animation: scaleup5 12s 3.5s linear infinite;
-  -moz-animation: scaleup5 12s 3.5s linear infinite;
-  animation: scaleup5 12s 3.5s linear infinite;
-}
-#hero .circle:nth-child(3)::after {
-  -webkit-animation: scaleup5 12s 4s linear infinite;
-  -moz-animation: scaleup5 12s 4s linear infinite;
-  animation: scaleup5 12s 4s linear infinite;
+  -webkit-animation: rainbowRinglet 12s 1s linear infinite;
+  -moz-animation: rainbowRinglet 12s 1s linear infinite;
+  animation: rainbowRinglet 12s 1s linear infinite;
 }
 #hero .circle:nth-child(4) {
-  -webkit-animation: scaleup5 12s 4.5s linear infinite;
-  -moz-animation: scaleup5 12s 4.5s linear infinite;
-  animation: scaleup5 12s 4.5s linear infinite;
-}
-#hero .circle:nth-child(4)::before {
-  -webkit-animation: scaleup5 12s 5s linear infinite;
-  -moz-animation: scaleup5 12s 5s linear infinite;
-  animation: scaleup5 12s 5s linear infinite;
-}
-#hero .circle:nth-child(4)::after {
-  -webkit-animation: scaleup5 12s 5.5s linear infinite;
-  -moz-animation: scaleup5 12s 5.5s linear infinite;
-  animation: scaleup5 12s 5.5s linear infinite;
+  -webkit-animation: rainbowRinglet 12s 1.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 1.5s linear infinite;
+  animation: rainbowRinglet 12s 1.5s linear infinite;
 }
 #hero .circle:nth-child(5) {
-  -webkit-animation: scaleup5 12s 6s linear infinite;
-  -moz-animation: scaleup5 12s 6s linear infinite;
-  animation: scaleup5 12s 6s linear infinite;
-}
-#hero .circle:nth-child(5)::before {
-  -webkit-animation: scaleup5 12s 6.5s linear infinite;
-  -moz-animation: scaleup5 12s 6.5s linear infinite;
-  animation: scaleup5 12s 6.5s linear infinite;
-}
-#hero .circle:nth-child(5)::after {
-  -webkit-animation: scaleup5 12s 7s linear infinite;
-  -moz-animation: scaleup5 12s 7s linear infinite;
-  animation: scaleup5 12s 7s linear infinite;
+  -webkit-animation: rainbowRinglet 12s 2s linear infinite;
+  -moz-animation: rainbowRinglet 12s 2s linear infinite;
+  animation: rainbowRinglet 12s 2s linear infinite;
 }
 #hero .circle:nth-child(6) {
-  -webkit-animation: scaleup5 12s 7.5s linear infinite;
-  -moz-animation: scaleup5 12s 7.5s linear infinite;
-  animation: scaleup5 12s 7.5s linear infinite;
-}
-#hero .circle:nth-child(6)::before {
-  -webkit-animation: scaleup5 12s 8s linear infinite;
-  -moz-animation: scaleup5 12s 8s linear infinite;
-  animation: scaleup5 12s 8s linear infinite;
-}
-#hero .circle:nth-child(6)::after {
-  -webkit-animation: scaleup5 12s 8.5s linear infinite;
-  -moz-animation: scaleup5 12s 8.5s linear infinite;
-  animation: scaleup5 12s 8.5s linear infinite;
+  -webkit-animation: rainbowRinglet 12s 2.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 2.5s linear infinite;
+  animation: rainbowRinglet 12s 2.5s linear infinite;
 }
 #hero .circle:nth-child(7) {
-  -webkit-animation: scaleup5 12s 9s linear infinite;
-  -moz-animation: scaleup5 12s 9s linear infinite;
-  animation: scaleup5 12s 9s linear infinite;
-}
-#hero .circle:nth-child(7)::before {
-  -webkit-animation: scaleup5 12s 9.5s linear infinite;
-  -moz-animation: scaleup5 12s 9.5s linear infinite;
-  animation: scaleup5 12s 9.5s linear infinite;
-}
-#hero .circle:nth-child(7)::after {
-  -webkit-animation: scaleup5 12s 10s linear infinite;
-  -moz-animation: scaleup5 12s 10s linear infinite;
-  animation: scaleup5 12s 10s linear infinite;
+  -webkit-animation: rainbowRinglet 12s 3s linear infinite;
+  -moz-animation: rainbowRinglet 12s 3s linear infinite;
+  animation: rainbowRinglet 12s 3s linear infinite;
 }
 #hero .circle:nth-child(8) {
-  -webkit-animation: scaleup5 12s 10.5s linear infinite;
-  -moz-animation: scaleup5 12s 10.5s linear infinite;
-  animation: scaleup5 12s 10.5s linear infinite;
-}
-#hero .circle:nth-child(8)::before {
-  -webkit-animation: scaleup5 12s 11s linear infinite;
-  -moz-animation: scaleup5 12s 11s linear infinite;
-  animation: scaleup5 12s 11s linear infinite;
-}
-#hero .circle:nth-child(8)::after {
-  -webkit-animation: scaleup5 12s 11.5s linear infinite;
-  -moz-animation: scaleup5 12s 11.5s linear infinite;
-  animation: scaleup5 12s 11.5s linear infinite;
+  -webkit-animation: rainbowRinglet 12s 3.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 3.5s linear infinite;
+  animation: rainbowRinglet 12s 3.5s linear infinite;
 }
 #hero .circle:nth-child(9) {
-  -webkit-animation: scaleup5 12s 12s linear infinite;
-  -moz-animation: scaleup5 12s 12s linear infinite;
-  animation: scaleup5 12s 12s linear infinite;
-}
-#hero .circle:nth-child(9)::before {
-  -webkit-animation: scaleup5 12s 12.5s linear infinite;
-  -moz-animation: scaleup5 12s 12.5s linear infinite;
-  animation: scaleup5 12s 12.5s linear infinite;
-}
-#hero .circle:nth-child(9)::after {
-  -webkit-animation: scaleup5 12s 13s linear infinite;
-  -moz-animation: scaleup5 12s 13s linear infinite;
-  animation: scaleup5 12s 13s linear infinite;
+  -webkit-animation: rainbowRinglet 12s 4s linear infinite;
+  -moz-animation: rainbowRinglet 12s 4s linear infinite;
+  animation: rainbowRinglet 12s 4s linear infinite;
 }
 #hero .circle:nth-child(10) {
-  -webkit-animation: scaleup5 12s 13.5s linear infinite;
-  -moz-animation: scaleup5 12s 13.5s linear infinite;
-  animation: scaleup5 12s 13.5s linear infinite;
+  -webkit-animation: rainbowRinglet 12s 4.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 4.5s linear infinite;
+  animation: rainbowRinglet 12s 4.5s linear infinite;
 }
-#hero .circle:nth-child(10)::before {
-  -webkit-animation: scaleup5 12s 14s linear infinite;
-  -moz-animation: scaleup5 12s 14s linear infinite;
-  animation: scaleup5 12s 14s linear infinite;
+#hero .circle:nth-child(11) {
+  -webkit-animation: rainbowRinglet 12s 5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 5s linear infinite;
+  animation: rainbowRinglet 12s 5s linear infinite;
 }
-#hero .circle:nth-child(10)::after {
-  -webkit-animation: scaleup5 12s 14.5s linear infinite;
-  -moz-animation: scaleup5 12s 14.5s linear infinite;
-  animation: scaleup5 12s 14.5s linear infinite;
+#hero .circle:nth-child(12) {
+  -webkit-animation: rainbowRinglet 12s 5.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 5.5s linear infinite;
+  animation: rainbowRinglet 12s 5.5s linear infinite;
 }
-@-moz-keyframes scaleup5 {
+#hero .circle:nth-child(13) {
+  -webkit-animation: rainbowRinglet 12s 6s linear infinite;
+  -moz-animation: rainbowRinglet 12s 6s linear infinite;
+  animation: rainbowRinglet 12s 6s linear infinite;
+}
+#hero .circle:nth-child(14) {
+  -webkit-animation: rainbowRinglet 12s 6.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 6.5s linear infinite;
+  animation: rainbowRinglet 12s 6.5s linear infinite;
+}
+#hero .circle:nth-child(15) {
+  -webkit-animation: rainbowRinglet 12s 7s linear infinite;
+  -moz-animation: rainbowRinglet 12s 7s linear infinite;
+  animation: rainbowRinglet 12s 7s linear infinite;
+}
+#hero .circle:nth-child(16) {
+  -webkit-animation: rainbowRinglet 12s 7.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 7.5s linear infinite;
+  animation: rainbowRinglet 12s 7.5s linear infinite;
+}
+#hero .circle:nth-child(17) {
+  -webkit-animation: rainbowRinglet 12s 8s linear infinite;
+  -moz-animation: rainbowRinglet 12s 8s linear infinite;
+  animation: rainbowRinglet 12s 8s linear infinite;
+}
+#hero .circle:nth-child(18) {
+  -webkit-animation: rainbowRinglet 12s 8.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 8.5s linear infinite;
+  animation: rainbowRinglet 12s 8.5s linear infinite;
+}
+#hero .circle:nth-child(19) {
+  -webkit-animation: rainbowRinglet 12s 9s linear infinite;
+  -moz-animation: rainbowRinglet 12s 9s linear infinite;
+  animation: rainbowRinglet 12s 9s linear infinite;
+}
+#hero .circle:nth-child(20) {
+  -webkit-animation: rainbowRinglet 12s 9.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 9.5s linear infinite;
+  animation: rainbowRinglet 12s 9.5s linear infinite;
+}
+#hero .circle:nth-child(21) {
+  -webkit-animation: rainbowRinglet 12s 10s linear infinite;
+  -moz-animation: rainbowRinglet 12s 10s linear infinite;
+  animation: rainbowRinglet 12s 10s linear infinite;
+}
+#hero .circle:nth-child(22) {
+  -webkit-animation: rainbowRinglet 12s 10.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 10.5s linear infinite;
+  animation: rainbowRinglet 12s 10.5s linear infinite;
+}
+#hero .circle:nth-child(23) {
+  -webkit-animation: rainbowRinglet 12s 11s linear infinite;
+  -moz-animation: rainbowRinglet 12s 11s linear infinite;
+  animation: rainbowRinglet 12s 11s linear infinite;
+}
+#hero .circle:nth-child(24) {
+  -webkit-animation: rainbowRinglet 12s 11.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 11.5s linear infinite;
+  animation: rainbowRinglet 12s 11.5s linear infinite;
+}
+@-moz-keyframes rainbowRinglet {
   0% {
     width: 300px;
     height: 300px;
@@ -1323,7 +1282,7 @@ footer .footer-credits p {
     border-color: #4e4e4e;
   }
 }
-@-webkit-keyframes scaleup5 {
+@-webkit-keyframes rainbowRinglet {
   0% {
     width: 300px;
     height: 300px;
@@ -1353,7 +1312,7 @@ footer .footer-credits p {
     border-color: #4e4e4e;
   }
 }
-@keyframes scaleup5 {
+@keyframes rainbowRinglet {
   0% {
     width: 300px;
     height: 300px;
@@ -1394,7 +1353,13 @@ footer .footer-credits p {
   padding: 0;
 }
 #hero .bottom {
-  background: #66665d;
+  background-color: #edaa00;
+  /*
+  background-image: url('/spiralpattern1-wide.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+*/
   border-top: 2px solid #4e4e4e;
   margin: 95vh 0 0 0;
   padding: 0;
@@ -1406,7 +1371,11 @@ footer .footer-credits p {
   font-family: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
   font-weight: normal;
   letter-spacing: 0;
-  color: #f7f8f8;
+  color: #4e4e4e;
+  /*
+  color: @bfh-yellow;
+  text-shadow: 1px 1px 1px @bfh-slate, -1px -1px 1px @bfh-white;
+*/
   font-size: 3rem;
   text-align: center;
   line-height: 1;
