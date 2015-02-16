@@ -1365,13 +1365,14 @@ footer .footer-credits p {
   padding: 0;
 }
 #hero .bottom .container {
-  padding: 2.25rem 2.25rem 3.5rem 2.25rem;
+  padding: 3rem 2.25rem 5rem 2.25rem;
 }
 #hero .bottom h2 {
   font-family: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
   font-weight: normal;
   letter-spacing: 0;
   color: #4e4e4e;
+  /* help: http://www.css3generator.in/text-shadow.html */
   /*
   color: @bfh-yellow;
   text-shadow: 1px 1px 1px @bfh-slate, -1px -1px 1px @bfh-white;
