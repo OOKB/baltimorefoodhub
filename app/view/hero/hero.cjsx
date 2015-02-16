@@ -4,17 +4,32 @@ module.exports = React.createClass
   render: ->
     {title, tagline, blurb} = @props.data
     <article id="hero">
-      <section className="container text-center">
-        <figure className="logo">
-          <img src="bfh-logo-gradient.png" alt="Baltimore Food Hub Logo" />
-        </figure>
-        <h1 className="sitename">{title}</h1>
-        <h2 className="siteblurb">{blurb}</h2>
+
+      <h1>{title}</h1>
+
+      <section className="top">
+        <div className="circlewrap">
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+        </div>
+        <div className="logowrap">
+          <img src="bfh-logo-white-trans.png" alt="Baltimore Food Hub Logo" />
+        </div>
+
       </section>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+
+      <section className="bottom">
+        <div className="container">
+          <h2>{blurb}</h2>
+        </div>
+      </section>
+
     </article>
