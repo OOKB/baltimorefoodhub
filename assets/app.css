@@ -493,18 +493,46 @@ ul {
   margin-bottom: 1em;
   line-height: normal;
 }
+/* Centering in the unknown */
+/* from http://css-tricks.com/centering-in-the-unknown/
+  ---------------------------------------------------------*/
+/* This parent can be any width and height */
+.block {
+  text-align: center;
+}
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+/* The element to be centered, can
+   also be of any width and height */
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+}
 /* -----------------------------------------------------*/
 /* ------------------->>> bfh.less <<<-------------------*/
 /* -----------------------------------------------------*/
 /* Custom Baltimore Food Hub
 ========================================================================================= */
 body {
-  background: #f7f8f8;
   margin: 0;
   padding: 0;
   font-family: 'Gentium Basic', Cambria, Georgia, Times, serif;
   color: #4e4e4e;
-  /* temp for testing */
+  /**/
+  background: #4e4e4e;
+  /*
+  background: #4e4e4e url('/footer-rainbow-to-gray.png') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+*/
 }
 /* Typograhy, etc.
 ====================================================================== */
@@ -527,7 +555,7 @@ a {
 header {
   background: #f7f8f8;
   border-bottom: 2px solid #4e4e4e;
-  height: 3rem;
+  height: 2.33rem;
   width: 100%;
   position: fixed;
   top: 0;
@@ -537,9 +565,9 @@ header {
   vertical-align: middle;
 }
 header h1 {
-  font-size: 1.66rem;
+  font-size: 1.25rem;
   letter-spacing: 1px;
-  line-height: 3rem;
+  line-height: 2.33rem;
   text-decoration: none;
   float: left;
   padding-left: 1rem;
@@ -573,7 +601,7 @@ header nav ul li a {
   font-style: normal;
   font-weight: normal;
   letter-spacing: 1px;
-  line-height: calc(3rem - 2px);
+  line-height: calc(2.33rem - 2px);
   padding-left: .75rem;
   padding-right: .75rem;
   text-decoration: none;
@@ -652,13 +680,11 @@ img {
 .group {
   margin-bottom: 0;
 }
-#hero,
 main > article {
   padding-top: 2rem;
   padding-bottom: 5rem;
 }
 @media (min-width: 768px) {
-  #hero,
   main > article {
     padding-top: 5rem;
   }
@@ -683,72 +709,11 @@ article h2 {
   letter-spacing: 2px;
   margin-top: 0.5rem !important;
 }
-/* Hero
+/* Leasing stripe
   ==============================================*/
-#hero {
-  /*
-  background: @bfh-slate url('../footer-rainbow-to-gray.png') left bottom no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-*/
-  padding-bottom: 2rem;
-}
-#hero .container {
-  max-width: 45rem;
-}
-#hero figure img {
-  width: 200px;
-  height: auto;
-}
-#hero h1 {
-  display: none;
-}
-#hero h2 {
-  background: #4e4e4e;
-  color: #f7f8f8;
-  padding: 1.5rem 1rem 2rem 1rem;
-  font-family: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
-  font-weight: normal;
-  font-size: 1.8rem;
-  letter-spacing: 0;
-  line-height: 1;
-  max-width: 90%;
-  margin: 0 auto;
-}
-@media (min-width: 40em) {
-  #hero {
-    height: 100vh;
-  }
-  #hero figure img {
-    height: 300px;
-    width: auto;
-  }
-  #hero h2 {
-    font-size: 2.66rem;
-    max-width: 100%;
-    margin: 0;
-  }
-}
-/* About stripe
-  ==============================================*/
-#about {
-  background-image: url('../about-flair-white.png');
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-@media (min-width: 30rem) {
-  #about {
-    background-size: 60%;
-  }
-}
-#about div.bordered {
-  background: #9a3820;
-  border: 15px solid #f7f8f8;
-  border-bottom-width: 30px;
-  color: #f7f8f8;
-  font-weight: bold;
-  padding: 1.25em;
+#map,
+#leasing {
+  background: #f7f8f8;
 }
 #leasing {
   border-top: 2px solid #4e4e4e;
@@ -756,9 +721,7 @@ article h2 {
 /* Footer
   -----------------------------------------------------*/
 footer {
-  background: #4e4e4e url('/footer-rainbow-to-gray.png') center bottom no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background: transparent;
   border-top: 2px solid #4e4e4e;
   padding-top: 5rem;
   padding-bottom: 6rem;
@@ -1112,19 +1075,9 @@ footer .footer-credits p {
   color: #f7f8f8;
 }
 /* -----------------------------------------------------*/
-/* ---------------->>> /END bfh.less <<<-----------------*/
+/* ---------------->>> ANIMATIONS.less <<<-----------------*/
 /* -----------------------------------------------------*/
-/*
-  Help:
-  http://css-tricks.com/almanac/properties/a/animation/
-  http://css-tricks.com/snippets/css/keyframe-animation-syntax/
-  http://css-tricks.com/css-animation-tricks/
-  http://css3please.com/
-  http://css-tricks.com/css3-gradients/
-  http://demosthenes.info/samples/polina.html
-  http://davidwalsh.name/css-spin-revisited
-*/
-/* ridiculous animation idea */
+/* ridiculous gradient idea */
 /*
   background-image:
     linear-gradient(
@@ -1136,146 +1089,327 @@ footer .footer-credits p {
       @bfh-slate,
     );
 */
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+/* help: http://codepen.io/bjornmeansbear/pen/gbveXZ */
+#hero .logowrap img {
+  height: 304px;
+  width: auto;
+  margin-top: -2px;
+  margin-left: -2px;
 }
-@keyframes flowingGradient {
-  0%,
-  100% {
-    background-color: #9a3820;
-  }
-  20% {
-    background-color: #edaa00;
-  }
-  40% {
-    background-color: #6ecb98;
-  }
-  60% {
-    background-color: #99a4ae;
-  }
-  80% {
-    background-color: #4e4e4e;
-  }
-}
-#hero {
-  margin: 0;
-  overflow: hidden;
-  background: #4e4e4e url('/hero-bg-f7f8f8.png') center center no-repeat;
-  background: radial-gradient(#f7f8f8 100px, #99a4ae);
-  background-size: cover;
-  padding: 0;
-}
-#hero figure {
-  background: white;
+#hero .logowrap,
+#hero .circle,
+#hero .circle::before,
+#hero .circle::after {
+  background: transparent;
   border-radius: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
-  position: absolute;
-  text-align: center;
-  z-index: 10;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: fixed;
   width: 300px;
   height: 300px;
   top: 50vh;
-  margin-top: -300px;
+  margin-top: -150px;
   left: 50%;
   margin-left: -150px;
-  padding: 0;
+  z-index: 0;
 }
-#hero figure img {
-  width: 300px;
-  height: auto;
+#hero .logowrap {
+  background: #4e4e4e;
+  box-shadow: 0 0 10px #4e4e4e;
+  z-index: 0;
 }
-#hero h2 {
-  position: absolute;
-  z-index: 10;
-  top: 55vh;
-  font-size: 5vh;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
-}
-#hero ul {
-  position: absolute;
-  top: -300px;
+#hero .circlewrap {
+  position: fixed;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;
-  padding: 0;
-  width: 0;
-  height: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+#hero .circle::before,
+#hero .circle::after {
+  content: ' ';
+  height: 294px;
+  width: 294px;
+}
+#hero .circle,
+#hero .circle::before,
+#hero .circle::after {
+  border: 3px solid #f7f8f8;
+  text-indent: -300%;
+  overflow: hidden;
+  text-wrap: nowrap;
   z-index: 0;
-  list-style: none;
-  animation: rotate 72s linear infinite;
 }
-#hero ul li,
-#hero ul li::before,
-#hero ul li::after {
-  position: absolute;
-  border: 0 solid transparent;
-  border-width: 2em 50em;
-  width: 1px;
-  height: 1px;
-  font-size: 30px;
-  box-shadow: 0 0 2em 0.5em #617e95;
+#hero .circle:nth-child(1) {
+  -webkit-animation: scaleup5 12s 0s linear infinite;
+  -moz-animation: scaleup5 12s 0s linear infinite;
+  animation: scaleup5 12s 0s linear infinite;
 }
-#hero ul li {
-  left: -50em;
-  top: 50%;
-  margin-top: -2em;
-  transform: rotate(0.1deg);
-  opacity: .1;
+#hero .circle:nth-child(1)::before {
+  -webkit-animation: scaleup5 12s .5s linear infinite;
+  -moz-animation: scaleup5 12s .5s linear infinite;
+  animation: scaleup5 12s .5s linear infinite;
 }
-#hero ul li::before,
-#hero ul li::after {
-  left: -50em;
-  top: -2em;
-  display: block;
-  content: "";
+#hero .circle:nth-child(1)::after {
+  -webkit-animation: scaleup5 12s 1s linear infinite;
+  -moz-animation: scaleup5 12s 1s linear infinite;
+  animation: scaleup5 12s 1s linear infinite;
 }
-#hero ul li::before {
-  transform: rotate(60deg);
+#hero .circle:nth-child(2) {
+  -webkit-animation: scaleup5 12s 1.5s linear infinite;
+  -moz-animation: scaleup5 12s 1.5s linear infinite;
+  animation: scaleup5 12s 1.5s linear infinite;
 }
-#hero ul li::after {
-  transform: rotate(-60deg);
+#hero .circle:nth-child(2)::before {
+  -webkit-animation: scaleup5 12s 2s linear infinite;
+  -moz-animation: scaleup5 12s 2s linear infinite;
+  animation: scaleup5 12s 2s linear infinite;
 }
-#hero ul li:nth-child(2) {
-  transform: rotate(15deg);
+#hero .circle:nth-child(2)::after {
+  -webkit-animation: scaleup5 12s 2.5s linear infinite;
+  -moz-animation: scaleup5 12s 2.5s linear infinite;
+  animation: scaleup5 12s 2.5s linear infinite;
 }
-#hero ul li:nth-child(3) {
-  transform: rotate(30deg);
+#hero .circle:nth-child(3) {
+  -webkit-animation: scaleup5 12s 3s linear infinite;
+  -moz-animation: scaleup5 12s 3s linear infinite;
+  animation: scaleup5 12s 3s linear infinite;
 }
-#hero ul li:nth-child(4) {
-  transform: rotate(45deg);
+#hero .circle:nth-child(3)::before {
+  -webkit-animation: scaleup5 12s 3.5s linear infinite;
+  -moz-animation: scaleup5 12s 3.5s linear infinite;
+  animation: scaleup5 12s 3.5s linear infinite;
 }
-#hero ul li:nth-child(2),
-#hero ul li:nth-child(2)::before,
-#hero ul li:nth-child(2)::after {
-  box-shadow: 0 0 2em 0.5em #edaa00;
+#hero .circle:nth-child(3)::after {
+  -webkit-animation: scaleup5 12s 4s linear infinite;
+  -moz-animation: scaleup5 12s 4s linear infinite;
+  animation: scaleup5 12s 4s linear infinite;
 }
-#hero ul li:nth-child(3),
-#hero ul li:nth-child(3)::before,
-#hero ul li:nth-child(3)::after {
-  box-shadow: 0 0 2em 0.5em #9a3820;
+#hero .circle:nth-child(4) {
+  -webkit-animation: scaleup5 12s 4.5s linear infinite;
+  -moz-animation: scaleup5 12s 4.5s linear infinite;
+  animation: scaleup5 12s 4.5s linear infinite;
 }
-#hero ul li:nth-child(4),
-#hero ul li:nth-child(4)::before,
-#hero ul li:nth-child(4)::after {
-  box-shadow: 0 0 2em 0.5em #6ecb98;
+#hero .circle:nth-child(4)::before {
+  -webkit-animation: scaleup5 12s 5s linear infinite;
+  -moz-animation: scaleup5 12s 5s linear infinite;
+  animation: scaleup5 12s 5s linear infinite;
 }
-@keyframes rotate {
-  100% {
-    transform: rotate(90deg);
+#hero .circle:nth-child(4)::after {
+  -webkit-animation: scaleup5 12s 5.5s linear infinite;
+  -moz-animation: scaleup5 12s 5.5s linear infinite;
+  animation: scaleup5 12s 5.5s linear infinite;
+}
+#hero .circle:nth-child(5) {
+  -webkit-animation: scaleup5 12s 6s linear infinite;
+  -moz-animation: scaleup5 12s 6s linear infinite;
+  animation: scaleup5 12s 6s linear infinite;
+}
+#hero .circle:nth-child(5)::before {
+  -webkit-animation: scaleup5 12s 6.5s linear infinite;
+  -moz-animation: scaleup5 12s 6.5s linear infinite;
+  animation: scaleup5 12s 6.5s linear infinite;
+}
+#hero .circle:nth-child(5)::after {
+  -webkit-animation: scaleup5 12s 7s linear infinite;
+  -moz-animation: scaleup5 12s 7s linear infinite;
+  animation: scaleup5 12s 7s linear infinite;
+}
+#hero .circle:nth-child(6) {
+  -webkit-animation: scaleup5 12s 7.5s linear infinite;
+  -moz-animation: scaleup5 12s 7.5s linear infinite;
+  animation: scaleup5 12s 7.5s linear infinite;
+}
+#hero .circle:nth-child(6)::before {
+  -webkit-animation: scaleup5 12s 8s linear infinite;
+  -moz-animation: scaleup5 12s 8s linear infinite;
+  animation: scaleup5 12s 8s linear infinite;
+}
+#hero .circle:nth-child(6)::after {
+  -webkit-animation: scaleup5 12s 8.5s linear infinite;
+  -moz-animation: scaleup5 12s 8.5s linear infinite;
+  animation: scaleup5 12s 8.5s linear infinite;
+}
+#hero .circle:nth-child(7) {
+  -webkit-animation: scaleup5 12s 9s linear infinite;
+  -moz-animation: scaleup5 12s 9s linear infinite;
+  animation: scaleup5 12s 9s linear infinite;
+}
+#hero .circle:nth-child(7)::before {
+  -webkit-animation: scaleup5 12s 9.5s linear infinite;
+  -moz-animation: scaleup5 12s 9.5s linear infinite;
+  animation: scaleup5 12s 9.5s linear infinite;
+}
+#hero .circle:nth-child(7)::after {
+  -webkit-animation: scaleup5 12s 10s linear infinite;
+  -moz-animation: scaleup5 12s 10s linear infinite;
+  animation: scaleup5 12s 10s linear infinite;
+}
+#hero .circle:nth-child(8) {
+  -webkit-animation: scaleup5 12s 10.5s linear infinite;
+  -moz-animation: scaleup5 12s 10.5s linear infinite;
+  animation: scaleup5 12s 10.5s linear infinite;
+}
+#hero .circle:nth-child(8)::before {
+  -webkit-animation: scaleup5 12s 11s linear infinite;
+  -moz-animation: scaleup5 12s 11s linear infinite;
+  animation: scaleup5 12s 11s linear infinite;
+}
+#hero .circle:nth-child(8)::after {
+  -webkit-animation: scaleup5 12s 11.5s linear infinite;
+  -moz-animation: scaleup5 12s 11.5s linear infinite;
+  animation: scaleup5 12s 11.5s linear infinite;
+}
+#hero .circle:nth-child(9) {
+  -webkit-animation: scaleup5 12s 12s linear infinite;
+  -moz-animation: scaleup5 12s 12s linear infinite;
+  animation: scaleup5 12s 12s linear infinite;
+}
+#hero .circle:nth-child(9)::before {
+  -webkit-animation: scaleup5 12s 12.5s linear infinite;
+  -moz-animation: scaleup5 12s 12.5s linear infinite;
+  animation: scaleup5 12s 12.5s linear infinite;
+}
+#hero .circle:nth-child(9)::after {
+  -webkit-animation: scaleup5 12s 13s linear infinite;
+  -moz-animation: scaleup5 12s 13s linear infinite;
+  animation: scaleup5 12s 13s linear infinite;
+}
+#hero .circle:nth-child(10) {
+  -webkit-animation: scaleup5 12s 13.5s linear infinite;
+  -moz-animation: scaleup5 12s 13.5s linear infinite;
+  animation: scaleup5 12s 13.5s linear infinite;
+}
+#hero .circle:nth-child(10)::before {
+  -webkit-animation: scaleup5 12s 14s linear infinite;
+  -moz-animation: scaleup5 12s 14s linear infinite;
+  animation: scaleup5 12s 14s linear infinite;
+}
+#hero .circle:nth-child(10)::after {
+  -webkit-animation: scaleup5 12s 14.5s linear infinite;
+  -moz-animation: scaleup5 12s 14.5s linear infinite;
+  animation: scaleup5 12s 14.5s linear infinite;
+}
+@-moz-keyframes scaleup5 {
+  0% {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+    border-radius: 100%;
+    border-color: #f7f8f8;
   }
-}
-@keyframes fadingOut {
-  0%,
+  7% {
+    border-color: #99a4ae;
+  }
   20% {
-    opacity: 1;
+    border-color: #6ecb98;
+  }
+  40% {
+    border-color: #edaa00;
+  }
+  60% {
+    border-color: #9a3820;
   }
   100% {
-    opacity: .1;
+    margin-top: -1300px;
+    margin-left: -1300px;
+    width: 2600px;
+    height: 2600px;
+    border-radius: 0%;
+    border-color: #4e4e4e;
   }
+}
+@-webkit-keyframes scaleup5 {
+  0% {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+    border-radius: 100%;
+    border-color: #f7f8f8;
+  }
+  7% {
+    border-color: #99a4ae;
+  }
+  20% {
+    border-color: #6ecb98;
+  }
+  40% {
+    border-color: #edaa00;
+  }
+  60% {
+    border-color: #9a3820;
+  }
+  100% {
+    margin-top: -1300px;
+    margin-left: -1300px;
+    width: 2600px;
+    height: 2600px;
+    border-radius: 0%;
+    border-color: #4e4e4e;
+  }
+}
+@keyframes scaleup5 {
+  0% {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+    border-radius: 100%;
+    border-color: #f7f8f8;
+  }
+  7% {
+    border-color: #99a4ae;
+  }
+  20% {
+    border-color: #6ecb98;
+  }
+  40% {
+    border-color: #edaa00;
+  }
+  60% {
+    border-color: #9a3820;
+  }
+  100% {
+    margin-top: -1300px;
+    margin-left: -1300px;
+    width: 2600px;
+    height: 2600px;
+    border-radius: 0%;
+    border-color: #4e4e4e;
+  }
+}
+/* Hero
+  ==============================================*/
+#hero h1 {
+  display: none;
+}
+#hero {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#hero .bottom {
+  background: #66665d;
+  border-top: 2px solid #4e4e4e;
+  margin: 95vh 0 0 0;
+  padding: 0;
+}
+#hero .bottom .container {
+  padding: 2.25rem 2.25rem 3.5rem 2.25rem;
+}
+#hero .bottom h2 {
+  font-family: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
+  font-weight: normal;
+  letter-spacing: 0;
+  color: #f7f8f8;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1;
+  max-width: 47rem;
+  margin: 0 auto;
 }
