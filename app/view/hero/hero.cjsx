@@ -19,6 +19,20 @@ module.exports = React.createClass
           <div className="circle"></div>
           <div className="circle"></div>
           <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
         </div>
         <div className="logowrap">
           <img src="bfh-logo-white-trans.png" alt="Baltimore Food Hub Logo" />
