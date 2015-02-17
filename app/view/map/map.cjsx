@@ -57,7 +57,7 @@ module.exports = React.createClass
       <h2>Directory</h2>
       <div className="map-group">
         {buildingElements}
-        <img src="temporarymap-web-lighter.png" alt="map" />
+        <img src="/kbcustom-bfh-map.png" alt="map" />
       </div>
       {buildingInfoEl}
     </article>

@@ -59,7 +59,7 @@ header h1 a {
 }
 
 header h1 a:hover {
-  color: @bfh-black;
+  color: @bfh-slate;
 }
 
 header nav {float: right;}
@@ -196,6 +196,24 @@ article h2 {
   ==============================================*/
 #map, #leasing { background: @bfh-white; }
 #leasing { border-top: 2px solid @bfh-slate; }
+
+#leasing .download a:hover {
+  background: rgba(110,203,152,.2);
+  border-color: @bfh-green;
+  color: @bfh-green;
+}
+
+#leasing .download a {
+  .deming-stack;
+  border: 3px solid;
+  border-radius: .4em;
+  display: block;
+  font-size: 1.6em;
+  padding: .4em;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
 
 /* Footer
   -----------------------------------------------------*/

@@ -15,6 +15,11 @@ module.exports = React.createClass
           <div className="eight columns lead">
             <p className="message" dangerouslySetInnerHTML={__html: body} />
           </div>
+          <div className="four columns offset-by-four">
+            <p className="download">
+              <a href="/assets/pdf/20150216-LeasingTwoPager.pdf">Leasing Brochure</a>
+            </p>
+          </div>
         </div>
       </section>
     </article>
