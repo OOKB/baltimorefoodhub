@@ -1,0 +1,211 @@
+/* -----------------------------------------------------*/
+/* ---------------->>> /END bfh.less <<<-----------------*/
+/* -----------------------------------------------------*/
+
+/*
+  Help:
+  http://css-tricks.com/almanac/properties/a/animation/
+  http://css-tricks.com/snippets/css/keyframe-animation-syntax/
+  http://css-tricks.com/css-animation-tricks/
+  http://css3please.com/
+  http://css-tricks.com/css3-gradients/
+  http://demosthenes.info/samples/polina.html
+  http://davidwalsh.name/css-spin-revisited
+*/
+
+/* ridiculous gradient idea */
+/*
+  background-image:
+    linear-gradient(
+      30deg,
+      @bfh-red174,
+      @bfh-yellow,
+      @bfh-green,
+      @bfh-silver,
+      @bfh-slate,
+    );
+*/
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100%  {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100%  {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slateFade {
+  0% {
+    background-color: @bfh-slate;
+  }
+  100%  {
+    background-color: rgba(0,0,0,0);
+  }
+}
+
+@keyframes flowingGradient {
+  0%, 100% {
+    background-color: @bfh-red174;
+  }
+  20% {
+    background-color: @bfh-yellow;
+  }
+  40% {
+    background-color: @bfh-green;
+  }
+  60% {
+    background-color: @bfh-silver;
+  }
+  80% {
+    background-color: @bfh-slate;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes fadingOut {
+  0%, 20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .1;
+  }
+}
+
+/** slowly fadein all the elements on the homepage **/
+#hero        { animation: slateFade 2s 0 ease-in; }
+#hero figure { animation: fadein 2s 2s ease-in, fadeout 2s 5s ease-in; }
+#hero h2     { animation: fadein 2s 7s ease-in; }
+header       { animation: fadein 2s 9s ease-in; }
+
+/** Crazy spirally idea **/
+/*
+#hero {
+  margin: 0;
+  overflow: hidden;
+  background: @bfh-slate url('/hero-bg-f7f8f8.png') center center no-repeat;
+  background: radial-gradient(@bfh-white 100px, @bfh-silver);
+  background-size: cover;
+  padding: 0;
+}
+
+#hero figure {
+  background: white;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,.35);
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+  width: 300px;
+  height: 300px;
+  top:50vh;
+  margin-top: -300px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 0;
+}
+
+#hero figure img {
+  width: 300px;
+  height: auto;
+}
+
+#hero h2 {
+  position: absolute;
+  z-index: 10;
+  top: 55vh;
+  font-size: 5vh;
+  box-shadow: 0 0 10px rgba(0,0,0,.35);
+}
+
+#hero ul {
+  position:   absolute;
+  top:       -300px;
+  right:      0;
+  bottom:     0;
+  left:       0;
+  margin:     auto;
+  padding:    0;
+  width:      0;
+  height:     0;
+  z-index:    0;
+  list-style: none;
+  animation:  rotate 72s linear infinite;
+}
+#hero ul li,
+#hero ul li::before,
+#hero ul li::after {
+  position: absolute;
+  border:   0 solid transparent;
+  border-width: 2em 50em;
+  width:  1px;
+  height: 1px;
+  font-size: 30px;
+//   box-shadow: 0 0 2em .5em @bfh-white;
+  box-shadow: 0 0 2em .5em @bfh-blue;
+}
+#hero ul li {
+  left: -50em;
+  top:   50%;
+  margin-top: -2em;
+  transform: rotate(.1deg);
+  opacity: .1;
+//   animation: fadingOut 10s;
+}
+#hero ul li::before,
+#hero ul li::after {
+  left: -50em;
+  top:  -2em;
+  display: block;
+  content: "";
+}
+
+#hero ul li::before {
+  transform: rotate(60deg);
+  }
+#hero ul li::after {
+  transform: rotate(-60deg);
+  }
+
+#hero ul li:nth-child(2){
+  transform: rotate(15deg);
+}
+#hero ul li:nth-child(3){
+  transform: rotate(30deg);
+}
+#hero ul li:nth-child(4){
+  transform: rotate(45deg);
+}
+
+#hero ul li:nth-child(2),
+#hero ul li:nth-child(2)::before,
+#hero ul li:nth-child(2)::after {
+  box-shadow: 0 0 2em .5em @bfh-yellow;
+}
+
+#hero ul li:nth-child(3),
+#hero ul li:nth-child(3)::before,
+#hero ul li:nth-child(3)::after {
+  box-shadow: 0 0 2em .5em @bfh-red174;
+}
+
+#hero ul li:nth-child(4),
+#hero ul li:nth-child(4)::before,
+#hero ul li:nth-child(4)::after {
+  box-shadow: 0 0 2em .5em @bfh-green;
+}
+*/

@@ -1,0 +1,304 @@
+/* -----------------------------------------------------*/
+/* ---------------->>> ANIMATIONS.less <<<-----------------*/
+/* -----------------------------------------------------*/
+
+/* ridiculous gradient idea */
+/*
+  background-image:
+    linear-gradient(
+      30deg,
+      @bfh-red174,
+      @bfh-yellow,
+      @bfh-green,
+      @bfh-silver,
+      @bfh-slate,
+    );
+*/
+
+/* help: http://codepen.io/bjornmeansbear/pen/gbveXZ */
+
+#hero .logowrap img {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+}
+
+#hero .logowrap,
+#hero .circle {
+  background: transparent;
+  border-radius: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  top:50vh;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -150px;
+}
+
+#hero .logowrap {
+  background: @bfh-slate;
+  box-shadow: 0 0 10px @bfh-slate;
+  z-index: 0;
+}
+
+#hero .circlewrap {
+  position: fixed;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#hero .circle {
+  border: 3px solid @bfh-white;
+  text-indent: -300%;
+  overflow: hidden;
+  text-wrap: nowrap;
+  z-index: 0;
+}
+
+#hero .circle:nth-child(1) {
+  -webkit-animation: rainbowRinglet 12s 0s linear infinite;
+  -moz-animation: rainbowRinglet 12s 0s linear infinite;
+  animation: rainbowRinglet 12s 0s linear infinite;
+}
+#hero .circle:nth-child(2) {
+  -webkit-animation: rainbowRinglet 12s .5s linear infinite;
+  -moz-animation: rainbowRinglet 12s .5s linear infinite;
+  animation: rainbowRinglet 12s .5s linear infinite;
+}
+#hero .circle:nth-child(3)  {
+  -webkit-animation: rainbowRinglet 12s 1s linear infinite;
+  -moz-animation: rainbowRinglet 12s 1s linear infinite;
+  animation: rainbowRinglet 12s 1s linear infinite;
+}
+#hero .circle:nth-child(4) {
+  -webkit-animation: rainbowRinglet 12s 1.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 1.5s linear infinite;
+  animation: rainbowRinglet 12s 1.5s linear infinite;
+}
+#hero .circle:nth-child(5) {
+  -webkit-animation: rainbowRinglet 12s 2s linear infinite;
+  -moz-animation: rainbowRinglet 12s 2s linear infinite;
+  animation: rainbowRinglet 12s 2s linear infinite;
+}
+#hero .circle:nth-child(6)  {
+  -webkit-animation: rainbowRinglet 12s 2.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 2.5s linear infinite;
+  animation: rainbowRinglet 12s 2.5s linear infinite;
+}
+#hero .circle:nth-child(7)  {
+  -webkit-animation: rainbowRinglet 12s 3s linear infinite;
+  -moz-animation: rainbowRinglet 12s 3s linear infinite;
+  animation: rainbowRinglet 12s 3s linear infinite;
+}
+#hero .circle:nth-child(8)  {
+  -webkit-animation: rainbowRinglet 12s 3.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 3.5s linear infinite;
+  animation: rainbowRinglet 12s 3.5s linear infinite;
+}
+#hero .circle:nth-child(9)  {
+  -webkit-animation: rainbowRinglet 12s 4s linear infinite;
+  -moz-animation: rainbowRinglet 12s 4s linear infinite;
+  animation: rainbowRinglet 12s 4s linear infinite;
+}
+#hero .circle:nth-child(10)  {
+  -webkit-animation: rainbowRinglet 12s 4.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 4.5s linear infinite;
+  animation: rainbowRinglet 12s 4.5s linear infinite;
+}
+#hero .circle:nth-child(11)  {
+  -webkit-animation: rainbowRinglet 12s 5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 5s linear infinite;
+  animation: rainbowRinglet 12s 5s linear infinite;
+}
+#hero .circle:nth-child(12)  {
+  -webkit-animation: rainbowRinglet 12s 5.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 5.5s linear infinite;
+  animation: rainbowRinglet 12s 5.5s linear infinite;
+}
+#hero .circle:nth-child(13) {
+  -webkit-animation: rainbowRinglet 12s 6s linear infinite;
+  -moz-animation: rainbowRinglet 12s 6s linear infinite;
+  animation: rainbowRinglet 12s 6s linear infinite;
+}
+#hero .circle:nth-child(14) {
+  -webkit-animation: rainbowRinglet 12s 6.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 6.5s linear infinite;
+  animation: rainbowRinglet 12s 6.5s linear infinite;
+}
+#hero .circle:nth-child(15)  {
+  -webkit-animation: rainbowRinglet 12s 7s linear infinite;
+  -moz-animation: rainbowRinglet 12s 7s linear infinite;
+  animation: rainbowRinglet 12s 7s linear infinite;
+}
+#hero .circle:nth-child(16) {
+  -webkit-animation: rainbowRinglet 12s 7.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 7.5s linear infinite;
+  animation: rainbowRinglet 12s 7.5s linear infinite;
+}
+#hero .circle:nth-child(17) {
+  -webkit-animation: rainbowRinglet 12s 8s linear infinite;
+  -moz-animation: rainbowRinglet 12s 8s linear infinite;
+  animation: rainbowRinglet 12s 8s linear infinite;
+}
+#hero .circle:nth-child(18)  {
+  -webkit-animation: rainbowRinglet 12s 8.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 8.5s linear infinite;
+  animation: rainbowRinglet 12s 8.5s linear infinite;
+}
+#hero .circle:nth-child(19)  {
+  -webkit-animation: rainbowRinglet 12s 9s linear infinite;
+  -moz-animation: rainbowRinglet 12s 9s linear infinite;
+  animation: rainbowRinglet 12s 9s linear infinite;
+}
+#hero .circle:nth-child(20)  {
+  -webkit-animation: rainbowRinglet 12s 9.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 9.5s linear infinite;
+  animation: rainbowRinglet 12s 9.5s linear infinite;
+}
+#hero .circle:nth-child(21)  {
+  -webkit-animation: rainbowRinglet 12s 10s linear infinite;
+  -moz-animation: rainbowRinglet 12s 10s linear infinite;
+  animation: rainbowRinglet 12s 10s linear infinite;
+}
+#hero .circle:nth-child(22)  {
+  -webkit-animation: rainbowRinglet 12s 10.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 10.5s linear infinite;
+  animation: rainbowRinglet 12s 10.5s linear infinite;
+}
+#hero .circle:nth-child(23)  {
+  -webkit-animation: rainbowRinglet 12s 11s linear infinite;
+  -moz-animation: rainbowRinglet 12s 11s linear infinite;
+  animation: rainbowRinglet 12s 11s linear infinite;
+}
+#hero .circle:nth-child(24)  {
+  -webkit-animation: rainbowRinglet 12s 11.5s linear infinite;
+  -moz-animation: rainbowRinglet 12s 11.5s linear infinite;
+  animation: rainbowRinglet 12s 11.5s linear infinite;
+}
+
+@-moz-keyframes rainbowRinglet {
+  0% {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+    border-radius: 100%;
+    border-color: @bfh-white;
+  }
+   7% { border-color: @bfh-silver; }
+  20% { border-color: @bfh-green; }
+  40% { border-color: @bfh-yellow; }
+  60% { border-color: @bfh-red174; }
+  100% {
+    margin-top: -1300px;
+    margin-left: -1300px;
+    width: 2600px;
+    height: 2600px;
+    border-radius: 0%;
+    border-color: @bfh-slate;
+  }
+}
+
+@-webkit-keyframes rainbowRinglet {
+  0% {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+    border-radius: 100%;
+    border-color: @bfh-white;
+  }
+   7% { border-color: @bfh-silver; }
+  20% { border-color: @bfh-green; }
+  40% { border-color: @bfh-yellow; }
+  60% { border-color: @bfh-red174; }
+  100% {
+    margin-top: -1300px;
+    margin-left: -1300px;
+    width: 2600px;
+    height: 2600px;
+    border-radius: 0%;
+    border-color: @bfh-slate;
+  }
+}
+
+@keyframes rainbowRinglet {
+  0% {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+    border-radius: 100%;
+    border-color: @bfh-white;
+  }
+   7% { border-color: @bfh-silver; }
+  20% { border-color: @bfh-green; }
+  40% { border-color: @bfh-yellow; }
+  60% { border-color: @bfh-red174; }
+  100% {
+    margin-top: -1300px;
+    margin-left: -1300px;
+    width: 2600px;
+    height: 2600px;
+    border-radius: 0%;
+    border-color: @bfh-slate;
+  }
+}
+
+/* Hero
+  ==============================================*/
+#hero h1 { display: none; }
+
+#hero {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#hero .bottom {
+  background-color: @bfh-yellow;
+/*
+  background-image: url('/spiralpattern1-wide.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+*/
+  border-top: 2px solid @bfh-slate;
+  margin: 95vh 0 0 0;
+  padding: 0;
+}
+
+#hero .bottom .container {
+  padding: 3rem 2.25rem 5rem 2.25rem;
+}
+
+#hero .bottom h2 {
+  .league-gothic-stack;
+  letter-spacing: 0;
+  color: @bfh-slate;
+/* help: http://www.css3generator.in/text-shadow.html */
+/*
+  color: @bfh-yellow;
+  text-shadow: 1px 1px 1px @bfh-slate, -1px -1px 1px @bfh-white;
+*/
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1;
+  max-width: 47rem;
+  margin: 0 auto;
+}
+
+
+/*** End Animations.less ***/
+/*** End Animations.less ***/
+/*** End Animations.less ***/
+/*** End Animations.less ***/
+/*** End Animations.less ***/

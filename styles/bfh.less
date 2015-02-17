@@ -239,20 +239,24 @@ footer .logo {
 }
 
 footer .footer-credits {
-  background: rgba(255,255,255,.75);
+  background: rgba(78,78,78,.75);
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
 footer .footer-credits p {
-  color: @bfh-silver;
+  color: lighten(@bfh-slate, 10%);
   margin: 0;
-  font-size: .75rem;
+  font-size: .66rem;
   letter-spacing: 1px;
   padding: .5em;
   text-transform: uppercase;
   font-family: helvetica, arial, sans-serif;
+}
+
+footer .footer-credits p a {
+  color: lighten(@bfh-slate, 20%);
 }
 
 /** mailchimp styling **/

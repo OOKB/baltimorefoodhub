@@ -6,9 +6,13 @@ sf: 15,000
 floors: 1 level
 tenants:
   - City Seeds
+leased: true
+leasedtxt: Leased
 ---
 
-[City Seeds](http://www.cityseeds.com), Operated by Humanim.
+#### Leased
+
+[City Seeds](http://www.cityseeds.org), Operated by Humanim.
 
 Opening summer 2016
 

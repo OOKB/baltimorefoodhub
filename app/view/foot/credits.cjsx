@@ -15,7 +15,7 @@ module.exports = React.createClass
         last = i is last_i
 
         if last
-          seperator = ' and '
+          seperator = ' and built with '
         else if not first
           seperator = ', '
 
@@ -26,5 +26,5 @@ module.exports = React.createClass
       Links = <span>a talented group of folks</span>
 
     <p className={className}>
-      Built and designed by {Links}.
+      Designed by {Links}.
     </p>
