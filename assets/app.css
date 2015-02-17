@@ -1095,6 +1095,16 @@ footer .footer-credits p a {
     font-size: 1.5rem;
   }
 }
+.building-info h4 {
+  font-family: 'DemingEP', Calibri, Helvetica, Arial, Sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 2;
+}
 .building-info a {
   color: #f7f8f8;
 }
