@@ -1,4 +1,5 @@
-React = require 'react'
+React = require 'react/addons'
+ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
 
 slides = [
   'http://bfh.ookb.co/slideshow/001-coworkingdesk.jpg'
@@ -39,7 +40,9 @@ module.exports = React.createClass
       <section className="top">
 
         <div id="slideshow" className="cycle-slideshow">
-          <img className="slide" src={slideSrc} />
+          <ReactCSSTransitionGroup transitionName="carousel-left">
+            <img className="slide" src={slideSrc} key={activeSlide} />
+          </ReactCSSTransitionGroup>
         </div>
 
         <div className="circlewrap">
