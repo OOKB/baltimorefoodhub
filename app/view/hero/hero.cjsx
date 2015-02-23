@@ -5,6 +5,11 @@ slides = [
   'http://bfh.ookb.co/slideshow/001-coworkingdesk.jpg'
   'http://bfh.ookb.co/slideshow/002-beets.jpg'
   'http://bfh.ookb.co/slideshow/003-coffeebeans.jpg'
+  'http://bfh.ookb.co/slideshow/004-507481.jpg'
+  'http://bfh.ookb.co/slideshow/005-283841.jpg'
+  'http://bfh.ookb.co/slideshow/006-506672.jpg'
+  'http://bfh.ookb.co/slideshow/007-216920.jpg'
+  'http://bfh.ookb.co/slideshow/008-446439.jpg'
 ]
 
 module.exports = React.createClass
