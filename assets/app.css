@@ -222,6 +222,9 @@ button.close {
   border: none;
   cursor: pointer;
 }
+.add-top {
+  margin-top: 1rem;
+}
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 * {
@@ -717,15 +720,11 @@ article h2 {
 #leasing {
   border-top: 2px solid #4e4e4e;
 }
-#leasing .download a:hover {
-  background: rgba(110, 203, 152, 0.2);
-  border-color: #6ecb98;
-  color: #6ecb98;
-}
 #leasing .download a {
   font-family: 'DemingEP', Calibri, Helvetica, Arial, Sans-serif;
   font-style: normal;
   font-weight: normal;
+  color: #4e4e4e;
   border: 3px solid;
   border-radius: .4em;
   display: block;
@@ -734,6 +733,11 @@ article h2 {
   text-align: center;
   text-decoration: none;
   width: 100%;
+}
+#leasing .download a:hover {
+  background: rgba(110, 203, 152, 0.2);
+  border-color: #6ecb98;
+  color: #6ecb98;
 }
 #leasing p.message {
   display: none;
@@ -775,6 +779,9 @@ footer .overlay li {
 }
 footer .logo {
   margin-bottom: .5em;
+}
+footer .logo img {
+  max-width: 100px;
 }
 footer .footer-credits {
   background: rgba(78, 78, 78, 0.75);
@@ -958,10 +965,10 @@ footer .footer-credits p a {
 }
 /*urban farming */
 #map .building.bld5 {
-  top: 55.7%;
-  left: 12.15%;
-  height: 13.2%;
-  width: 27.7%;
+  top: 60.7%;
+  left: 28.15%;
+  height: 15.2%;
+  width: 16.7%;
 }
 #map .building.bld5:hover span {
   background: rgba(92, 73, 37, 0.66);
@@ -1008,9 +1015,87 @@ footer .footer-credits p a {
 @media (min-width: 40em) {
   .building-info {
     font-size: 1.25rem;
+    margin: 0;
+    position: absolute;
+    width: 450px;
+    top: 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.33);
+  }
+  .building-info::after {
+    background: inherit;
+    position: absolute;
+    content: '';
+    display: block;
+    height: 30px;
+    width: 30px;
+    top: calc(50% - 15px);
   }
   .building-info h3 {
     font-size: 1.5rem;
+  }
+  /* custom place all the building popups? */
+  .building-info.bld0 {
+    left: 23%;
+    top: 25%;
+  }
+  .building-info.bld0::after {
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid #4e4e4e;
+    border-right: 1px solid #4e4e4e;
+  }
+  .building-info.bld1 {
+    left: 44%;
+    top: 30%;
+  }
+  .building-info.bld1::after {
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid #4e4e4e;
+    border-right: 1px solid #4e4e4e;
+  }
+  .building-info.bld2 {
+    left: 59%;
+    top: 30%;
+  }
+  .building-info.bld2::after {
+    background: inherit;
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid #4e4e4e;
+    border-right: 1px solid #4e4e4e;
+  }
+  .building-info.bld3 {
+    left: 40%;
+    top: 21%;
+  }
+  .building-info.bld3::after {
+    background: inherit;
+    transform: rotate(45deg);
+    left: -16px;
+    border-bottom: 1px solid #4e4e4e;
+    border-left: 1px solid #4e4e4e;
+  }
+  .building-info.bld4 {
+    left: 19%;
+    top: 40%;
+  }
+  .building-info.bld4::after {
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid #4e4e4e;
+    border-right: 1px solid #4e4e4e;
+  }
+  .building-info.bld5 {
+    left: 44%;
+    top: 44%;
+  }
+  .building-info.bld5::after {
+    background: inherit;
+    transform: rotate(45deg);
+    left: -16px;
+    border-bottom: 1px solid #4e4e4e;
+    border-left: 1px solid #4e4e4e;
   }
 }
 .building-info h4 {
@@ -1029,19 +1114,6 @@ footer .footer-credits p a {
 /* -----------------------------------------------------*/
 /* ---------------->>> ANIMATIONS.less <<<-----------------*/
 /* -----------------------------------------------------*/
-/* ridiculous gradient idea */
-/*
-  background-image:
-    linear-gradient(
-      30deg,
-      @bfh-red174,
-      @bfh-yellow,
-      @bfh-green,
-      @bfh-silver,
-      @bfh-slate,
-    );
-*/
-/* help: http://codepen.io/bjornmeansbear/pen/gbveXZ */
 #hero .logowrap img {
   max-width: 100%;
   width: 300px;
@@ -1063,8 +1135,6 @@ footer .footer-credits p a {
   margin-left: -150px;
 }
 #hero .logowrap {
-  background: #4e4e4e;
-  box-shadow: 0 0 10px #4e4e4e;
   z-index: 0;
 }
 #hero .circlewrap {
@@ -1073,8 +1143,10 @@ footer .footer-credits p a {
   right: 0;
   bottom: 0;
   left: 0;
+  opacity: .333333;
   overflow: hidden;
   z-index: -1;
+  pointer-events: none;
 }
 #hero .circle {
   border: 3px solid #f7f8f8;
@@ -1262,13 +1334,7 @@ footer .footer-credits p a {
   padding: 0;
 }
 #hero .bottom {
-  background-color: #edaa00;
-  /*
-  background-image: url('/spiralpattern1-wide.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-*/
+  background-color: #4e4e4e;
   border-top: 2px solid #4e4e4e;
   margin: 95vh 0 0 0;
   padding: 0;
@@ -1280,15 +1346,67 @@ footer .footer-credits p a {
   font-family: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
   font-weight: normal;
   letter-spacing: 0;
-  color: #4e4e4e;
-  /* help: http://www.css3generator.in/text-shadow.html */
-  /*
-  color: @bfh-yellow;
-  text-shadow: 1px 1px 1px @bfh-slate, -1px -1px 1px @bfh-white;
-*/
+  color: #f7f8f8;
   font-size: 3rem;
   text-align: center;
   line-height: 1;
   max-width: 47rem;
   margin: 0 auto;
+}
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+#slideshow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  min-height: 0%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  z-index: -2;
+  text-align: center;
+}
+#slideshow img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  text-align: center;
+}
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/****************************************************/
+/** slide left **/
+.carousel-left-enter {
+  opacity: 0.01;
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  -ms-transition: opacity 500ms ease-in;
+  -o-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.carousel-left-enter.carousel-left-enter-active {
+  opacity: 1;
+}
+.carousel-left-leave {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  -ms-transition: opacity 500ms ease-in;
+  -o-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.carousel-left-leave.carousel-left-leave-active {
+  opacity: 0.01;
 }
