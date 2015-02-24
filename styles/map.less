@@ -175,10 +175,10 @@ width: 23%;
 
 /*urban farming */
 #map .building.bld5 {
-top: 55.7%;
-left: 12.15%;
-height: 13.2%;
-width: 27.7%;
+top: 60.7%;
+left: 28.15%;
+height: 15.2%;
+width: 16.7%;
 }
 
 #map .building.bld5:hover span {
@@ -225,29 +225,90 @@ width: 27.7%;
     top:0;
     box-shadow: 0 0 6px rgba(0,0,0,.33);
   }
+
+  .building-info::after {
+    background: inherit;
+    position: absolute;
+    content: '';
+    display: block;
+    height: 30px;
+    width: 30px;
+    top: ~'calc(50% - 15px)';
+  }
+
   .building-info h3 {
     font-size: 1.5rem;
   }
 
   /* custom place all the building popups? */
-  .building-info.bld2 {
-    left: 54%;
-    top: 30%;
+  .building-info.bld0 {
+    left: 17%;
+    top: 25%;
   }
-  .building-info.bld2::after {
-    position: absolute;
-    content: '';
-    display: block;
-    background: inherit;
-    height: 30px;
-    width: 30px;
+  .building-info.bld0::after {
     transform: rotate(45deg);
-    top: ~'calc(50% - 15px)';
     right: -16px;
     border-top: 1px solid @bfh-slate;
     border-right: 1px solid @bfh-slate;
   }
 
+  .building-info.bld1 {
+    left: 39%;
+    top: 30%;
+  }
+  .building-info.bld1::after {
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid @bfh-slate;
+    border-right: 1px solid @bfh-slate;
+  }
+
+  .building-info.bld2 {
+    left: 54%;
+    top: 30%;
+  }
+  .building-info.bld2::after {
+    background: inherit;
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid @bfh-slate;
+    border-right: 1px solid @bfh-slate;
+  }
+
+  .building-info.bld3 {
+    left: 40%;
+    top: 21%;
+  }
+  .building-info.bld3::after {
+    background: inherit;
+    transform: rotate(45deg);
+    left: -16px;
+    border-bottom: 1px solid @bfh-slate;
+    border-left: 1px solid @bfh-slate;
+  }
+
+  .building-info.bld4 {
+    left: 15%;
+    top: 40%;
+  }
+  .building-info.bld4::after {
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid @bfh-slate;
+    border-right: 1px solid @bfh-slate;
+  }
+
+  .building-info.bld5 {
+    left: 44%;
+    top: 44%;
+  }
+  .building-info.bld5::after {
+    background: inherit;
+    transform: rotate(45deg);
+    left: -16px;
+    border-bottom: 1px solid @bfh-slate;
+    border-left: 1px solid @bfh-slate;
+  }
 }
 
 .building-info h4 {
