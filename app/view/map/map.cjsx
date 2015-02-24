@@ -43,11 +43,11 @@ module.exports = React.createClass
         buildingInfoEl =
           <ul className="building-info bld#{i}">
             <li className="close"><button onClick={onClickFunc}>Close</button></li>
-            <li className="container">Building #{i+1}</li>
-            <li className="container"><h3>{title}</h3></li>
-            {if sf then <li className="container">{sf} sq. ft</li>}
-            <li className="container"><p>{sample}</p></li>
-            <li className="container" dangerouslySetInnerHTML={__html: content} />
+            <li>Building #{i+1}</li>
+            <li><h3>{title}</h3></li>
+            {if sf then <li>{sf} sq. ft</li>}
+            <li><p>{sample}</p></li>
+            <li dangerouslySetInnerHTML={__html: content} />
           </ul>
 
       # Build the element we want for each building.

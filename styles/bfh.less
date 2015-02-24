@@ -196,14 +196,9 @@ article h2 {
 #map, #leasing { background: @bfh-white; }
 #leasing { border-top: 2px solid @bfh-slate; }
 
-#leasing .download a:hover {
-  background: rgba(110,203,152,.2);
-  border-color: @bfh-green;
-  color: @bfh-green;
-}
-
 #leasing .download a {
   .deming-stack;
+  color: @bfh-slate;
   border: 3px solid;
   border-radius: .4em;
   display: block;
@@ -212,6 +207,12 @@ article h2 {
   text-align: center;
   text-decoration: none;
   width: 100%;
+}
+
+#leasing .download a:hover {
+  background: rgba(110,203,152,.2);
+  border-color: @bfh-green;
+  color: @bfh-green;
 }
 
 #leasing p.message { display: none; }
