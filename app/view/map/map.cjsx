@@ -27,7 +27,7 @@ module.exports = React.createClass
     # If building is active then create buildingInfoEl.
     buildingElements = buildings.map (item, i) =>
       # The variables we want from each building object.
-      {building, title, id, sample, leasing, sf, content} = item
+      {building, title, id, sample, leasing, sf, ceilings, floors, loading, content} = item
       if _.isArray title
         title = title.join(' ')
       # Define the class name for each building div.
@@ -45,9 +45,11 @@ module.exports = React.createClass
             <li className="close"><button onClick={onClickFunc}>Close</button></li>
             <li>Building #{i+1}</li>
             <li><h3>{title}</h3></li>
-            {if sf then <li>{sf} sq. ft</li>}
-            <li><p>{sample}</p></li>
-            <li dangerouslySetInnerHTML={__html: content} />
+            {if sf then <li className="list-item sf">{sf} sq. ft</li>}
+            {if ceilings then <li className="list-item ceilings">{ceilings} Ceilings</li>}
+            {if floors then <li className="list-item floors">{floors}</li>}
+            {if loading then <li className="list-item loading">{loading}</li>}
+            <li className="add-top" dangerouslySetInnerHTML={__html: content} />
           </ul>
 
       # Build the element we want for each building.

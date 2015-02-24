@@ -7,7 +7,6 @@ floors: 1 level
 tenants:
   - City Seeds
 leased: true
-leasedtxt: Leased
 ---
 
 #### Leased

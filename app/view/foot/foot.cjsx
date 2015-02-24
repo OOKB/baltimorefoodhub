@@ -13,7 +13,7 @@ module.exports = React.createClass
     {title, tagline, since, builtDesigned, street, zipcode, email, mainContact, leasingContact, mailchimpBlurb} = data
 
     yr = new Date().getFullYear()
-    msg = "\u00a9 Copyright #{since}-#{yr}, #{title}"
+    msg = "\u00a9 Copyright #{yr}, #{title}"
     address = "#{street}, #{zipcode}"
     <footer id="contact">
       <div className="container">
@@ -21,9 +21,7 @@ module.exports = React.createClass
 
           <div className="three columns">
             <div className="overlay">
-              <figure className="logo text-center">
-                <img src="bfh-logo-gradient.png" alt="Baltimore Food Hub Logo" />
-              </figure>
+
               <ul>
                 <li><strong>{title}</strong></li>
                 <li>{address}</li>
