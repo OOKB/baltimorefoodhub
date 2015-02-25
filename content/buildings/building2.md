@@ -2,7 +2,6 @@
 building: 2
 title: Flex 2
 id: flex
-leasing: the “Machine Shop”
 sf: 13,965
 floors: 2 Levels + Mezzanine
 loading: Loading Dock

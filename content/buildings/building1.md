@@ -2,9 +2,8 @@
 building: 1
 title: Flex 1
 id: flex1
-leasing: the “Pumping Station”
 sf: 9,961
-floors: Potential 2nd floor office space.
+floors: Potential 2nd floor office space
 ceilings: 30ft
 loading: Loading Dock
 ---

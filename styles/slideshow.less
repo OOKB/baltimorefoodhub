@@ -21,6 +21,11 @@
   text-align: center;
 }
 
+#slideshow > span {
+  position: relative;
+  display: block;
+}
+
 #slideshow img {
   display: inline-block;
   vertical-align: middle;
@@ -29,6 +34,9 @@
   height: auto;
   max-height: none;
   text-align: center;
+  position: absolute;
+  left:0;
+  z-index: -2;
 }
 
 /****************************************************/
@@ -45,6 +53,7 @@
   -ms-transition: opacity 500ms ease-in;
   -o-transition: opacity 500ms ease-in;
   transition: opacity 500ms ease-in;
+  z-index: -1;
 }
 
 .carousel-left-enter.carousel-left-enter-active {
@@ -58,6 +67,7 @@
   -ms-transition: opacity 500ms ease-in;
   -o-transition: opacity 500ms ease-in;
   transition: opacity 500ms ease-in;
+  z-index: -2;
 }
 .carousel-left-leave.carousel-left-leave-active {
   opacity: 0.01;
