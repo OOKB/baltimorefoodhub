@@ -1,17 +1,6 @@
 React = require 'react/addons'
 ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
 
-slides = [
-  'http://bfh.ookb.co/slideshow/001-coworkingdesk.jpg'
-  'http://bfh.ookb.co/slideshow/002-beets.jpg'
-  'http://bfh.ookb.co/slideshow/003-coffeebeans.jpg'
-  'http://bfh.ookb.co/slideshow/004-507481.jpg'
-  'http://bfh.ookb.co/slideshow/005-283841.jpg'
-  'http://bfh.ookb.co/slideshow/006-506672.jpg'
-  'http://bfh.ookb.co/slideshow/007-216920.jpg'
-  'http://bfh.ookb.co/slideshow/008-446439.jpg'
-]
-
 module.exports = React.createClass
   getInitialState: ->
     activeSlide: 0
@@ -28,15 +17,16 @@ module.exports = React.createClass
 
   next: ->
     {activeSlide} = @state
-    if activeSlide == slides.length-1
+    {imgSlides} = @props.data
+    if activeSlide == imgSlides.length-1
       @setState activeSlide: 0
     else
       @setState activeSlide: activeSlide+1
 
   render: ->
-    {title, tagline, blurb} = @props.data
+    {title, tagline, blurb, imgSlides} = @props.data
     {activeSlide} = @state
-    slideSrc = slides[activeSlide]
+    slideSrc = imgSlides[activeSlide]
 
     <article id="hero">
 

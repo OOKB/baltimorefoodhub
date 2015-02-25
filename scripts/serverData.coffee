@@ -54,7 +54,11 @@ module.exports = (callback) ->
     callback()
     return
 
-  getData = {}
+  if data.api
+    getData = _.mapValues data.api, (url) ->
+      makeReq url
+  else
+    getData = {}
 
   if data.facebook
     url = "http://social.cape.io/facebook/#{data.facebook}"
@@ -75,6 +79,7 @@ module.exports = (callback) ->
   save = (err, serverData) ->
     throw err if err
     _.merge data, serverData
+    data.imgSlides = _.pluck data.imgSlides.contents, 'url'
     fs.outputJsonSync 'app/data/index.json', data
     if _.isFunction callback
       callback()
