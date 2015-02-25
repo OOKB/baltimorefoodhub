@@ -60,6 +60,11 @@ html, body {
 .twelve,
 .fullwidth    { width: calc(100% / 12 * 12); }
 
+.visible-lg {
+  display: none;
+  visibility: hidden;
+}
+
 @media (min-width: 30rem) {
   .container {
     margin: 0 auto;
@@ -123,6 +128,11 @@ html, body {
   .offset-by-ten            { margin-left: calc(100% / 12 * 10); }
   .offset-by-eleven         { margin-left: calc(100% / 12 * 11); }
   .offset-by-twelve         { margin-left: calc(100% / 12 * 12); }
+
+  .visible-lg {
+    display: block;
+    visibility: visible;
+  }
 
 }
 
@@ -188,6 +198,11 @@ p {
 ul {
   margin-bottom: 1em;
   line-height: normal;
+}
+
+small,
+.small {
+  font-size: .9rem;
 }
 
 /* Centering in the unknown */

@@ -57,6 +57,7 @@ module.exports = React.createClass
 
     <article id="map">
       <h2>Directory</h2>
+      <p className="small"><em>Click on a building below for more information. <br className="visible-lg" /> Map information is subject to change.</em></p>
       <div className="map-group">
         {buildingElements}
         <img src="/map-feb24-rendering.jpg" alt="map" />

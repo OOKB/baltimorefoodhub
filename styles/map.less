@@ -8,23 +8,25 @@
   color: @bfh-slate;
 }
 
-#map h2 {
+#map h2,
+#map p.small {
   margin: 1rem 1rem 0;
 }
 
 @media (min-width: 30em) {
-  #map h2 {
+  #map h2,
+  #map p.small {
     position: absolute;
-    top: 1rem;
     left: 10%;
-    z-index: 99;
+    z-index: 2;
     margin: 0;
   }
+  #map h2 { top: 1rem; }
+  #map p.small { top: 3.333rem; }
 }
 @media (min-width: 50em) {
-  #map h2 {
-    top: 3rem;
-  }
+  #map h2 { top: 3rem; }
+  #map p.small { top: 5.333rem; }
 }
 
 #map .map-group {
