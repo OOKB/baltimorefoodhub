@@ -11,7 +11,7 @@ leased: true
 
 #### Leased
 
-[City Seeds](http://www.cityseeds.org), Operated by Humanim.
+<a href="http://www.cityseeds.org" target="_blank">City Seeds</a>, Operated by Humanim.
 
 Opening summer 2016
 

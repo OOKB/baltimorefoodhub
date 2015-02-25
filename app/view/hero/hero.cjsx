@@ -7,10 +7,10 @@ module.exports = React.createClass
 
   componentDidUpdate: ->
     clearInterval @interval
-    @interval = setInterval @next, 4000
+    @interval = setInterval @next, 3000
 
   componentDidMount: ->
-    @interval = setInterval @next, 3000
+    @interval = setInterval @next, 2000
 
   componentWillUnmount: ->
     clearInterval @interval
@@ -67,7 +67,7 @@ module.exports = React.createClass
           <div className="circle"></div>
         </div>
         <div className="logowrap">
-          <img src="bfh-logo-white-trans.png" alt="Baltimore Food Hub Logo" />
+          <a href="#map"><img src="bfh-logo-white-trans.png" alt="Baltimore Food Hub Logo" /></a>
         </div>
 
       </section>

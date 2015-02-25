@@ -28,7 +28,7 @@ module.exports = React.createClass
                 <li><Email email={email} /></li>
               </ul>
               <p className="message">{msg}</p>
-              <p><a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
+              <p><a target="_blank" href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
             </div>
           </div>
 
