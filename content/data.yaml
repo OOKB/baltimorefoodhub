@@ -1,3 +1,5 @@
+api:
+  imgSlides: http://bfh.ookb.co/_api/slideshow
 windowInnerWidth: 900
 title: Baltimore Food Hub
 since: 2014
