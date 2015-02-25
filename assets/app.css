@@ -1056,6 +1056,7 @@ footer .footer-credits p a {
     top: 25%;
   }
   .building-info.bld0::after {
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: -16px;
     border-top: 1px solid #4e4e4e;
@@ -1066,6 +1067,7 @@ footer .footer-credits p a {
     top: 30%;
   }
   .building-info.bld1::after {
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: -16px;
     border-top: 1px solid #4e4e4e;
@@ -1076,7 +1078,7 @@ footer .footer-credits p a {
     top: 30%;
   }
   .building-info.bld2::after {
-    background: inherit;
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: -16px;
     border-top: 1px solid #4e4e4e;
@@ -1087,7 +1089,7 @@ footer .footer-credits p a {
     top: 21%;
   }
   .building-info.bld3::after {
-    background: inherit;
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     left: -16px;
     border-bottom: 1px solid #4e4e4e;
@@ -1098,6 +1100,7 @@ footer .footer-credits p a {
     top: 40%;
   }
   .building-info.bld4::after {
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: -16px;
     border-top: 1px solid #4e4e4e;
@@ -1108,7 +1111,7 @@ footer .footer-credits p a {
     top: 44%;
   }
   .building-info.bld5::after {
-    background: inherit;
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     left: -16px;
     border-bottom: 1px solid #4e4e4e;
@@ -1137,6 +1140,7 @@ footer .footer-credits p a {
   height: auto;
 }
 #hero .logowrap,
+#hero .logowrap a,
 #hero .circle {
   background: transparent;
   border-radius: 100%;
