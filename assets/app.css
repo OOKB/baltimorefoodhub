@@ -288,6 +288,10 @@ body {
 .fullwidth {
   width: calc(100%);
 }
+.visible-lg {
+  display: none;
+  visibility: hidden;
+}
 @media (min-width: 30rem) {
   .container {
     margin: 0 auto;
@@ -408,6 +412,10 @@ body {
   .offset-by-twelve {
     margin-left: calc(100%);
   }
+  .visible-lg {
+    display: block;
+    visibility: visible;
+  }
 }
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -497,6 +505,10 @@ ul {
   margin-bottom: 1em;
   line-height: normal;
 }
+small,
+.small {
+  font-size: .9rem;
+}
 /* Centering in the unknown */
 /* from http://css-tricks.com/centering-in-the-unknown/
   ---------------------------------------------------------*/
@@ -550,7 +562,7 @@ table {
   font-size: 1.6rem;
 }
 a {
-  color: #edaa00;
+  color: #617e95;
   transition: all 400ms;
 }
 /* topbar with sitename and links */
@@ -745,6 +757,12 @@ article h2 {
 #leasing .lead {
   margin-top: 4px;
 }
+@media (min-width: 50rem) and (max-width: 1150px) {
+  #leasing .four.offset-by-four {
+    width: calc(50%);
+    margin-left: calc(25%);
+  }
+}
 /* Footer
   -----------------------------------------------------*/
 footer {
@@ -822,21 +840,31 @@ footer .footer-credits p a {
   overflow: hidden;
   color: #4e4e4e;
 }
-#map h2 {
+#map h2,
+#map p.small {
   margin: 1rem 1rem 0;
 }
 @media (min-width: 30em) {
-  #map h2 {
+  #map h2,
+  #map p.small {
     position: absolute;
-    top: 1rem;
     left: 10%;
-    z-index: 99;
+    z-index: 2;
     margin: 0;
+  }
+  #map h2 {
+    top: 1rem;
+  }
+  #map p.small {
+    top: 3.333rem;
   }
 }
 @media (min-width: 50em) {
   #map h2 {
     top: 3rem;
+  }
+  #map p.small {
+    top: 5.333rem;
   }
 }
 #map .map-group {
@@ -905,40 +933,27 @@ footer .footer-credits p a {
 #map .building.bld0 {
   top: 33%;
   left: 49.5%;
-  height: 19%;
   width: 15%;
-}
-#map .building.bld0::after {
-  position: absolute;
-  content: '';
-  width: 10%;
-  height: 36%;
-  bottom: 1%;
-  right: -10%;
+  top: 36%;
+  left: 50%;
+  height: 19%;
+  width: 16%;
 }
 #map .building.bld0:hover span {
   background: rgba(154, 56, 32, 0.66);
 }
 #map .building.bld1 {
-  top: 39%;
-  left: 70.25%;
+  top: 42%;
+  left: 71.25%;
   height: 16.5%;
-  width: 13.5%;
-}
-#map .building.bld1::after {
-  position: absolute;
-  content: '';
-  width: 14%;
-  height: 59.5%;
-  top: 30%;
-  right: -14%;
+  width: 12%;
 }
 #map .building.bld1:hover span {
   background: rgba(237, 170, 0, 0.66);
 }
 #map .building.bld2 {
-  top: 35%;
-  left: 85.5%;
+  top: 38%;
+  left: 87%;
   height: 22.5%;
   width: 11.8%;
 }
@@ -946,30 +961,31 @@ footer .footer-credits p a {
   background: rgba(110, 203, 152, 0.66);
 }
 #map .building.bld3 {
-  top: 41.5%;
-  left: 9.66%;
-  height: 15%;
-  width: 31.66%;
+  top: 43.5%;
+  left: 11%;
+  height: 17%;
+  width: 31%;
 }
 #map .building.bld3:hover span {
   background: rgba(97, 126, 149, 0.66);
 }
 /*foodtrucks*/
 #map .building.bld4 {
-  top: 52%;
-  left: 42%;
-  height: 21%;
-  width: 23%;
+  top: 55.5%;
+  left: 45%;
+  height: 22%;
+  width: 21%;
 }
 #map .building.bld4:hover span {
+  max-width: 75%;
   background: rgba(153, 164, 174, 0.66);
 }
 /*urban farming */
 #map .building.bld5 {
   top: 60.7%;
-  left: 28.15%;
+  left: 28%;
   height: 15.2%;
-  width: 16.7%;
+  width: 17%;
 }
 #map .building.bld5:hover span {
   background: rgba(92, 73, 37, 0.66);
@@ -1113,7 +1129,7 @@ footer .footer-credits p a {
   color: #f7f8f8;
 }
 /* -----------------------------------------------------*/
-/* ---------------->>> ANIMATIONS.less <<<-----------------*/
+/* ---------------->>> HERO.less <<<-----------------*/
 /* -----------------------------------------------------*/
 #hero .logowrap img {
   max-width: 100%;
@@ -1157,126 +1173,126 @@ footer .footer-credits p a {
   z-index: 0;
 }
 #hero .circle:nth-child(1) {
-  -webkit-animation: rainbowRinglet 12s 0s linear infinite;
-  -moz-animation: rainbowRinglet 12s 0s linear infinite;
-  animation: rainbowRinglet 12s 0s linear infinite;
+  -webkit-animation: whiteRings 12s 0s linear infinite;
+  -moz-animation: whiteRings 12s 0s linear infinite;
+  animation: whiteRings 12s 0s linear infinite;
 }
 #hero .circle:nth-child(2) {
-  -webkit-animation: rainbowRinglet 12s .5s linear infinite;
-  -moz-animation: rainbowRinglet 12s .5s linear infinite;
-  animation: rainbowRinglet 12s .5s linear infinite;
+  -webkit-animation: whiteRings 12s .5s linear infinite;
+  -moz-animation: whiteRings 12s .5s linear infinite;
+  animation: whiteRings 12s .5s linear infinite;
 }
 #hero .circle:nth-child(3) {
-  -webkit-animation: rainbowRinglet 12s 1s linear infinite;
-  -moz-animation: rainbowRinglet 12s 1s linear infinite;
-  animation: rainbowRinglet 12s 1s linear infinite;
+  -webkit-animation: whiteRings 12s 1s linear infinite;
+  -moz-animation: whiteRings 12s 1s linear infinite;
+  animation: whiteRings 12s 1s linear infinite;
 }
 #hero .circle:nth-child(4) {
-  -webkit-animation: rainbowRinglet 12s 1.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 1.5s linear infinite;
-  animation: rainbowRinglet 12s 1.5s linear infinite;
+  -webkit-animation: whiteRings 12s 1.5s linear infinite;
+  -moz-animation: whiteRings 12s 1.5s linear infinite;
+  animation: whiteRings 12s 1.5s linear infinite;
 }
 #hero .circle:nth-child(5) {
-  -webkit-animation: rainbowRinglet 12s 2s linear infinite;
-  -moz-animation: rainbowRinglet 12s 2s linear infinite;
-  animation: rainbowRinglet 12s 2s linear infinite;
+  -webkit-animation: whiteRings 12s 2s linear infinite;
+  -moz-animation: whiteRings 12s 2s linear infinite;
+  animation: whiteRings 12s 2s linear infinite;
 }
 #hero .circle:nth-child(6) {
-  -webkit-animation: rainbowRinglet 12s 2.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 2.5s linear infinite;
-  animation: rainbowRinglet 12s 2.5s linear infinite;
+  -webkit-animation: whiteRings 12s 2.5s linear infinite;
+  -moz-animation: whiteRings 12s 2.5s linear infinite;
+  animation: whiteRings 12s 2.5s linear infinite;
 }
 #hero .circle:nth-child(7) {
-  -webkit-animation: rainbowRinglet 12s 3s linear infinite;
-  -moz-animation: rainbowRinglet 12s 3s linear infinite;
-  animation: rainbowRinglet 12s 3s linear infinite;
+  -webkit-animation: whiteRings 12s 3s linear infinite;
+  -moz-animation: whiteRings 12s 3s linear infinite;
+  animation: whiteRings 12s 3s linear infinite;
 }
 #hero .circle:nth-child(8) {
-  -webkit-animation: rainbowRinglet 12s 3.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 3.5s linear infinite;
-  animation: rainbowRinglet 12s 3.5s linear infinite;
+  -webkit-animation: whiteRings 12s 3.5s linear infinite;
+  -moz-animation: whiteRings 12s 3.5s linear infinite;
+  animation: whiteRings 12s 3.5s linear infinite;
 }
 #hero .circle:nth-child(9) {
-  -webkit-animation: rainbowRinglet 12s 4s linear infinite;
-  -moz-animation: rainbowRinglet 12s 4s linear infinite;
-  animation: rainbowRinglet 12s 4s linear infinite;
+  -webkit-animation: whiteRings 12s 4s linear infinite;
+  -moz-animation: whiteRings 12s 4s linear infinite;
+  animation: whiteRings 12s 4s linear infinite;
 }
 #hero .circle:nth-child(10) {
-  -webkit-animation: rainbowRinglet 12s 4.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 4.5s linear infinite;
-  animation: rainbowRinglet 12s 4.5s linear infinite;
+  -webkit-animation: whiteRings 12s 4.5s linear infinite;
+  -moz-animation: whiteRings 12s 4.5s linear infinite;
+  animation: whiteRings 12s 4.5s linear infinite;
 }
 #hero .circle:nth-child(11) {
-  -webkit-animation: rainbowRinglet 12s 5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 5s linear infinite;
-  animation: rainbowRinglet 12s 5s linear infinite;
+  -webkit-animation: whiteRings 12s 5s linear infinite;
+  -moz-animation: whiteRings 12s 5s linear infinite;
+  animation: whiteRings 12s 5s linear infinite;
 }
 #hero .circle:nth-child(12) {
-  -webkit-animation: rainbowRinglet 12s 5.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 5.5s linear infinite;
-  animation: rainbowRinglet 12s 5.5s linear infinite;
+  -webkit-animation: whiteRings 12s 5.5s linear infinite;
+  -moz-animation: whiteRings 12s 5.5s linear infinite;
+  animation: whiteRings 12s 5.5s linear infinite;
 }
 #hero .circle:nth-child(13) {
-  -webkit-animation: rainbowRinglet 12s 6s linear infinite;
-  -moz-animation: rainbowRinglet 12s 6s linear infinite;
-  animation: rainbowRinglet 12s 6s linear infinite;
+  -webkit-animation: whiteRings 12s 6s linear infinite;
+  -moz-animation: whiteRings 12s 6s linear infinite;
+  animation: whiteRings 12s 6s linear infinite;
 }
 #hero .circle:nth-child(14) {
-  -webkit-animation: rainbowRinglet 12s 6.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 6.5s linear infinite;
-  animation: rainbowRinglet 12s 6.5s linear infinite;
+  -webkit-animation: whiteRings 12s 6.5s linear infinite;
+  -moz-animation: whiteRings 12s 6.5s linear infinite;
+  animation: whiteRings 12s 6.5s linear infinite;
 }
 #hero .circle:nth-child(15) {
-  -webkit-animation: rainbowRinglet 12s 7s linear infinite;
-  -moz-animation: rainbowRinglet 12s 7s linear infinite;
-  animation: rainbowRinglet 12s 7s linear infinite;
+  -webkit-animation: whiteRings 12s 7s linear infinite;
+  -moz-animation: whiteRings 12s 7s linear infinite;
+  animation: whiteRings 12s 7s linear infinite;
 }
 #hero .circle:nth-child(16) {
-  -webkit-animation: rainbowRinglet 12s 7.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 7.5s linear infinite;
-  animation: rainbowRinglet 12s 7.5s linear infinite;
+  -webkit-animation: whiteRings 12s 7.5s linear infinite;
+  -moz-animation: whiteRings 12s 7.5s linear infinite;
+  animation: whiteRings 12s 7.5s linear infinite;
 }
 #hero .circle:nth-child(17) {
-  -webkit-animation: rainbowRinglet 12s 8s linear infinite;
-  -moz-animation: rainbowRinglet 12s 8s linear infinite;
-  animation: rainbowRinglet 12s 8s linear infinite;
+  -webkit-animation: whiteRings 12s 8s linear infinite;
+  -moz-animation: whiteRings 12s 8s linear infinite;
+  animation: whiteRings 12s 8s linear infinite;
 }
 #hero .circle:nth-child(18) {
-  -webkit-animation: rainbowRinglet 12s 8.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 8.5s linear infinite;
-  animation: rainbowRinglet 12s 8.5s linear infinite;
+  -webkit-animation: whiteRings 12s 8.5s linear infinite;
+  -moz-animation: whiteRings 12s 8.5s linear infinite;
+  animation: whiteRings 12s 8.5s linear infinite;
 }
 #hero .circle:nth-child(19) {
-  -webkit-animation: rainbowRinglet 12s 9s linear infinite;
-  -moz-animation: rainbowRinglet 12s 9s linear infinite;
-  animation: rainbowRinglet 12s 9s linear infinite;
+  -webkit-animation: whiteRings 12s 9s linear infinite;
+  -moz-animation: whiteRings 12s 9s linear infinite;
+  animation: whiteRings 12s 9s linear infinite;
 }
 #hero .circle:nth-child(20) {
-  -webkit-animation: rainbowRinglet 12s 9.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 9.5s linear infinite;
-  animation: rainbowRinglet 12s 9.5s linear infinite;
+  -webkit-animation: whiteRings 12s 9.5s linear infinite;
+  -moz-animation: whiteRings 12s 9.5s linear infinite;
+  animation: whiteRings 12s 9.5s linear infinite;
 }
 #hero .circle:nth-child(21) {
-  -webkit-animation: rainbowRinglet 12s 10s linear infinite;
-  -moz-animation: rainbowRinglet 12s 10s linear infinite;
-  animation: rainbowRinglet 12s 10s linear infinite;
+  -webkit-animation: whiteRings 12s 10s linear infinite;
+  -moz-animation: whiteRings 12s 10s linear infinite;
+  animation: whiteRings 12s 10s linear infinite;
 }
 #hero .circle:nth-child(22) {
-  -webkit-animation: rainbowRinglet 12s 10.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 10.5s linear infinite;
-  animation: rainbowRinglet 12s 10.5s linear infinite;
+  -webkit-animation: whiteRings 12s 10.5s linear infinite;
+  -moz-animation: whiteRings 12s 10.5s linear infinite;
+  animation: whiteRings 12s 10.5s linear infinite;
 }
 #hero .circle:nth-child(23) {
-  -webkit-animation: rainbowRinglet 12s 11s linear infinite;
-  -moz-animation: rainbowRinglet 12s 11s linear infinite;
-  animation: rainbowRinglet 12s 11s linear infinite;
+  -webkit-animation: whiteRings 12s 11s linear infinite;
+  -moz-animation: whiteRings 12s 11s linear infinite;
+  animation: whiteRings 12s 11s linear infinite;
 }
 #hero .circle:nth-child(24) {
-  -webkit-animation: rainbowRinglet 12s 11.5s linear infinite;
-  -moz-animation: rainbowRinglet 12s 11.5s linear infinite;
-  animation: rainbowRinglet 12s 11.5s linear infinite;
+  -webkit-animation: whiteRings 12s 11.5s linear infinite;
+  -moz-animation: whiteRings 12s 11.5s linear infinite;
+  animation: whiteRings 12s 11.5s linear infinite;
 }
-@-moz-keyframes rainbowRinglet {
+@-moz-keyframes whiteRings {
   0% {
     width: 300px;
     height: 300px;
@@ -1292,7 +1308,7 @@ footer .footer-credits p a {
     border-radius: 0%;
   }
 }
-@-webkit-keyframes rainbowRinglet {
+@-webkit-keyframes whiteRings {
   0% {
     width: 300px;
     height: 300px;
@@ -1308,7 +1324,7 @@ footer .footer-credits p a {
     border-radius: 0%;
   }
 }
-@keyframes rainbowRinglet {
+@keyframes whiteRings {
   0% {
     width: 300px;
     height: 300px;
