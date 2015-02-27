@@ -89,7 +89,6 @@
   #map .building:active::after {
     color: @bfh-white;
   }
-
 }
 
 #map img {
@@ -173,6 +172,17 @@
 
 #map .building.bld5:hover span {
   background: rgba(92,73,37,.66);
+}
+
+@media (max-width: 767px) {
+  #map .building:hover span {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    .hide-text;
+  }
 }
 
 /* popup */
