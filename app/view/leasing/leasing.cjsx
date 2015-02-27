@@ -17,7 +17,7 @@ module.exports = React.createClass
           </div>
           <div className="four columns offset-by-four">
             <p className="download">
-              <a target="_blank" href="/assets/pdf/20150225-BFH-LeasingInformation.pdf">Leasing Brochure</a>
+              <a target="_blank" href="/assets/pdf/20150227-BFH-LeasingInformation.pdf">Leasing Brochure</a>
             </p>
           </div>
         </div>
