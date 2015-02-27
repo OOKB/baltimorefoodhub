@@ -10,22 +10,31 @@
 
 #map h2,
 #map p.small {
-  margin: 1rem 1rem 0;
+  margin: 1rem auto;
+  padding: 0 1rem 0 1rem;
+  width: 100%;
 }
 
+#map h2 { margin-bottom: 0; padding-top: 2rem; }
+#map p.small { margin-top: 0; padding-bottom: 1rem;}
+
 @media (min-width: 30em) {
+  #map h2,
+  #map p.small {
+    width: 80%;
+  }
+}
+
+@media (min-width: 50em) {
   #map h2,
   #map p.small {
     position: absolute;
     left: 10%;
     z-index: 2;
     margin: 0;
+    padding: 0;
   }
-  #map h2 { top: 1rem; }
-  #map p.small { top: 3.333rem; }
-}
-@media (min-width: 50em) {
-  #map h2 { top: 3rem; }
+  #map h2 { top: 3rem; padding: 0; }
   #map p.small { top: 5.333rem; }
 }
 
@@ -37,6 +46,7 @@
   #map .map-group {
     width: 124%;
     margin-left: -21%;
+    border-top: 2px solid;
   }
 }
 
