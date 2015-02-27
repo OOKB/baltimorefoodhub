@@ -254,14 +254,11 @@
   }
 }
 
-@media (min-width: 1100px ) {
+@media (min-width: 1000px ) {
   .building-info {
-    width: 450px;
-    top:0;
-    box-shadow: 0 0 6px rgba(0,0,0,.33);
     transition: all 400ms;
-    height:auto;
-    border: 1px solid;
+    border: 1px solid @bfh-slate;
+    overflow: visible;
   }
 
   .building-info::after {
@@ -272,6 +269,110 @@
     height: 30px;
     width: 30px;
     top: ~'calc(50% - 15px)';
+  }
+
+  .building-info.bld3,
+  .building-info.bld5 {
+    right: initial;
+  }
+
+  .building-info h3 {
+    font-size: 1.5rem;
+  }
+
+  /* custom place all the building popups? */
+  .building-info.bld0 {
+    left: 5%;
+  }
+  .building-info.bld0::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid @bfh-slate;
+    border-right: 1px solid @bfh-slate;
+  }
+
+  .building-info.bld1 {
+    left: 27%;
+  }
+  .building-info.bld1::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid @bfh-slate;
+    border-right: 1px solid @bfh-slate;
+  }
+
+  .building-info.bld2 {
+    left: 42%;
+  }
+  .building-info.bld2::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid @bfh-slate;
+    border-right: 1px solid @bfh-slate;
+  }
+
+  .building-info.bld3 {
+    left: 39%;
+  }
+  .building-info.bld3::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left: -16px;
+    border-bottom: 1px solid @bfh-slate;
+    border-left: 1px solid @bfh-slate;
+  }
+
+  .building-info.bld4 {
+    left: 0%;
+  }
+  .building-info.bld4::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: -16px;
+    border-top: 1px solid @bfh-slate;
+    border-right: 1px solid @bfh-slate;
+    top: 67%;
+  }
+
+  .building-info.bld5 {
+    left: 44%;
+  }
+  .building-info.bld5::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left: -16px;
+    border-bottom: 1px solid @bfh-slate;
+    border-left: 1px solid @bfh-slate;
+    top: 64%;
+  }
+}
+
+@media (min-width: 1200px ) {
+  .building-info {
+    width: 450px;
+    top:0;
+    box-shadow: 0 0 6px rgba(0,0,0,.33);
+    transition: all 400ms;
+    height:auto;
+    border: 1px solid @bfh-slate;
+  }
+
+  .building-info::after {
+    background: inherit;
+    position: absolute;
+    content: '';
+    display: block;
+    height: 30px;
+    width: 30px;
+    top: ~'calc(50% - 15px)';
+  }
+
+  .building-info.bld3,
+  .building-info.bld5 {
+    right: initial;
   }
 
   .building-info h3 {
