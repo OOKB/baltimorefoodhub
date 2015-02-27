@@ -25,6 +25,7 @@ module.exports = React.createClass
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={blurb} />
+        <meta name="google-site-verification" content="gs_54jcM2bV7xIZp-dbwxioZjP-yKkPUhDjYAb_LCf8" />
         <link rel="stylesheet" type="text/css" href={cssFilePath} />
       </head>
       <body>
@@ -37,6 +38,6 @@ module.exports = React.createClass
         </main>
         <Foot data={data} />
         <script src={jsFilePath} type="text/javascript" />
-        <script src="/assets/ga}.js" type="text/javascript" />
+        <script src="/assets/ga.js" type="text/javascript" />
       </body>
     </html>
