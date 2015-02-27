@@ -43,7 +43,7 @@ module.exports = React.createClass
         buildingInfoEl =
           <ul className="building-info bld#{i}">
             <li className="close"><button onClick={onClickFunc}>Close</button></li>
-            <li>Building #{i+1}</li>
+            <li className="bld-number">Building #{i+1}</li>
             <li><h3>{title}</h3></li>
             {if sf then <li className="list-item sf">{sf} sq. ft</li>}
             {if ceilings then <li className="list-item ceilings">{ceilings} Ceilings</li>}

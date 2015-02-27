@@ -221,17 +221,46 @@
 .building-info.bld4 { background-color: @bfh-silver;    }
 .building-info.bld5 { background-color: @bfh-darkbrown; }
 
+.building-info li {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 30rem) {
+  .building-info li {
+    width: 80%;
+  }
+}
+
 .building-info li.close {
   position: absolute;
   top: 11px;
   right: 11px;
-  z-index: 209
+  z-index: 209;
+  height: 22px;
+  width: 22px;
+}
+
+.building-info li.bld-number {
+  color: @bfh-black;
 }
 
 .building-info h3 {
   font-size: 1.1rem;
   letter-spacing: 0;
   font-weight: bold;
+}
+
+li.list-item {
+  list-style: circle inside;
+}
+
+li.list-item,
+li.list-item span {
+  font-weight: 400 !important;
 }
 
 @media (min-width: 50rem ) {
@@ -251,6 +280,11 @@
   .building-info.bld3,
   .building-info.bld5 {
     right: 0;
+  }
+  .building-info li {
+    width: auto;
+    padding-left:  0;
+    padding-right: 0;
   }
 }
 

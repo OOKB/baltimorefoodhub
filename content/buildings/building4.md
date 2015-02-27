@@ -15,5 +15,4 @@ leased: true
 
 Opening summer 2016
 
-Rent space to scale your food business, join our commercial production kitchen enterprise or
-teach your best culinary skills. This facility has what you need, even if you don’t realize it yet.
+Become a member to access our commercial kitchen with state of the art equipment to scale your food business. Join our commercial production kitchen enterprise or teach your best culinary skills. This facility has what you need, even if you don’t realize it yet.
