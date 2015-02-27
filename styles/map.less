@@ -18,14 +18,14 @@
 #map h2 { margin-bottom: 0; padding-top: 2rem; }
 #map p.small { margin-top: 0; padding-bottom: 1rem;}
 
-@media (min-width: 30em) {
+@media (min-width: 30rem) {
   #map h2,
   #map p.small {
     width: 80%;
   }
 }
 
-@media (min-width: 50em) {
+@media (min-width: 50rem) {
   #map h2,
   #map p.small {
     position: absolute;
@@ -50,6 +50,11 @@
   }
 }
 
+/*********************/
+/*********************/
+/*********************/
+
+/** buildings **/
 #map .building {
   border:none;
   color: rgba(255,255,255,0);
@@ -195,15 +200,18 @@
   }
 }
 
+/*********************/
+/*********************/
+/*********************/
+
 /* popup */
 .building-info {
   border: 1px solid @bfh-slate;
   color: @bfh-white;
-  margin: -5% 0 0;
+  margin: -8% 0 0; // position the popup as close to the bottom of the buildings as possible on small screens.
   padding: 1em;
   z-index:  199;
   /**/
-  transition: all 400ms;
 }
 
 .building-info.bld0 { background-color: @bfh-red174;    }
@@ -226,7 +234,7 @@
   font-weight: bold;
 }
 
-@media (min-width: 40em ) {
+@media (min-width: 768px ) {
   .building-info {
     font-size: 1.25rem;
     margin:0;
@@ -234,6 +242,7 @@
     width: 450px;
     top:0;
     box-shadow: 0 0 6px rgba(0,0,0,.33);
+    transition: all 400ms;
   }
 
   .building-info::after {
