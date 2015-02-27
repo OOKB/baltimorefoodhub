@@ -13,7 +13,7 @@ Leasing = require './leasing/leasing'
 module.exports = React.createClass
   render: ->
     {data} = @props
-    {title, sha} = data
+    {title, sha, blurb} = data
 
     appFileName = sha or 'app'
     cssFilePath = "/assets/#{appFileName}.css"
@@ -24,6 +24,7 @@ module.exports = React.createClass
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={blurb} />
         <link rel="stylesheet" type="text/css" href={cssFilePath} />
       </head>
       <body>
@@ -36,5 +37,6 @@ module.exports = React.createClass
         </main>
         <Foot data={data} />
         <script src={jsFilePath} type="text/javascript" />
+        <script src="/assets/ga}.js" type="text/javascript" />
       </body>
     </html>
