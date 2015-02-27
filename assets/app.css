@@ -223,7 +223,7 @@ button.close {
   cursor: pointer;
 }
 .add-top {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -842,26 +842,36 @@ footer .footer-credits p a {
 }
 #map h2,
 #map p.small {
-  margin: 1rem 1rem 0;
+  margin: 1rem auto;
+  padding: 0 1rem 0 1rem;
+  width: 100%;
 }
-@media (min-width: 30em) {
+#map h2 {
+  margin-bottom: 0;
+  padding-top: 2rem;
+}
+#map p.small {
+  margin-top: 0;
+  padding-bottom: 1rem;
+}
+@media (min-width: 30rem) {
+  #map h2,
+  #map p.small {
+    width: 80%;
+  }
+}
+@media (min-width: 50rem) {
   #map h2,
   #map p.small {
     position: absolute;
     left: 10%;
     z-index: 2;
     margin: 0;
+    padding: 0;
   }
-  #map h2 {
-    top: 1rem;
-  }
-  #map p.small {
-    top: 3.333rem;
-  }
-}
-@media (min-width: 50em) {
   #map h2 {
     top: 3rem;
+    padding: 0;
   }
   #map p.small {
     top: 5.333rem;
@@ -870,12 +880,17 @@ footer .footer-credits p a {
 #map .map-group {
   position: relative;
 }
-@media (max-width: 767px) {
+@media (max-width: 50rem) {
   #map .map-group {
-    width: 120%;
-    margin-left: -10%;
+    width: 124%;
+    margin-left: -21%;
+    border-top: 2px solid;
   }
 }
+/*********************/
+/*********************/
+/*********************/
+/** buildings **/
 #map .building {
   border: none;
   color: rgba(255, 255, 255, 0);
@@ -911,7 +926,7 @@ footer .footer-credits p a {
   border-radius: 3px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.33);
 }
-@media (min-width: 768px) {
+@media (min-width: 50rem) {
   #map .building:hover,
   #map .building:active,
   #map .building:hover::before,
@@ -990,15 +1005,29 @@ footer .footer-credits p a {
 #map .building.bld5:hover span {
   background: rgba(92, 73, 37, 0.66);
 }
+@media (max-width: 50rem) {
+  #map .building:hover span {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+/*********************/
+/*********************/
+/*********************/
 /* popup */
 .building-info {
   border: 1px solid #4e4e4e;
   color: #f7f8f8;
-  margin: -5% 0 0;
+  margin: -8% 0 0;
   padding: 1em;
   z-index: 199;
   /**/
-  transition: all 400ms;
 }
 .building-info.bld0 {
   background-color: #9a3820;
@@ -1018,25 +1047,71 @@ footer .footer-credits p a {
 .building-info.bld5 {
   background-color: #5c4925;
 }
+.building-info li {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+@media (min-width: 30rem) {
+  .building-info li {
+    width: 80%;
+  }
+}
 .building-info li.close {
   position: absolute;
   top: 11px;
   right: 11px;
   z-index: 209;
+  height: 22px;
+  width: 22px;
+}
+.building-info li.bld-number {
+  color: #231f20;
 }
 .building-info h3 {
   font-size: 1.1rem;
   letter-spacing: 0;
   font-weight: bold;
 }
-@media (min-width: 40em) {
+li.list-item {
+  list-style: circle inside;
+}
+li.list-item,
+li.list-item span {
+  font-weight: 400 !important;
+}
+@media (min-width: 50rem) {
   .building-info {
     font-size: 1.25rem;
     margin: 0;
     position: absolute;
+    height: 100%;
     width: 450px;
     top: 0;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.33);
+    transition: all 400ms;
+    border-top: none;
+    border-bottom: none;
+    overflow: auto;
+  }
+  .building-info.bld3,
+  .building-info.bld5 {
+    right: 0;
+  }
+  .building-info li {
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .building-info {
+    width: 45%;
+    transition: all 400ms;
+    border: 1px solid #4e4e4e;
+    overflow: visible;
   }
   .building-info::after {
     background: inherit;
@@ -1047,13 +1122,16 @@ footer .footer-credits p a {
     width: 30px;
     top: calc(50% - 15px);
   }
+  .building-info.bld3,
+  .building-info.bld5 {
+    right: initial;
+  }
   .building-info h3 {
     font-size: 1.5rem;
   }
   /* custom place all the building popups? */
   .building-info.bld0 {
-    left: 23%;
-    top: 25%;
+    left: 5%;
   }
   .building-info.bld0::after {
     -webkit-transform: rotate(45deg);
@@ -1063,8 +1141,7 @@ footer .footer-credits p a {
     border-right: 1px solid #4e4e4e;
   }
   .building-info.bld1 {
-    left: 44%;
-    top: 30%;
+    left: 27%;
   }
   .building-info.bld1::after {
     -webkit-transform: rotate(45deg);
@@ -1074,8 +1151,7 @@ footer .footer-credits p a {
     border-right: 1px solid #4e4e4e;
   }
   .building-info.bld2 {
-    left: 59%;
-    top: 30%;
+    left: 42%;
   }
   .building-info.bld2::after {
     -webkit-transform: rotate(45deg);
@@ -1085,8 +1161,7 @@ footer .footer-credits p a {
     border-right: 1px solid #4e4e4e;
   }
   .building-info.bld3 {
-    left: 40%;
-    top: 21%;
+    left: 39%;
   }
   .building-info.bld3::after {
     -webkit-transform: rotate(45deg);
@@ -1096,8 +1171,7 @@ footer .footer-credits p a {
     border-left: 1px solid #4e4e4e;
   }
   .building-info.bld4 {
-    left: 19%;
-    top: 40%;
+    left: 0%;
   }
   .building-info.bld4::after {
     -webkit-transform: rotate(45deg);
@@ -1105,10 +1179,10 @@ footer .footer-credits p a {
     right: -16px;
     border-top: 1px solid #4e4e4e;
     border-right: 1px solid #4e4e4e;
+    top: 67%;
   }
   .building-info.bld5 {
     left: 44%;
-    top: 44%;
   }
   .building-info.bld5::after {
     -webkit-transform: rotate(45deg);
@@ -1116,6 +1190,44 @@ footer .footer-credits p a {
     left: -16px;
     border-bottom: 1px solid #4e4e4e;
     border-left: 1px solid #4e4e4e;
+    top: 64%;
+  }
+}
+@media (min-width: 1200px) {
+  .building-info {
+    width: 36%;
+    height: auto;
+  }
+  /* custom place all the building popups? */
+  .building-info.bld0 {
+    left: 15%;
+    top: 20%;
+  }
+  .building-info.bld1 {
+    left: 36%;
+    top: 30%;
+  }
+  .building-info.bld2 {
+    left: 51%;
+    top: 30%;
+  }
+  .building-info.bld3 {
+    left: 39%;
+    top: 16%;
+  }
+  .building-info.bld4 {
+    left: 12%;
+    top: 43%;
+  }
+  .building-info.bld4::after {
+    top: calc(50% - 15px);
+  }
+  .building-info.bld5 {
+    left: 44%;
+    top: 44%;
+  }
+  .building-info.bld5::after {
+    top: calc(50% - 15px);
   }
 }
 .building-info h4 {
@@ -1134,216 +1246,6 @@ footer .footer-credits p a {
 /* -----------------------------------------------------*/
 /* ---------------->>> HERO.less <<<-----------------*/
 /* -----------------------------------------------------*/
-#hero .logowrap img {
-  max-width: 100%;
-  width: 300px;
-  height: auto;
-}
-#hero .logowrap,
-#hero .logowrap a,
-#hero .circle {
-  background: transparent;
-  border-radius: 100%;
-  display: block;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  width: 300px;
-  height: 300px;
-  top: 50vh;
-  margin-top: -150px;
-  left: 50%;
-  margin-left: -150px;
-}
-#hero .logowrap {
-  z-index: 0;
-}
-#hero .circlewrap {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: .333333;
-  overflow: hidden;
-  z-index: -1;
-  pointer-events: none;
-}
-#hero .circle {
-  border: 3px solid #f7f8f8;
-  text-indent: -300%;
-  overflow: hidden;
-  text-wrap: nowrap;
-  z-index: 0;
-}
-#hero .circle:nth-child(1) {
-  -webkit-animation: whiteRings 12s 0s linear infinite;
-  -moz-animation: whiteRings 12s 0s linear infinite;
-  animation: whiteRings 12s 0s linear infinite;
-}
-#hero .circle:nth-child(2) {
-  -webkit-animation: whiteRings 12s .5s linear infinite;
-  -moz-animation: whiteRings 12s .5s linear infinite;
-  animation: whiteRings 12s .5s linear infinite;
-}
-#hero .circle:nth-child(3) {
-  -webkit-animation: whiteRings 12s 1s linear infinite;
-  -moz-animation: whiteRings 12s 1s linear infinite;
-  animation: whiteRings 12s 1s linear infinite;
-}
-#hero .circle:nth-child(4) {
-  -webkit-animation: whiteRings 12s 1.5s linear infinite;
-  -moz-animation: whiteRings 12s 1.5s linear infinite;
-  animation: whiteRings 12s 1.5s linear infinite;
-}
-#hero .circle:nth-child(5) {
-  -webkit-animation: whiteRings 12s 2s linear infinite;
-  -moz-animation: whiteRings 12s 2s linear infinite;
-  animation: whiteRings 12s 2s linear infinite;
-}
-#hero .circle:nth-child(6) {
-  -webkit-animation: whiteRings 12s 2.5s linear infinite;
-  -moz-animation: whiteRings 12s 2.5s linear infinite;
-  animation: whiteRings 12s 2.5s linear infinite;
-}
-#hero .circle:nth-child(7) {
-  -webkit-animation: whiteRings 12s 3s linear infinite;
-  -moz-animation: whiteRings 12s 3s linear infinite;
-  animation: whiteRings 12s 3s linear infinite;
-}
-#hero .circle:nth-child(8) {
-  -webkit-animation: whiteRings 12s 3.5s linear infinite;
-  -moz-animation: whiteRings 12s 3.5s linear infinite;
-  animation: whiteRings 12s 3.5s linear infinite;
-}
-#hero .circle:nth-child(9) {
-  -webkit-animation: whiteRings 12s 4s linear infinite;
-  -moz-animation: whiteRings 12s 4s linear infinite;
-  animation: whiteRings 12s 4s linear infinite;
-}
-#hero .circle:nth-child(10) {
-  -webkit-animation: whiteRings 12s 4.5s linear infinite;
-  -moz-animation: whiteRings 12s 4.5s linear infinite;
-  animation: whiteRings 12s 4.5s linear infinite;
-}
-#hero .circle:nth-child(11) {
-  -webkit-animation: whiteRings 12s 5s linear infinite;
-  -moz-animation: whiteRings 12s 5s linear infinite;
-  animation: whiteRings 12s 5s linear infinite;
-}
-#hero .circle:nth-child(12) {
-  -webkit-animation: whiteRings 12s 5.5s linear infinite;
-  -moz-animation: whiteRings 12s 5.5s linear infinite;
-  animation: whiteRings 12s 5.5s linear infinite;
-}
-#hero .circle:nth-child(13) {
-  -webkit-animation: whiteRings 12s 6s linear infinite;
-  -moz-animation: whiteRings 12s 6s linear infinite;
-  animation: whiteRings 12s 6s linear infinite;
-}
-#hero .circle:nth-child(14) {
-  -webkit-animation: whiteRings 12s 6.5s linear infinite;
-  -moz-animation: whiteRings 12s 6.5s linear infinite;
-  animation: whiteRings 12s 6.5s linear infinite;
-}
-#hero .circle:nth-child(15) {
-  -webkit-animation: whiteRings 12s 7s linear infinite;
-  -moz-animation: whiteRings 12s 7s linear infinite;
-  animation: whiteRings 12s 7s linear infinite;
-}
-#hero .circle:nth-child(16) {
-  -webkit-animation: whiteRings 12s 7.5s linear infinite;
-  -moz-animation: whiteRings 12s 7.5s linear infinite;
-  animation: whiteRings 12s 7.5s linear infinite;
-}
-#hero .circle:nth-child(17) {
-  -webkit-animation: whiteRings 12s 8s linear infinite;
-  -moz-animation: whiteRings 12s 8s linear infinite;
-  animation: whiteRings 12s 8s linear infinite;
-}
-#hero .circle:nth-child(18) {
-  -webkit-animation: whiteRings 12s 8.5s linear infinite;
-  -moz-animation: whiteRings 12s 8.5s linear infinite;
-  animation: whiteRings 12s 8.5s linear infinite;
-}
-#hero .circle:nth-child(19) {
-  -webkit-animation: whiteRings 12s 9s linear infinite;
-  -moz-animation: whiteRings 12s 9s linear infinite;
-  animation: whiteRings 12s 9s linear infinite;
-}
-#hero .circle:nth-child(20) {
-  -webkit-animation: whiteRings 12s 9.5s linear infinite;
-  -moz-animation: whiteRings 12s 9.5s linear infinite;
-  animation: whiteRings 12s 9.5s linear infinite;
-}
-#hero .circle:nth-child(21) {
-  -webkit-animation: whiteRings 12s 10s linear infinite;
-  -moz-animation: whiteRings 12s 10s linear infinite;
-  animation: whiteRings 12s 10s linear infinite;
-}
-#hero .circle:nth-child(22) {
-  -webkit-animation: whiteRings 12s 10.5s linear infinite;
-  -moz-animation: whiteRings 12s 10.5s linear infinite;
-  animation: whiteRings 12s 10.5s linear infinite;
-}
-#hero .circle:nth-child(23) {
-  -webkit-animation: whiteRings 12s 11s linear infinite;
-  -moz-animation: whiteRings 12s 11s linear infinite;
-  animation: whiteRings 12s 11s linear infinite;
-}
-#hero .circle:nth-child(24) {
-  -webkit-animation: whiteRings 12s 11.5s linear infinite;
-  -moz-animation: whiteRings 12s 11.5s linear infinite;
-  animation: whiteRings 12s 11.5s linear infinite;
-}
-@-moz-keyframes whiteRings {
-  0% {
-    width: 300px;
-    height: 300px;
-    margin-top: -150px;
-    margin-left: -150px;
-    border-radius: 100%;
-  }
-  100% {
-    margin-top: -1300px;
-    margin-left: -1300px;
-    width: 2600px;
-    height: 2600px;
-    border-radius: 0%;
-  }
-}
-@-webkit-keyframes whiteRings {
-  0% {
-    width: 300px;
-    height: 300px;
-    margin-top: -150px;
-    margin-left: -150px;
-    border-radius: 100%;
-  }
-  100% {
-    margin-top: -1300px;
-    margin-left: -1300px;
-    width: 2600px;
-    height: 2600px;
-    border-radius: 0%;
-  }
-}
-@keyframes whiteRings {
-  0% {
-    width: 300px;
-    height: 300px;
-    margin-top: -150px;
-    margin-left: -150px;
-    border-radius: 100%;
-  }
-  100% {
-    margin-top: -1300px;
-    margin-left: -1300px;
-    width: 2600px;
-    height: 2600px;
-    border-radius: 0%;
-  }
-}
 /* Hero
   ==============================================*/
 #hero h1 {
@@ -1354,25 +1256,266 @@ footer .footer-credits p a {
   margin: 0;
   padding: 0;
 }
+#hero .logowrap {
+  background: transparent;
+  text-align: center;
+  padding: 3rem;
+}
+#hero .logowrap img {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+}
+#hero .top {
+  position: relative;
+}
+#hero .circle,
+#hero .circewrap {
+  background: transparent;
+  display: none;
+}
 #hero .bottom {
   background-color: #4e4e4e;
   border-top: 2px solid #4e4e4e;
-  margin: 95vh 0 0 0;
+  margin: 0;
   padding: 0;
 }
 #hero .bottom .container {
-  padding: 3rem 2.25rem 5rem 2.25rem;
+  padding: 2rem;
 }
 #hero .bottom h2 {
   font-family: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
   font-weight: normal;
   letter-spacing: 0;
   color: #f7f8f8;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   line-height: 1;
-  max-width: 47rem;
-  margin: 0 auto;
+}
+/* only do the animated rings and full screen images when of a certain width... */
+@media (min-width: 768px) and (orientation: landscape) {
+  #hero .bottom {
+    margin: 95vh 0 0 0;
+  }
+  #hero .bottom .container {
+    padding: 3rem 2.25rem 5rem 2.25rem;
+  }
+  #hero .bottom h2 {
+    font-size: 3rem;
+    line-height: 1;
+    max-width: 47rem;
+    margin: 0 auto;
+  }
+  #hero .logowrap img {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+  }
+  #hero .logowrap,
+  #hero .logowrap a,
+  #hero .circle {
+    border-radius: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 50vh;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+  }
+  #hero .logowrap {
+    z-index: 0;
+  }
+  #hero .circlewrap {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .333333;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+  }
+  #hero .circle {
+    border: 3px solid #f7f8f8;
+    text-indent: -300%;
+    overflow: hidden;
+    text-wrap: nowrap;
+    z-index: 0;
+  }
+  #hero .circle:nth-child(1) {
+    -webkit-animation: whiteRings 12s 0s linear infinite;
+    -moz-animation: whiteRings 12s 0s linear infinite;
+    animation: whiteRings 12s 0s linear infinite;
+  }
+  #hero .circle:nth-child(2) {
+    -webkit-animation: whiteRings 12s .5s linear infinite;
+    -moz-animation: whiteRings 12s .5s linear infinite;
+    animation: whiteRings 12s .5s linear infinite;
+  }
+  #hero .circle:nth-child(3) {
+    -webkit-animation: whiteRings 12s 1s linear infinite;
+    -moz-animation: whiteRings 12s 1s linear infinite;
+    animation: whiteRings 12s 1s linear infinite;
+  }
+  #hero .circle:nth-child(4) {
+    -webkit-animation: whiteRings 12s 1.5s linear infinite;
+    -moz-animation: whiteRings 12s 1.5s linear infinite;
+    animation: whiteRings 12s 1.5s linear infinite;
+  }
+  #hero .circle:nth-child(5) {
+    -webkit-animation: whiteRings 12s 2s linear infinite;
+    -moz-animation: whiteRings 12s 2s linear infinite;
+    animation: whiteRings 12s 2s linear infinite;
+  }
+  #hero .circle:nth-child(6) {
+    -webkit-animation: whiteRings 12s 2.5s linear infinite;
+    -moz-animation: whiteRings 12s 2.5s linear infinite;
+    animation: whiteRings 12s 2.5s linear infinite;
+  }
+  #hero .circle:nth-child(7) {
+    -webkit-animation: whiteRings 12s 3s linear infinite;
+    -moz-animation: whiteRings 12s 3s linear infinite;
+    animation: whiteRings 12s 3s linear infinite;
+  }
+  #hero .circle:nth-child(8) {
+    -webkit-animation: whiteRings 12s 3.5s linear infinite;
+    -moz-animation: whiteRings 12s 3.5s linear infinite;
+    animation: whiteRings 12s 3.5s linear infinite;
+  }
+  #hero .circle:nth-child(9) {
+    -webkit-animation: whiteRings 12s 4s linear infinite;
+    -moz-animation: whiteRings 12s 4s linear infinite;
+    animation: whiteRings 12s 4s linear infinite;
+  }
+  #hero .circle:nth-child(10) {
+    -webkit-animation: whiteRings 12s 4.5s linear infinite;
+    -moz-animation: whiteRings 12s 4.5s linear infinite;
+    animation: whiteRings 12s 4.5s linear infinite;
+  }
+  #hero .circle:nth-child(11) {
+    -webkit-animation: whiteRings 12s 5s linear infinite;
+    -moz-animation: whiteRings 12s 5s linear infinite;
+    animation: whiteRings 12s 5s linear infinite;
+  }
+  #hero .circle:nth-child(12) {
+    -webkit-animation: whiteRings 12s 5.5s linear infinite;
+    -moz-animation: whiteRings 12s 5.5s linear infinite;
+    animation: whiteRings 12s 5.5s linear infinite;
+  }
+  #hero .circle:nth-child(13) {
+    -webkit-animation: whiteRings 12s 6s linear infinite;
+    -moz-animation: whiteRings 12s 6s linear infinite;
+    animation: whiteRings 12s 6s linear infinite;
+  }
+  #hero .circle:nth-child(14) {
+    -webkit-animation: whiteRings 12s 6.5s linear infinite;
+    -moz-animation: whiteRings 12s 6.5s linear infinite;
+    animation: whiteRings 12s 6.5s linear infinite;
+  }
+  #hero .circle:nth-child(15) {
+    -webkit-animation: whiteRings 12s 7s linear infinite;
+    -moz-animation: whiteRings 12s 7s linear infinite;
+    animation: whiteRings 12s 7s linear infinite;
+  }
+  #hero .circle:nth-child(16) {
+    -webkit-animation: whiteRings 12s 7.5s linear infinite;
+    -moz-animation: whiteRings 12s 7.5s linear infinite;
+    animation: whiteRings 12s 7.5s linear infinite;
+  }
+  #hero .circle:nth-child(17) {
+    -webkit-animation: whiteRings 12s 8s linear infinite;
+    -moz-animation: whiteRings 12s 8s linear infinite;
+    animation: whiteRings 12s 8s linear infinite;
+  }
+  #hero .circle:nth-child(18) {
+    -webkit-animation: whiteRings 12s 8.5s linear infinite;
+    -moz-animation: whiteRings 12s 8.5s linear infinite;
+    animation: whiteRings 12s 8.5s linear infinite;
+  }
+  #hero .circle:nth-child(19) {
+    -webkit-animation: whiteRings 12s 9s linear infinite;
+    -moz-animation: whiteRings 12s 9s linear infinite;
+    animation: whiteRings 12s 9s linear infinite;
+  }
+  #hero .circle:nth-child(20) {
+    -webkit-animation: whiteRings 12s 9.5s linear infinite;
+    -moz-animation: whiteRings 12s 9.5s linear infinite;
+    animation: whiteRings 12s 9.5s linear infinite;
+  }
+  #hero .circle:nth-child(21) {
+    -webkit-animation: whiteRings 12s 10s linear infinite;
+    -moz-animation: whiteRings 12s 10s linear infinite;
+    animation: whiteRings 12s 10s linear infinite;
+  }
+  #hero .circle:nth-child(22) {
+    -webkit-animation: whiteRings 12s 10.5s linear infinite;
+    -moz-animation: whiteRings 12s 10.5s linear infinite;
+    animation: whiteRings 12s 10.5s linear infinite;
+  }
+  #hero .circle:nth-child(23) {
+    -webkit-animation: whiteRings 12s 11s linear infinite;
+    -moz-animation: whiteRings 12s 11s linear infinite;
+    animation: whiteRings 12s 11s linear infinite;
+  }
+  #hero .circle:nth-child(24) {
+    -webkit-animation: whiteRings 12s 11.5s linear infinite;
+    -moz-animation: whiteRings 12s 11.5s linear infinite;
+    animation: whiteRings 12s 11.5s linear infinite;
+  }
+  @-moz-keyframes whiteRings {
+    0% {
+      width: 300px;
+      height: 300px;
+      margin-top: -150px;
+      margin-left: -150px;
+      border-radius: 100%;
+    }
+    100% {
+      margin-top: -1300px;
+      margin-left: -1300px;
+      width: 2600px;
+      height: 2600px;
+      border-radius: 0%;
+    }
+  }
+  @-webkit-keyframes whiteRings {
+    0% {
+      width: 300px;
+      height: 300px;
+      margin-top: -150px;
+      margin-left: -150px;
+      border-radius: 100%;
+    }
+    100% {
+      margin-top: -1300px;
+      margin-left: -1300px;
+      width: 2600px;
+      height: 2600px;
+      border-radius: 0%;
+    }
+  }
+  @keyframes whiteRings {
+    0% {
+      width: 300px;
+      height: 300px;
+      margin-top: -150px;
+      margin-left: -150px;
+      border-radius: 100%;
+    }
+    100% {
+      margin-top: -1300px;
+      margin-left: -1300px;
+      width: 2600px;
+      height: 2600px;
+      border-radius: 0%;
+    }
+  }
 }
 /****************************************************/
 /****************************************************/
@@ -1380,35 +1523,64 @@ footer .footer-credits p a {
 /****************************************************/
 /****************************************************/
 #slideshow {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 100%;
-  min-height: 0%;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  width: 100%;
   z-index: -2;
-  text-align: center;
+  height: 100%;
+  width: 100%;
 }
 #slideshow > span {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
 }
-#slideshow img {
-  display: inline-block;
-  vertical-align: middle;
+#slideshow div.slide {
+  height: 100%;
+  max-height: 100%;
   width: 100%;
   max-width: 100%;
-  height: auto;
-  max-height: none;
   text-align: center;
   position: absolute;
   left: 0;
-  z-index: -2;
+  /**/
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  #slideshow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    min-height: 0%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    z-index: -2;
+    text-align: center;
+  }
+  #slideshow > span {
+    position: relative;
+    top: initial;
+    right: initial;
+    bottom: initial;
+    left: initial;
+    display: block;
+  }
 }
 /****************************************************/
 /****************************************************/
@@ -1423,7 +1595,6 @@ footer .footer-credits p a {
   -ms-transition: opacity 500ms ease-in;
   -o-transition: opacity 500ms ease-in;
   transition: opacity 500ms ease-in;
-  z-index: -1;
 }
 .carousel-left-enter.carousel-left-enter-active {
   opacity: 1;
@@ -1435,7 +1606,6 @@ footer .footer-credits p a {
   -ms-transition: opacity 500ms ease-in;
   -o-transition: opacity 500ms ease-in;
   transition: opacity 500ms ease-in;
-  z-index: -2;
 }
 .carousel-left-leave.carousel-left-leave-active {
   opacity: 0.01;
