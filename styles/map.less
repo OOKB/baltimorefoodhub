@@ -256,6 +256,7 @@
 
 @media (min-width: 1000px ) {
   .building-info {
+    width: 45%;
     transition: all 400ms;
     border: 1px solid @bfh-slate;
     overflow: visible;
@@ -352,92 +353,37 @@
 
 @media (min-width: 1200px ) {
   .building-info {
-    width: 450px;
-    top:0;
-    box-shadow: 0 0 6px rgba(0,0,0,.33);
-    transition: all 400ms;
+    width: 36%;
     height:auto;
-    border: 1px solid @bfh-slate;
-  }
-
-  .building-info::after {
-    background: inherit;
-    position: absolute;
-    content: '';
-    display: block;
-    height: 30px;
-    width: 30px;
-    top: ~'calc(50% - 15px)';
-  }
-
-  .building-info.bld3,
-  .building-info.bld5 {
-    right: initial;
-  }
-
-  .building-info h3 {
-    font-size: 1.5rem;
   }
 
   /* custom place all the building popups? */
   .building-info.bld0 {
-    left: 23%;
-    top: 25%;
-  }
-  .building-info.bld0::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    right: -16px;
-    border-top: 1px solid @bfh-slate;
-    border-right: 1px solid @bfh-slate;
+    left: 15%;
+    top: 20%;
   }
 
   .building-info.bld1 {
-    left: 44%;
+    left: 36%;
     top: 30%;
-  }
-  .building-info.bld1::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    right: -16px;
-    border-top: 1px solid @bfh-slate;
-    border-right: 1px solid @bfh-slate;
   }
 
   .building-info.bld2 {
-    left: 59%;
+    left: 51%;
     top: 30%;
-  }
-  .building-info.bld2::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    right: -16px;
-    border-top: 1px solid @bfh-slate;
-    border-right: 1px solid @bfh-slate;
   }
 
   .building-info.bld3 {
-    left: 40%;
-    top: 21%;
-  }
-  .building-info.bld3::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    left: -16px;
-    border-bottom: 1px solid @bfh-slate;
-    border-left: 1px solid @bfh-slate;
+    left: 39%;
+    top: 16%;
   }
 
   .building-info.bld4 {
-    left: 19%;
-    top: 40%;
+    left: 12%;
+    top: 43%;
   }
   .building-info.bld4::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    right: -16px;
-    border-top: 1px solid @bfh-slate;
-    border-right: 1px solid @bfh-slate;
+    top: ~'calc(50% - 15px)';
   }
 
   .building-info.bld5 {
@@ -445,11 +391,7 @@
     top: 44%;
   }
   .building-info.bld5::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    left: -16px;
-    border-bottom: 1px solid @bfh-slate;
-    border-left: 1px solid @bfh-slate;
+    top: ~'calc(50% - 15px)';
   }
 }
 
