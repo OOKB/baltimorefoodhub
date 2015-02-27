@@ -36,7 +36,7 @@ module.exports = React.createClass
 
         <div id="slideshow" className="cycle-slideshow">
           <ReactCSSTransitionGroup transitionName="carousel-left">
-            <img className="slide" src={slideSrc} key={activeSlide} />
+            <div className="slide" style={backgroundImage: 'url(' + slideSrc + ')'} key={activeSlide} />
           </ReactCSSTransitionGroup>
         </div>
 
