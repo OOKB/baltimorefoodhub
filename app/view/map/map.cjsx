@@ -60,7 +60,7 @@ module.exports = React.createClass
       <p className="small"><em>Click on a building below for more information. <br className="visible-lg" /> Map information is subject to change.</em></p>
       <div className="map-group">
         {buildingElements}
-        <img src="/map-feb24-rendering.jpg" alt="map" />
+        <img src="/assets/img/map-feb24-rendering.jpg" alt="Baltimore Food Hub Campus Map (Rendering by Ziger/Snead Architects)" />
       </div>
       {buildingInfoEl}
     </article>

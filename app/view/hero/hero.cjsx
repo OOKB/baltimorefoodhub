@@ -67,7 +67,7 @@ module.exports = React.createClass
           <div className="circle"></div>
         </div>
         <div className="logowrap">
-          <a href="#map"><img src="bfh-logo-white-trans.png" alt="Baltimore Food Hub Logo" /></a>
+          <a href="#map"><img src="/assets/img/bfh-logo-white-trans.png" alt="Baltimore Food Hub Logo" /></a>
         </div>
 
       </section>
