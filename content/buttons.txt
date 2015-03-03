@@ -13,4 +13,4 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-like" data-href="http://www.baltimorefoodhub.com" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+<div class="fb-like" data-href="http://www.baltimorefoodhub.com" data-text="Charmed, packed and shipped. The Baltimore Food Hub is promoting local and regional foods in Baltimore City. Doors open in 2016!" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
