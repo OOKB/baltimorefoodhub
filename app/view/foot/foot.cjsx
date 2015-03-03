@@ -5,6 +5,8 @@ LeasingContact = require './leasingContact'
 Credits = require './credits'
 Email = require '../emailField'
 MailchimpForm = require './mailchimp'
+FacebookBtn = require './facebook'
+TwitterBtn = require './twitter'
 
 module.exports = React.createClass
 
