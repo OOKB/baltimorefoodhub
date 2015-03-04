@@ -117,48 +117,52 @@
 }
 
 /** position and "design" the building overlays with CSS **/
+/** Flex 1 **/
 #map .building.bld0 {
   top: 36%;
   left: 50%;
   height: 19%;
   width: 16%;
+
+  &:hover span {
+    background: rgba(154,56,32,.66);
+  }
 }
 
-#map .building.bld0:hover span {
-  background: rgba(154,56,32,.66);
-}
-
+/** Flex 2 **/
 #map .building.bld1 {
   top: 42%;
   left: 71.25%;
   height: 16.5%;
   width: 12%;
+
+  &:hover span {
+    background: rgba(237,170,0,.66);
+  }
 }
 
-#map .building.bld1:hover span {
-  background: rgba(237,170,0,.66);
-}
-
+/** Coworking **/
 #map .building.bld2 {
   top: 38%;
   left: 87%;
   height: 22.5%;
   width: 11.8%;
+
+  &:hover span {
+    background: rgba(110,203,152,.66);
+  }
 }
 
-#map .building.bld2:hover span {
-  background: rgba(110,203,152,.66);
-}
-
+/** Kitchen Incubator **/
 #map .building.bld3 {
   top: 43.5%;
   left: 11%;
   height: 17%;
   width: 31%;
-}
 
-#map .building.bld3:hover span {
-  background: rgba(97,126,149,.66);
+  &:hover span {
+    background: rgba(97,126,149,.66);
+  }
 }
 
 /*foodtrucks*/
@@ -167,11 +171,11 @@
   left: 45%;
   height: 22%;
   width: 21%;
-}
 
-#map .building.bld4:hover span {
-  max-width: 75%;
-  background: rgba(153,164,174,.66);
+  &:hover span {
+    max-width: 75%;
+    background: rgba(153,164,174,.66);
+  }
 }
 
 /*urban farming */
@@ -180,10 +184,10 @@
   left: 28%;
   height: 15.2%;
   width: 17%;
-}
 
-#map .building.bld5:hover span {
-  background: rgba(92,73,37,.66);
+  &:hover span {
+    background: rgba(92,73,37,.66);
+  }
 }
 
 @media (max-width: 50rem) {
@@ -204,11 +208,24 @@
 /* popup */
 .building-info {
   border: 1px solid;
-  color: @bfh-white;
   margin: -8% 0 0; // position the popup as close to the bottom of the buildings as possible on small screens.
   padding: 1em;
   z-index:  199;
   /**/
+
+  li {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid
+  }
 }
 
 .building-info.bld0 { background-color: lighten(@bfh-red174,    60%); border-color: @bfh-red174;    color: darken(@bfh-red174,    20%); }
@@ -217,14 +234,6 @@
 .building-info.bld3 { background-color: lighten(@bfh-blue,      55%); border-color: @bfh-blue;      color: darken(@bfh-blue,      20%); }
 .building-info.bld4 { background-color: lighten(@bfh-silver,    47%); border-color: @bfh-silver;    color: darken(@bfh-silver,    30%); }
 .building-info.bld5 { background-color: lighten(@bfh-darkbrown, 60%); border-color: @bfh-darkbrown; color: darken(@bfh-darkbrown, 15%); }
-
-.building-info li {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  width: 100%;
-}
 
 @media (min-width: 30rem) {
   .building-info li {
@@ -258,20 +267,15 @@ li.list-item {
   list-style: circle inside;
 }
 
-li.list-item,
-li.list-item span {
-  font-weight: 400 !important;
-}
-
 .building-info li.leased {
   border: 1px solid;
   padding: .33em;
   border-radius: .33em;
   margin-bottom: 1em;
-}
 
-.building-info li.leased p {
-  margin: 0;
+  p {
+    margin: 0;
+  }
 }
 
 @media (min-width: 50rem ) {
@@ -286,17 +290,20 @@ li.list-item span {
     box-shadow: 0 0 6px rgba(0,0,0,.33);
     transition: all 400ms;
     overflow: auto;
+
+    li {
+      width: auto;
+      padding-left:  0;
+      padding-right: 0;
+    }
   }
+
   .building-info.bld3,
   .building-info.bld5 {
     right: 0;
   }
+
   .building-info.bld3 { width: 60%; }
-  .building-info li {
-    width: auto;
-    padding-left:  0;
-    padding-right: 0;
-  }
 }
 
 @media (min-width: 1000px ) {
@@ -307,16 +314,19 @@ li.list-item span {
     transition: all 400ms;
     border: 1px solid @bfh-slate;
     overflow: visible;
-  }
 
-  .building-info::after {
-    background: inherit;
-    position: absolute;
-    content: '';
-    display: block;
-    height: 30px;
-    width: 30px;
-    top: ~'calc(50% - 15px)';
+    &::after {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      /**/
+      background: inherit;
+      position: absolute;
+      content: '';
+      display: block;
+      height: 30px;
+      width: 30px;
+      top: ~'calc(50% - 15px)';
+    }
   }
 
   .building-info.bld3,
@@ -331,70 +341,64 @@ li.list-item span {
   /* custom place all the building popups? */
   .building-info.bld0 {
     left: 5%;
-  }
-  .building-info.bld0::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    right: -16px;
-    border-top: 1px solid @bfh-red174;
-    border-right: 1px solid @bfh-red174;
+
+    &::after {
+      right: -16px;
+      border-top: 1px solid @bfh-red174;
+      border-right: 1px solid @bfh-red174;
+    }
   }
 
   .building-info.bld1 {
     left: 27%;
-  }
-  .building-info.bld1::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    right: -16px;
-    border-top: 1px solid @bfh-yellow;
-    border-right: 1px solid @bfh-yellow;
+
+    &::after {
+      right: -16px;
+      border-top: 1px solid @bfh-yellow;
+      border-right: 1px solid @bfh-yellow;
+    }
   }
 
   .building-info.bld2 {
     left: 42%;
-  }
-  .building-info.bld2::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    right: -16px;
-    border-top: 1px solid @bfh-green;
-    border-right: 1px solid @bfh-green;
+
+    &::after {
+      right: -16px;
+      border-top: 1px solid @bfh-green;
+      border-right: 1px solid @bfh-green;
+    }
   }
 
   .building-info.bld3 {
     left: 39%;
-  }
-  .building-info.bld3::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    left: -16px;
-    border-bottom: 1px solid @bfh-blue;
-    border-left: 1px solid @bfh-blue;
+
+    &::after {
+      left: -16px;
+      border-bottom: 1px solid @bfh-blue;
+      border-left: 1px solid @bfh-blue;
+    }
   }
 
   .building-info.bld4 {
     left: 0%;
-  }
-  .building-info.bld4::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    right: -16px;
-    border-top: 1px solid @bfh-silver;
-    border-right: 1px solid @bfh-silver;
-    top: 67%;
+
+    &::after {
+      right: -16px;
+      border-top: 1px solid @bfh-silver;
+      border-right: 1px solid @bfh-silver;
+      top: 67%;
+    }
   }
 
   .building-info.bld5 {
     left: 44%;
-  }
-  .building-info.bld5::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    left: -16px;
-    border-bottom: 1px solid @bfh-darkbrown;
-    border-left: 1px solid @bfh-darkbrown;
-    top: 64%;
+
+    &::after {
+      left: -16px;
+      border-bottom: 1px solid @bfh-darkbrown;
+      border-left: 1px solid @bfh-darkbrown;
+      top: 64%;
+    }
   }
 }
 
@@ -480,12 +484,6 @@ li.list-item span {
     left: 12%;
   }
 
-}
-
-.building-info a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid
 }
 
 /** /end styles for the map **/
