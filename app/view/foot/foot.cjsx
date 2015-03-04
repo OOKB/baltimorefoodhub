@@ -54,14 +54,19 @@ module.exports = React.createClass
             </div>
           </div>
 
-          <div className="three columns">
+        </div>
+
+        <div className="group">
+
+          <div className="three columns social">
             <div className="overlay">
-              <TwitterBtn />
               <FacebookBtn />
+              <TwitterBtn />
             </div>
           </div>
 
         </div>
+
       </div>
 
       <div className="footer-credits ">

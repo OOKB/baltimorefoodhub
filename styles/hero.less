@@ -54,8 +54,18 @@
 
 /* only do the animated rings and full screen images when of a certain width... */
 @media (min-width: 768px) and (orientation: landscape) {
+  #hero {
+    padding-top: 95vh;
+  }
+  #hero .top {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:100vh
+  }
   #hero .bottom {
-    margin: 95vh 0 0 0;
+    margin: 0;
   }
   #hero .bottom .container {
     padding: 3rem 2.25rem 5rem 2.25rem;
@@ -80,9 +90,13 @@
     display: block;
     margin: 0;
     padding: 0;
-    position: fixed;
+    position: absolute;
     width: 300px;
     height: 300px;
+  }
+
+  #hero .logowrap,
+  #hero .circle {
     top:50vh;
     margin-top: -150px;
     left: 50%;
@@ -94,7 +108,7 @@
   }
 
   #hero .circlewrap {
-    position: fixed;
+    position: absolute;
     display: block;
     top:0;
     right: 0;
@@ -102,7 +116,7 @@
     left: 0;
     opacity: .333333;
     overflow: hidden;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
   }
 

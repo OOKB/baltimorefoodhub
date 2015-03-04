@@ -11,6 +11,8 @@ body {
   color: @bfh-slate;
   /**/
   background: #4e4e4e;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* Typograhy, etc.
@@ -292,6 +294,8 @@ footer .footer-credits p {
 footer .footer-credits p a {
   color: lighten(@bfh-slate, 20%);
 }
+
+footer .social .overlay > div { float: left; margin-right: 1rem; }
 
 /** mailchimp styling **/
 .indicates-required { font-size: .9em; font-style: italic; }

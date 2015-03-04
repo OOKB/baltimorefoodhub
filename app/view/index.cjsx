@@ -26,6 +26,7 @@ module.exports = React.createClass
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={blurb} />
         <meta name="google-site-verification" content="gs_54jcM2bV7xIZp-dbwxioZjP-yKkPUhDjYAb_LCf8" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href={cssFilePath} />
       </head>
       <body>

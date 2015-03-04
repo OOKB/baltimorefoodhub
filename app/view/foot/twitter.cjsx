@@ -16,4 +16,4 @@ module.exports = React.createClass
     @insertJs document, 'script', 'twitter-wjs', '//platform.twitter.com/widgets.js'
 
   render: ->
-      <a href="https://twitter.com/share" className="twitter-share-button" data-text="Charmed, packed and shipped. The Baltimore Food Hub is promoting local and regional foods in Baltimore City. Doors open in 2016!" data-size="large" data-count="none" data-hashtags="baltimorefoodhub">Tweet</a>
+      <a href="https://twitter.com/share" className="twitter-share-button" data-text="Charmed, packed & shipped. The Baltimore Food Hub promotes local & regional foods. Doors open in 2016!" data-size="large" data-count="none" >Tweet</a>

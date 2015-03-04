@@ -4,7 +4,7 @@
   position: relative;
   border-top: 2px solid @bfh-slate;
   max-width: 100%;
-  overflow: hidden;
+//   overflow: hidden;
   color: @bfh-slate;
 }
 
@@ -88,6 +88,7 @@
   padding: .25em;
   box-shadow: none;
   background: transparent;
+  font-weight: bold;
 }
 
 #map .building:hover span {
@@ -117,10 +118,6 @@
 
 /** position and "design" the building overlays with CSS **/
 #map .building.bld0 {
-  top:    33%;
-  left:   49.5%;
-  height: 19%;
-  width:  15%;
   top: 36%;
   left: 50%;
   height: 19%;
@@ -206,7 +203,7 @@
 
 /* popup */
 .building-info {
-  border: 1px solid @bfh-slate;
+  border: 1px solid;
   color: @bfh-white;
   margin: -8% 0 0; // position the popup as close to the bottom of the buildings as possible on small screens.
   padding: 1em;
@@ -214,12 +211,12 @@
   /**/
 }
 
-.building-info.bld0 { background-color: @bfh-red174;    }
-.building-info.bld1 { background-color: @bfh-yellow;    }
-.building-info.bld2 { background-color: @bfh-green;     }
-.building-info.bld3 { background-color: @bfh-blue;      }
-.building-info.bld4 { background-color: @bfh-silver;    }
-.building-info.bld5 { background-color: @bfh-darkbrown; }
+.building-info.bld0 { background-color: lighten(@bfh-red174,    60%); border-color: @bfh-red174;    color: darken(@bfh-red174,    20%); }
+.building-info.bld1 { background-color: lighten(@bfh-yellow,    47%); border-color: @bfh-yellow;    color: darken(@bfh-yellow,    30%); }
+.building-info.bld2 { background-color: lighten(@bfh-green,     45%); border-color: @bfh-green;     color: darken(@bfh-green,     27%); }
+.building-info.bld3 { background-color: lighten(@bfh-blue,      55%); border-color: @bfh-blue;      color: darken(@bfh-blue,      20%); }
+.building-info.bld4 { background-color: lighten(@bfh-silver,    47%); border-color: @bfh-silver;    color: darken(@bfh-silver,    30%); }
+.building-info.bld5 { background-color: lighten(@bfh-darkbrown, 60%); border-color: @bfh-darkbrown; color: darken(@bfh-darkbrown, 15%); }
 
 .building-info li {
   margin-left: auto;
@@ -246,6 +243,9 @@
 
 .building-info li.bld-number {
   color: @bfh-black;
+  .deming-stack;
+  font-size: .75em;
+  letter-spacing: 2px;
 }
 
 .building-info h3 {
@@ -263,24 +263,35 @@ li.list-item span {
   font-weight: 400 !important;
 }
 
+.building-info li.leased {
+  border: 1px solid;
+  padding: .33em;
+  border-radius: .33em;
+  margin-bottom: 1em;
+}
+
+.building-info li.leased p {
+  margin: 0;
+}
+
 @media (min-width: 50rem ) {
   .building-info {
     font-size: 1.25rem;
     margin:0;
     position: absolute;
-    height: 100%;
-    width: 450px;
+    min-height: 100%;
+    height:100%;
+    width: 50%;
     top:0;
     box-shadow: 0 0 6px rgba(0,0,0,.33);
     transition: all 400ms;
-    border-top:none;
-    border-bottom:none;
     overflow: auto;
   }
   .building-info.bld3,
   .building-info.bld5 {
     right: 0;
   }
+  .building-info.bld3 { width: 60%; }
   .building-info li {
     width: auto;
     padding-left:  0;
@@ -290,7 +301,9 @@ li.list-item span {
 
 @media (min-width: 1000px ) {
   .building-info {
-    width: 45%;
+    width: 50%;
+    min-height: intrinsic;
+    height: auto;
     transition: all 400ms;
     border: 1px solid @bfh-slate;
     overflow: visible;
@@ -323,8 +336,8 @@ li.list-item span {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: -16px;
-    border-top: 1px solid @bfh-slate;
-    border-right: 1px solid @bfh-slate;
+    border-top: 1px solid @bfh-red174;
+    border-right: 1px solid @bfh-red174;
   }
 
   .building-info.bld1 {
@@ -334,8 +347,8 @@ li.list-item span {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: -16px;
-    border-top: 1px solid @bfh-slate;
-    border-right: 1px solid @bfh-slate;
+    border-top: 1px solid @bfh-yellow;
+    border-right: 1px solid @bfh-yellow;
   }
 
   .building-info.bld2 {
@@ -345,8 +358,8 @@ li.list-item span {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: -16px;
-    border-top: 1px solid @bfh-slate;
-    border-right: 1px solid @bfh-slate;
+    border-top: 1px solid @bfh-green;
+    border-right: 1px solid @bfh-green;
   }
 
   .building-info.bld3 {
@@ -356,8 +369,8 @@ li.list-item span {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     left: -16px;
-    border-bottom: 1px solid @bfh-slate;
-    border-left: 1px solid @bfh-slate;
+    border-bottom: 1px solid @bfh-blue;
+    border-left: 1px solid @bfh-blue;
   }
 
   .building-info.bld4 {
@@ -367,8 +380,8 @@ li.list-item span {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: -16px;
-    border-top: 1px solid @bfh-slate;
-    border-right: 1px solid @bfh-slate;
+    border-top: 1px solid @bfh-silver;
+    border-right: 1px solid @bfh-silver;
     top: 67%;
   }
 
@@ -379,16 +392,66 @@ li.list-item span {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     left: -16px;
-    border-bottom: 1px solid @bfh-slate;
-    border-left: 1px solid @bfh-slate;
+    border-bottom: 1px solid @bfh-darkbrown;
+    border-left: 1px solid @bfh-darkbrown;
     top: 64%;
   }
 }
 
 @media (min-width: 1200px ) {
   .building-info {
-    width: 36%;
+    width: 40%;
     height:auto;
+  }
+
+  /* custom place all the building popups? */
+  .building-info.bld0 {
+    left: 11%;
+    top: 18%;
+  }
+
+  .building-info.bld1 {
+    left: 32%;
+    top: 25%;
+  }
+
+  .building-info.bld2 {
+    left: 47%;
+    top: 5%;
+  }
+
+  .building-info.bld3 {
+    left: 38%;
+    top: 5%;
+    width: 45%;
+
+    &::after {
+      top: 40%;
+    }
+  }
+
+  .building-info.bld4 {
+    left: 10%;
+    top: 43%;
+
+    &::after {
+      top: ~'calc(50% - 15px)';
+    }
+  }
+
+  .building-info.bld5 {
+    left: 44%;
+    top: 44%;
+
+    &::after {
+      top: ~'calc(50% - 15px)';
+    }
+  }
+}
+
+@media (min-width: 1400px ) {
+  .building-info {
+    width: 36%;
   }
 
   /* custom place all the building popups? */
@@ -404,42 +467,25 @@ li.list-item span {
 
   .building-info.bld2 {
     left: 51%;
-    top: 30%;
+    top: 11%;
   }
 
   .building-info.bld3 {
-    left: 39%;
-    top: 16%;
+    left: 38%;
+    top: 10%;
+    width: 40%;
   }
 
   .building-info.bld4 {
     left: 12%;
-    top: 43%;
-  }
-  .building-info.bld4::after {
-    top: ~'calc(50% - 15px)';
   }
 
-  .building-info.bld5 {
-    left: 44%;
-    top: 44%;
-  }
-  .building-info.bld5::after {
-    top: ~'calc(50% - 15px)';
-  }
-}
-
-.building-info h4 {
-  .deming-stack;
-  border: 1px solid;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1.25rem;
-  line-height: 2;
 }
 
 .building-info a {
-  color: @bfh-white;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid
 }
 
 /** /end styles for the map **/
