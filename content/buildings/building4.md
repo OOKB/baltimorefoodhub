@@ -9,7 +9,7 @@ tenants:
 leased: Fully Leased
 ---
 
-Fully leased by <a href="http://www.cityseeds.org" target="_blank">City Seeds</a> a Social Enterprise of <a href="http://www.humanim.com/" target="_blank">Humanim</a>. Humanim is a prominent workforce development mission driven organization. Offering a range of services and programs, Humanim builds economic opportunities to create jobs and employment opportunities.
+Fully leased by <a href="http://www.cityseeds.org" target="_blank">City Seeds</a>, operated by <a href="http://www.humanim.com/" target="_blank">Humanim</a>. Humanim is a prominent workforce development mission driven organization. Offering a range of services and programs, Humanim builds economic opportunities to create jobs and employment opportunities.
 
 _Opening summer 2016_
 

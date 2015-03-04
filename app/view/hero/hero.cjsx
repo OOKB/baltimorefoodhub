@@ -7,10 +7,10 @@ module.exports = React.createClass
 
   componentDidUpdate: ->
     clearInterval @interval
-    @interval = setInterval @next, 3000
+    @interval = setInterval @next, 2250
 
   componentDidMount: ->
-    @interval = setInterval @next, 2000
+    @interval = setInterval @next, 1500
 
   componentWillUnmount: ->
     clearInterval @interval
