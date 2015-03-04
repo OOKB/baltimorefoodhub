@@ -544,6 +544,8 @@ body {
   color: #4e4e4e;
   /**/
   background: #4e4e4e;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 /* Typograhy, etc.
 ====================================================================== */
@@ -819,6 +821,13 @@ footer .footer-credits p {
 footer .footer-credits p a {
   color: #818181;
 }
+footer .social .overlay {
+  padding-bottom: .75rem;
+}
+footer .social .overlay > div {
+  float: left;
+  margin-right: .66rem;
+}
 /** mailchimp styling **/
 .indicates-required {
   font-size: .9em;
@@ -837,7 +846,6 @@ footer .footer-credits p a {
   position: relative;
   border-top: 2px solid #4e4e4e;
   max-width: 100%;
-  overflow: hidden;
   color: #4e4e4e;
 }
 #map h2,
@@ -921,6 +929,7 @@ footer .footer-credits p a {
   padding: .25em;
   box-shadow: none;
   background: transparent;
+  font-weight: bold;
 }
 #map .building:hover span {
   border-radius: 3px;
@@ -945,10 +954,8 @@ footer .footer-credits p a {
   display: block;
 }
 /** position and "design" the building overlays with CSS **/
+/** Flex 1 **/
 #map .building.bld0 {
-  top: 33%;
-  left: 49.5%;
-  width: 15%;
   top: 36%;
   left: 50%;
   height: 19%;
@@ -957,6 +964,7 @@ footer .footer-credits p a {
 #map .building.bld0:hover span {
   background: rgba(154, 56, 32, 0.66);
 }
+/** Flex 2 **/
 #map .building.bld1 {
   top: 42%;
   left: 71.25%;
@@ -966,6 +974,7 @@ footer .footer-credits p a {
 #map .building.bld1:hover span {
   background: rgba(237, 170, 0, 0.66);
 }
+/** Coworking **/
 #map .building.bld2 {
   top: 38%;
   left: 87%;
@@ -975,6 +984,7 @@ footer .footer-credits p a {
 #map .building.bld2:hover span {
   background: rgba(110, 203, 152, 0.66);
 }
+/** Kitchen Incubator **/
 #map .building.bld3 {
   top: 43.5%;
   left: 11%;
@@ -1022,30 +1032,11 @@ footer .footer-credits p a {
 /*********************/
 /* popup */
 .building-info {
-  border: 1px solid #4e4e4e;
-  color: #f7f8f8;
+  border: 1px solid;
   margin: -8% 0 0;
   padding: 1em;
   z-index: 199;
   /**/
-}
-.building-info.bld0 {
-  background-color: #9a3820;
-}
-.building-info.bld1 {
-  background-color: #edaa00;
-}
-.building-info.bld2 {
-  background-color: #6ecb98;
-}
-.building-info.bld3 {
-  background-color: #617e95;
-}
-.building-info.bld4 {
-  background-color: #99a4ae;
-}
-.building-info.bld5 {
-  background-color: #5c4925;
 }
 .building-info li {
   margin-left: auto;
@@ -1053,6 +1044,41 @@ footer .footer-credits p a {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%;
+}
+.building-info a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+.building-info.bld0 {
+  background-color: #fcf2f0;
+  border-color: #9a3820;
+  color: #46190e;
+}
+.building-info.bld1 {
+  background-color: #fff6de;
+  border-color: #edaa00;
+  color: #543c00;
+}
+.building-info.bld2 {
+  background-color: #ffffff;
+  border-color: #6ecb98;
+  color: #2e8154;
+}
+.building-info.bld3 {
+  background-color: #ffffff;
+  border-color: #617e95;
+  color: #394a57;
+}
+.building-info.bld4 {
+  background-color: #ffffff;
+  border-color: #99a4ae;
+  color: #4d5761;
+}
+.building-info.bld5 {
+  background-color: #e9deca;
+  border-color: #5c4925;
+  color: #251e0f;
 }
 @media (min-width: 30rem) {
   .building-info li {
@@ -1069,6 +1095,11 @@ footer .footer-credits p a {
 }
 .building-info li.bld-number {
   color: #231f20;
+  font-family: 'DemingEP', Calibri, Helvetica, Arial, Sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: .75em;
+  letter-spacing: 2px;
 }
 .building-info h3 {
   font-size: 1.1rem;
@@ -1078,42 +1109,54 @@ footer .footer-credits p a {
 li.list-item {
   list-style: circle inside;
 }
-li.list-item,
-li.list-item span {
-  font-weight: 400 !important;
+.building-info li.leased {
+  border: 1px solid;
+  padding: .33em;
+  border-radius: .33em;
+  margin-bottom: 1em;
+}
+.building-info li.leased p {
+  margin: 0;
 }
 @media (min-width: 50rem) {
   .building-info {
     font-size: 1.25rem;
     margin: 0;
     position: absolute;
+    min-height: 100%;
     height: 100%;
-    width: 450px;
+    width: 50%;
     top: 0;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.33);
     transition: all 400ms;
-    border-top: none;
-    border-bottom: none;
     overflow: auto;
-  }
-  .building-info.bld3,
-  .building-info.bld5 {
-    right: 0;
   }
   .building-info li {
     width: auto;
     padding-left: 0;
     padding-right: 0;
   }
+  .building-info.bld3,
+  .building-info.bld5 {
+    right: 0;
+  }
+  .building-info.bld3 {
+    width: 60%;
+  }
 }
 @media (min-width: 1000px) {
   .building-info {
-    width: 45%;
+    width: 50%;
+    min-height: intrinsic;
+    height: auto;
     transition: all 400ms;
     border: 1px solid #4e4e4e;
     overflow: visible;
   }
   .building-info::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    /**/
     background: inherit;
     position: absolute;
     content: '';
@@ -1134,89 +1177,81 @@ li.list-item span {
     left: 5%;
   }
   .building-info.bld0::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
     right: -16px;
-    border-top: 1px solid #4e4e4e;
-    border-right: 1px solid #4e4e4e;
+    border-top: 1px solid #9a3820;
+    border-right: 1px solid #9a3820;
   }
   .building-info.bld1 {
     left: 27%;
   }
   .building-info.bld1::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
     right: -16px;
-    border-top: 1px solid #4e4e4e;
-    border-right: 1px solid #4e4e4e;
+    border-top: 1px solid #edaa00;
+    border-right: 1px solid #edaa00;
   }
   .building-info.bld2 {
     left: 42%;
   }
   .building-info.bld2::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
     right: -16px;
-    border-top: 1px solid #4e4e4e;
-    border-right: 1px solid #4e4e4e;
+    border-top: 1px solid #6ecb98;
+    border-right: 1px solid #6ecb98;
   }
   .building-info.bld3 {
     left: 39%;
   }
   .building-info.bld3::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
     left: -16px;
-    border-bottom: 1px solid #4e4e4e;
-    border-left: 1px solid #4e4e4e;
+    border-bottom: 1px solid #617e95;
+    border-left: 1px solid #617e95;
   }
   .building-info.bld4 {
     left: 0%;
   }
   .building-info.bld4::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
     right: -16px;
-    border-top: 1px solid #4e4e4e;
-    border-right: 1px solid #4e4e4e;
+    border-top: 1px solid #99a4ae;
+    border-right: 1px solid #99a4ae;
     top: 67%;
   }
   .building-info.bld5 {
     left: 44%;
   }
   .building-info.bld5::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
     left: -16px;
-    border-bottom: 1px solid #4e4e4e;
-    border-left: 1px solid #4e4e4e;
+    border-bottom: 1px solid #5c4925;
+    border-left: 1px solid #5c4925;
     top: 64%;
   }
 }
 @media (min-width: 1200px) {
   .building-info {
-    width: 36%;
+    width: 40%;
     height: auto;
   }
   /* custom place all the building popups? */
   .building-info.bld0 {
-    left: 15%;
-    top: 20%;
+    left: 11%;
+    top: 18%;
   }
   .building-info.bld1 {
-    left: 36%;
-    top: 30%;
+    left: 32%;
+    top: 25%;
   }
   .building-info.bld2 {
-    left: 51%;
-    top: 30%;
+    left: 47%;
+    top: 5%;
   }
   .building-info.bld3 {
-    left: 39%;
-    top: 16%;
+    left: 38%;
+    top: 5%;
+    width: 45%;
+  }
+  .building-info.bld3::after {
+    top: 40%;
   }
   .building-info.bld4 {
-    left: 12%;
+    left: 10%;
     top: 43%;
   }
   .building-info.bld4::after {
@@ -1230,18 +1265,31 @@ li.list-item span {
     top: calc(50% - 15px);
   }
 }
-.building-info h4 {
-  font-family: 'DemingEP', Calibri, Helvetica, Arial, Sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  border: 1px solid;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1.25rem;
-  line-height: 2;
-}
-.building-info a {
-  color: #f7f8f8;
+@media (min-width: 1400px) {
+  .building-info {
+    width: 36%;
+  }
+  /* custom place all the building popups? */
+  .building-info.bld0 {
+    left: 15%;
+    top: 20%;
+  }
+  .building-info.bld1 {
+    left: 36%;
+    top: 30%;
+  }
+  .building-info.bld2 {
+    left: 51%;
+    top: 11%;
+  }
+  .building-info.bld3 {
+    left: 38%;
+    top: 10%;
+    width: 40%;
+  }
+  .building-info.bld4 {
+    left: 12%;
+  }
 }
 /* -----------------------------------------------------*/
 /* ---------------->>> HERO.less <<<-----------------*/
@@ -1294,8 +1342,18 @@ li.list-item span {
 }
 /* only do the animated rings and full screen images when of a certain width... */
 @media (min-width: 768px) and (orientation: landscape) {
+  #hero {
+    padding-top: 95vh;
+  }
+  #hero .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+  }
   #hero .bottom {
-    margin: 95vh 0 0 0;
+    margin: 0;
   }
   #hero .bottom .container {
     padding: 3rem 2.25rem 5rem 2.25rem;
@@ -1318,9 +1376,12 @@ li.list-item span {
     display: block;
     margin: 0;
     padding: 0;
-    position: fixed;
+    position: absolute;
     width: 300px;
     height: 300px;
+  }
+  #hero .logowrap,
+  #hero .circle {
     top: 50vh;
     margin-top: -150px;
     left: 50%;
@@ -1330,7 +1391,7 @@ li.list-item span {
     z-index: 0;
   }
   #hero .circlewrap {
-    position: fixed;
+    position: absolute;
     display: block;
     top: 0;
     right: 0;
@@ -1338,7 +1399,7 @@ li.list-item span {
     left: 0;
     opacity: .333333;
     overflow: hidden;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
   }
   #hero .circle {
@@ -1559,12 +1620,11 @@ li.list-item span {
 }
 @media (min-width: 768px) {
   #slideshow {
-    position: fixed;
-    top: 0;
+    top: 2.25rem;
     right: 0;
-    bottom: 0;
+    bottom: initial;
     left: 0;
-    height: 100%;
+    height: 95vh;
     min-height: 0%;
     margin: 0;
     overflow: hidden;
@@ -1572,14 +1632,6 @@ li.list-item span {
     width: 100%;
     z-index: -2;
     text-align: center;
-  }
-  #slideshow > span {
-    position: relative;
-    top: initial;
-    right: initial;
-    bottom: initial;
-    left: initial;
-    display: block;
   }
 }
 /****************************************************/
