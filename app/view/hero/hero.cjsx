@@ -1,5 +1,6 @@
-React = require 'react/addons'
-ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
+React = require 'react'
+#ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
+TimeoutTransitionGroup = require '../../timeout-transition-group.js'
 
 module.exports = React.createClass
   getInitialState: ->
@@ -35,9 +36,9 @@ module.exports = React.createClass
       <section className="top">
 
         <div id="slideshow" className="cycle-slideshow">
-          <ReactCSSTransitionGroup transitionName="carousel-left">
+          <TimeoutTransitionGroup transitionName="carousel-left" enterTimeout={500} leaveTimeout={500}>
             <div className="slide" style={backgroundImage: 'url(' + slideSrc + '?size=xl)'} key={activeSlide} />
-          </ReactCSSTransitionGroup>
+          </TimeoutTransitionGroup>
         </div>
 
         <div className="circlewrap">
