@@ -1,6 +1,13 @@
 ---
-title: Food Truck Parking and Commissary
 id: food-trucks
+
+title: Food Truck Parking and Commissary
+sf:
+floors:
+ceiling:
+loading:
+tenants:
+leased:
 
 ---
 

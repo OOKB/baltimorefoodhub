@@ -1,11 +1,13 @@
 ---
-building: 1
-title: Flex 1
 id: flex1
+
+title: Flex 1
 sf: 9,961
 floors: Potential 2nd floor office space
 ceilings: 30ft
 loading: Loading Dock
+tenants:
+leased:
 
 ---
 

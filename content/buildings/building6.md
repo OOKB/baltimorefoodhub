@@ -1,7 +1,13 @@
 ---
-title: Urban Farming
 id: hoophouse
+
+title: Urban Farming
 sf: 3,300
+floors:
+ceiling:
+loading:
+tenants:
+leased:
 
 ---
 

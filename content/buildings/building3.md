@@ -1,9 +1,11 @@
 ---
-building: 3
-title: Coworking
 id: coworking
+
+title: Coworking
 sf: 9,888
 floors: 2 Levels
+ceilings:
+loading: 
 tenants:
   - Maryland Farmers Market Association
 leased: One office leased to Maryland Farmers Market Association

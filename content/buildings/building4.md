@@ -1,9 +1,11 @@
 ---
-building: 4
-title: Kitchen Incubator
 id: incubator
+
+title: Kitchen Incubator
 sf: 15,000
 floors: 1 level
+ceiling:
+loading:
 tenants:
   - City Seeds, a Social Enterprise of Humanim.
 leased: Fully Leased

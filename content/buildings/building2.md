@@ -1,10 +1,13 @@
 ---
-building: 2
+id: flex2
+
 title: Flex 2
-id: flex
 sf: 13,965
 floors: 2 Levels + Mezzanine
+ceilings:
 loading: Loading Dock
+tenants:
+leased:
 
 ---
 
