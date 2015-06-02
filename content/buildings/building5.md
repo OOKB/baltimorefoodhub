@@ -1,6 +1,7 @@
 ---
 title: Food Truck Parking and Commissary
 id: food-trucks
+
 ---
 
 We like food and we like trucks that make it easy for us to access it. Park your truck, store and prep your

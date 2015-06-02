@@ -7,6 +7,7 @@ floors: 2 Levels
 tenants:
   - Maryland Farmers Market Association
 leased: One office leased to Maryland Farmers Market Association
+
 ---
 
 A destination for food entrepreneurs and businesses who want an office that doesn’t double as a kitchen table. 
