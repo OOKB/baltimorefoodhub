@@ -35,15 +35,15 @@ nav:
     offset: -600
 
 mainContact:
-  name: Deborah Haust
-  title: Director of Strategic Partnerships
-  email: deborah@actimpact.org
-  phone: 202.731.3099
-leasingContact:
   name: Yaroslav Kovaliv
   title: Finance Director
   email: yaroslav@actimpact.org
   phone: 215.327.7614
+leasingContact:
+  name: Peter Jackson
+  title: Jones Lang LaSalle
+  email: peterm.jackson@am.jll.com
+  phone: 410.935.3556
 
 mailchimpBlurb: 'Stay up to date on what’s happening.'
 
