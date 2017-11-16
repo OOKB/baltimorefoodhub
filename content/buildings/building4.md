@@ -1,19 +1,15 @@
 ---
 id: incubator
-
-title: Kitchen Incubator
-sf: 15,000
+title: City Seeds
+sf: '8,000'
 floors: 1 level
-ceiling:
-loading:
+ceiling: null
+loading: null
 tenants:
-  - City Seeds, a Social Enterprise of Humanim.
+  - 'City Seeds, a Humanim Social Enterprise'
 leased: Fully Leased
-
 ---
 
-Fully leased by <a href="http://www.cityseeds.org" target="_blank">City Seeds</a>, operated by <a href="http://www.humanim.com/" target="_blank">Humanim</a>. Humanim is a prominent workforce development mission driven organization. Offering a range of services and programs, Humanim builds economic opportunities to create jobs and employment.
+Fully leased by [City Seeds](http://www.cityseeds.org), operated by [Humanim](http://www.humanim.com/). The catering business provides job training and employment through catering contracts with local institutions.
 
-_Opening summer 2016_
-
-Become a member to access our commercial kitchen with state of the art equipment to scale your food business. Join our commercial production kitchen enterprise or teach your best culinary skills. This facility has what you need, even if you don’t realize it yet.
+_Opening fall 2017_

@@ -1,14 +1,12 @@
 ---
 id: hoophouse
-
 title: Urban Farming
-sf: 3,300
-floors:
-ceiling:
-loading:
-tenants:
-leased:
-
+sf: '3,300'
+floors: null
+ceiling: null
+loading: null
+tenants: null
+leased: null
 ---
 
 Local sourcing at its finest year round. Get your hands dirty and learn what it means to grow real food from the ground up.

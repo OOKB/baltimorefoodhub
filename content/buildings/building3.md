@@ -1,17 +1,16 @@
 ---
 id: coworking
-
-title: Coworking
-sf: 9,888
+title: Office
+sf: '9,880'
 floors: 2 Levels
-ceilings:
-loading: 
-tenants:
-  - Maryland Farmers Market Association
-leased: One office leased to Maryland Farmers Market Association
-
+ceilings: null
+loading: null
+tenants: null
+leased: null
 ---
 
-A destination for food entrepreneurs and businesses who want an office that doesn’t double as a kitchen table. 
-
-Access to beautiful workspace as you need it, with opportunities for collaboration, support and resources at your fingertips. Flexible workspace is provided to up to sixty members. Private office space is available for up to six organizations. Conference room and technology equipment can be available for anyone at anytime depending on your membership access.
+- Ideal for office or flex space
+- Beautiful open floor plan with vaulted ceiling
+- Two-story historic building rich with architectural detail
+- Concrete floors
+- Elevator
