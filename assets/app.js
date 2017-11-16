@@ -58,9 +58,9 @@ module.exports = App;
 
 
 },{"./data":"/Users/Loki/Sites/baltimorefoodhub/app/data/index.json","./routes":"/Users/Loki/Sites/baltimorefoodhub/app/routes.cjsx","queries":"/Users/Loki/Sites/baltimorefoodhub/node_modules/queries/lib/queries.js","react":"/Users/Loki/Sites/baltimorefoodhub/node_modules/react/react.js","react-router":"/Users/Loki/Sites/baltimorefoodhub/node_modules/react-router/modules/index.js"}],"/Users/Loki/Sites/baltimorefoodhub/app/data/about.json":[function(require,module,exports){
-module.exports={"id":"about","blurb":"Baltimore Food Hub is a facility where locally and regionally-produced food is  aggregated, stored, processed, distributed or marketed. It may include one or all of these functions, depending on what our tenants need. After all, this is an opportunity for Baltimore, and we do what our people need us to do.","body":"<p>If you haven’t heard, we are growing the food innovation economy. Lucky for us, we aren’t doing this alone.</p>\n<p>The Baltimore Food Hub is a space for all food businesses, organizations and entrepreneurs to collaborate and think big while they  prep, make, store and park. </p>\n<p>A food campus lets us grow as an united front and together promote our local and regional efforts. Join us as we build recognition for what Baltimore brings to the table.</p>\n"}
+module.exports={"id":"about","blurb":"Baltimore Food Hub is a facility where locally and regionally-produced food is  aggregated, stored, processed, distributed or marketed. It may include one or all of these functions, depending on what our tenants need. After all, this is an opportunity for Baltimore, and we do what our people need us to do.","body":"<p>If you havenâ€™t heard, we are growing the food innovation economy. Lucky for us, we arenâ€™t doing this alone.</p>\n<p>The Baltimore Food Hub is a space for all food businesses, organizations and entrepreneurs to collaborate and think big while they  prep, make, store and park. </p>\n<p>A food campus lets us grow as an united front and together promote our local and regional efforts. Join us as we build recognition for what Baltimore brings to the table.</p>\n"}
 },{}],"/Users/Loki/Sites/baltimorefoodhub/app/data/contact.json":[function(require,module,exports){
-module.exports={"id":"contact","mailchimp":"Stay up to date on what’s happening. Sign up for our newsletter.","body":"<p><em>Charmed, packed and shipped.</em></p>\n<p>We are working ’round the clock and won’t stop unless you tell us why. \nBest way to get in touch? Send us a message below.</p>\n"}
+module.exports={"id":"contact","mailchimp":"Stay up to date on whatâ€™s happening. Sign up for our newsletter.","body":"<p><em>Charmed, packed and shipped.</em></p>\n<p>We are working â€™round the clock and wonâ€™t stop unless you tell us why. \nBest way to get in touch? Send us a message below.</p>\n"}
 },{}],"/Users/Loki/Sites/baltimorefoodhub/app/data/index.json":[function(require,module,exports){
 module.exports={
   "api": {
@@ -69,7 +69,7 @@ module.exports={
   "windowInnerWidth": 900,
   "title": "Baltimore Food Hub",
   "since": 2014,
-  "tagline": "Creating Baltimore’s First Food Hub",
+  "tagline": "Creating Baltimoreâ€™s First Food Hub",
   "blurb": "The Baltimore Food Hub promotes local and regional foods in Baltimore City.\nWe are growing the food innovation economy by offering entrepreneurs and food businesses resources to scale their mission.\n",
   "groundbreaking": "Look for a groundbreaking in early 2015.",
   "email": "info@baltimorefoodhub.com",
@@ -110,7 +110,7 @@ module.exports={
     "email": "peterm.jackson@am.jll.com",
     "phone": "410.935.3556"
   },
-  "mailchimpBlurb": "Stay up to date on what’s happening.",
+  "mailchimpBlurb": "Stay up to date on whatâ€™s happening.",
   "builtDesigned": [
     {
       "name": "OOKB",
@@ -127,67 +127,56 @@ module.exports={
         "content": "<p>Think of this as your own secured container to make all food business dreams a reality. Use this flexible space for food manufacturing, preparation and storage. 750–8000 sq ft spaces are available for any food-related business.</p>",
         "filename": "building1",
         "id": "flex1",
-        "title": "Flex 1",
+        "title": "Building 1",
         "sf": "9,961",
         "floors": "Potential 2nd floor office space",
         "ceilings": "30ft",
         "loading": "Loading Dock",
         "tenants": null,
         "leased": null
-      },
-      {
-        "content": "<p>Think of this as your own secured container to make all food business dreams a reality. Use this flexible space for food manufacturing, preparation and storage. 750–8000 sq ft spaces are available for any food-related business.</p>",
+      }, {
+        "content": "<p>Think of this as your own secured container to make all food business dreams a reality. Use this flexible space for food manufacturing, retail or office.</p>",
         "filename": "building2",
         "id": "flex2",
-        "title": "Flex 2",
-        "sf": "13,965",
+        "title": "Building 2",
+        "sf": "13,271",
         "floors": "2 Levels + Mezzanine",
         "ceilings": null,
         "loading": "Loading Dock",
         "tenants": null,
         "leased": null
-      },
-      {
-        "content": "<p>A destination for food entrepreneurs and businesses who want an office that doesn’t double as a kitchen table. </p>\n<p>Access to beautiful workspace as you need it, with opportunities for collaboration, support and resources at your fingertips. Flexible workspace is provided to up to sixty members. Private office space is available for up to six organizations. Conference room and technology equipment can be available for anyone at anytime depending on your membership access.</p>",
+      }, {
+        "content": "<ul><li>Ideal for office or flex space</li><li>Beautiful open floor plan with vaulted ceiling</li><li>Two-story historic building rich with architectural detail</li><li>Concrete floors</li><li>Elevator</li></ul>",
         "filename": "building3",
         "id": "coworking",
-        "title": "Coworking",
+        "title": "Office",
         "sf": "9,888",
         "floors": "2 Levels",
         "ceilings": null,
         "loading": null,
-        "tenants": [
-          "Maryland Farmers Market Association"
-        ],
-        "leased": "One office leased to Maryland Farmers Market Association"
-      },
-      {
-        "content": "<p>Fully leased by <a href=\"http://www.cityseeds.org\" target=\"_blank\">City Seeds</a>, operated by <a href=\"http://www.humanim.com/\" target=\"_blank\">Humanim</a>. Humanim is a prominent workforce development mission driven organization. Offering a range of services and programs, Humanim builds economic opportunities to create jobs and employment.</p><p>Become a member to access our commercial kitchen with state of the art equipment to scale your food business. Join our commercial production kitchen enterprise or teach your best culinary skills. This facility has what you need, even if you don’t realize it yet.</p>",
+      }, {
+        "content": "<p>Fully leased by <a href='http://www.cityseeds.org' target='_blank'>City Seeds</a>, operated by <a href='http://www.humanim.com/' target='_blank'>Humanim</a>. The catering business provides job training and employment through catering contracts with local institutions.</p><p><em>Opening fall 2017</em></p>",
         "filename": "building4",
         "id": "incubator",
-        "title": "Kitchen Incubator",
-        "sf": "15,000",
+        "title": "City Seeds",
+        "sf": "8,000",
         "floors": "1 level",
         "ceiling": null,
         "loading": null,
-        "tenants": [
-          "City Seeds, a Social Enterprise of Humanim."
-        ],
+        "tenants": ["City Seeds, a Social Enterprise of Humanim."],
         "leased": "Fully Leased"
-      },
-      {
-        "content": "<p>We like food and we like trucks that make it easy for us to access it. Park your truck, store and prep your\nfood and even have space to write some emails. The Baltimore Food Hub was made for you.</p>\n<p>With 6 spots for Food Trucks, get in touch today to secure yours.</p>",
+      }, {
+        "content": "<ul><li>Ideal for retail or manufacturing</li><li>Street frontage on heavily trafficked Wolfe &amp; Gay Streets</li><li>Historic one-story stables will be joined to create single space</li><li>Exposed brick and concrete floors</li><li>Adjacent to parking and planned community plaza</li></ul>",
         "filename": "building5",
         "id": "food-trucks",
-        "title": "Food Truck Parking and Commissary",
-        "sf": null,
+        "title": "Buildings 5 & 6",
+        "sf": "7,085 (combined)",
         "floors": null,
         "ceiling": null,
         "loading": null,
         "tenants": null,
         "leased": null
-      },
-      {
+      }, {
         "content": "<p>Local sourcing at its finest year round. Get your hands dirty and learn what it means to grow real food from the ground up.</p>\n<p>Farmer or grower, this is your land, make it grow! We have ¼ of an acre ready for you to dig in (currently planned to be made up from three 22&#39; x 50&#39; hoop houses).</p>",
         "filename": "building6",
         "id": "hoophouse",
