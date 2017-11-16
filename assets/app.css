@@ -440,6 +440,9 @@ body {
 }
 /* Base Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.white { color:white; }
+
 h1,
 h2,
 h3,
@@ -617,6 +620,7 @@ header nav ul li a {
   font-style: normal;
   font-weight: normal;
   letter-spacing: 1px;
+  line-height: 2.33rem;
   line-height: calc(2.33rem - 2px);
   padding-left: .75rem;
   padding-right: .75rem;
@@ -753,9 +757,6 @@ article h2 {
   border-color: #6ecb98;
   color: #6ecb98;
 }
-#leasing p.message {
-  display: none;
-}
 #leasing .lead {
   margin-top: 4px;
 }
@@ -776,6 +777,9 @@ footer {
 }
 footer a {
   color: #617e95;
+}
+footer span.plain {
+  font-family: Times, Georgia, serif;
 }
 footer .overlay {
   background: #f7f8f8;
@@ -1143,7 +1147,7 @@ li.list-item {
 @media (min-width: 1000px) {
   .building-info {
     width: 50%;
-    min-height: intrinsic;
+    min-height: initial;
     height: auto;
     top: initial;
     right: initial;

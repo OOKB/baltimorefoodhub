@@ -1,0 +1,70 @@
+/**groundbreaking additions **/
+#groundbreaking {
+  color: #256743;
+}
+
+.bottom .stripe {
+  border-top: 2px solid #f5fbf8;
+  background-color: #6ecb98;
+}
+
+.btn.jump {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 5rem;
+  position: absolute;
+  z-index: 99;
+  background-color: #6ecb98;
+  color:white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'LeagueGothic', Calibri, Helvetica, Arial, Sans-serif;
+  font-weight: normal;
+  top: 5%;
+  left: 5%;
+  transform: rotate(-22.5deg);
+  box-shadow: 0 0 1rem 0 rgba(0,0,0,.3);
+}
+
+@media (min-width: 1000px) {
+  .btn.jump {
+    top: 15%;
+    left: 25%;
+  }
+}
+.btn.jump,
+.btn.jump span {
+  display: block;
+}
+
+.btn.jump span {
+  font-size: 1.8rem;
+  line-height: 1;
+  padding-top: 2rem;
+}
+
+.stripe #groundbreaking h2 {
+  font-family: 'DemingEP', Calibri, Helvetica, Arial, Sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-top: 0.5rem !important;
+  text-align: left;
+}
+
+.stripe #groundbreaking .lead:first-of-type {
+  margin-top: 4px;
+}
+
+#groundbreaking a {
+  color: #f5fbf8;
+  text-decoration: none;
+  border-bottom: 1px solid #256743;
+  transition: all 400ms;
+}
+
+#groundbreaking a:hover {
+  color: #256743;
+  border-color: #f5fbf8;
+}
